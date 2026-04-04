@@ -7,14 +7,14 @@ export default function PrivacyStatementCalifornia() {
       sections={[
         {
           body: [
-            "This PRIVACY NOTICE IS APPLICABLE TO CALIFORNIA RESIDENTS ("consumers" or "you") ONLY and supplements the information in MEDVi's general Privacy Statement. We adopt this notice to comply with the California Consumer Privacy Act of 2018 ("CCPA"), the California Privacy Rights Act (\"CPRA\"), and other California privacy laws. Any terms defined in the CCPA or CRPA have the same meaning when used in this notice.",
+            `This PRIVACY NOTICE IS APPLICABLE TO CALIFORNIA RESIDENTS ("consumers" or "you") ONLY and supplements the information in MEDVi's general Privacy Statement. We adopt this notice to comply with the California Consumer Privacy Act of 2018 ("CCPA"), the California Privacy Rights Act (\"CPRA\"), and other California privacy laws. Any terms defined in the CCPA or CRPA have the same meaning when used in this notice.`,
           ],
         },
         {
           heading: "Information We Collect",
           level: 2,
           body: [
-            "We collect information that identifies, relates to, describes, references, is capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or device ("Personal Information").",
+            `We collect information that identifies, relates to, describes, references, is capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular consumer or device ("Personal Information").`,
             "We have collected the following categories of Personal Information from California consumers since January 1, 2024 on MEDVi's Platform:",
           ],
         },
@@ -120,7 +120,7 @@ export default function PrivacyStatementCalifornia() {
           heading: "Personal Information does NOT include:",
           level: 2,
           body: [
-            "Information that is lawfully made available from federal, state, or local government records ("Publicly Available Information").",
+            `Information that is lawfully made available from federal, state, or local government records ("Publicly Available Information").`,
             "De-identified or aggregate consumer information (as such terms are defined in the CCPA).",
             "Information excluded from the CCPA's scope, such as:",
             "health or medical information covered by the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and the California Confidentiality of Medical Information Act (CMIA) or clinical trial data.",

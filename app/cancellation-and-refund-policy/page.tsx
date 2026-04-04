@@ -9,7 +9,7 @@ export default function CancellationAndRefundPolicy() {
           heading: "Subscription Services",
           level: 2,
           body: [
-            "Your membership in the subscription program ("Subscription Service"), including your ability to access the services, begins when you have completed the intake form at which time you will be charged for the first month of the Subscription Services.",
+            `Your membership in the subscription program ("Subscription Service"), including your ability to access the services, begins when you have completed the intake form at which time you will be charged for the first month of the Subscription Services.`,
             "The Subscription Services include access to providers, medications where appropriate, and online support.",
             "Please note if you are disqualified by our medical provider for any medical reason you will receive a full refund.",
             "There is no guarantee of results or effectiveness due to your participation in the Subscription Services.",

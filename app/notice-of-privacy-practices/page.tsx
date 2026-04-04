@@ -9,7 +9,7 @@ export default function NoticeOfPrivacyPractices() {
         {
           body: [
             "THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.",
-            "This Notice of Privacy Practices ("Notice") describes the privacy practices of MEDVi, LLC and its affiliates, including certain affiliated professional entities, their physicians, health care practitioners, and other personnel ("we" or "us").",
+            `This Notice of Privacy Practices ("Notice") describes the privacy practices of MEDVi, LLC and its affiliates, including certain affiliated professional entities, their physicians, health care practitioners, and other personnel ("we" or "us").`,
           ],
         },
         {
@@ -21,7 +21,7 @@ export default function NoticeOfPrivacyPractices() {
           heading: "II. Our Privacy Obligations",
           level: 2,
           body: [
-            "We are required by law to maintain the privacy of your health information ("Protected Health Information" or "PHI") and to provide you with this Notice of our legal duties and privacy practices with respect to your PHI. We are also obligated to notify you following a Breach of unsecured PHI. When we use or disclose your PHI, we are required to abide by the terms of this Notice (or other notice in effect at the time of the use or disclosure).",
+            `We are required by law to maintain the privacy of your health information ("Protected Health Information" or "PHI") and to provide you with this Notice of our legal duties and privacy practices with respect to your PHI. We are also obligated to notify you following a Breach of unsecured PHI. When we use or disclose your PHI, we are required to abide by the terms of this Notice (or other notice in effect at the time of the use or disclosure).`,
           ],
         },
         {
@@ -35,7 +35,7 @@ export default function NoticeOfPrivacyPractices() {
           heading: "A. Uses and Disclosures For Treatment, Payment and Health Care Operations.",
           level: 3,
           body: [
-            "We may use and disclose PHI, but not your "Highly Confidential Information" (defined in Section IV.B below), in order to treat you, obtain payment for services provided to you, and conduct our "Healthcare Operations" as detailed below:",
+            `We may use and disclose PHI, but not your "Highly Confidential Information" (defined in Section IV.B below), in order to treat you, obtain payment for services provided to you, and conduct our "Healthcare Operations" as detailed below:`,
             "Treatment. We may use and disclose your PHI to provide treatment, for example, to diagnose and treat your injury or illness. We may also disclose PHI to other health care providers involved in your treatment.",
             "Payment. In most cases, we may use and disclose your PHI to obtain payment for services that we provide to you.",
             "Healthcare Operations. We may use and disclose your PHI for our healthcare operations which include internal administration and planning and various activities that improve the quality and cost effectiveness of the care that we deliver to you. For example, we may use PHI to evaluate the quality and competence of our physicians and other health care practitioners. We may also disclose PHI in order to resolve any complaints you may have. We may also disclose PHI to your other healthcare providers when such PHI is required for them to treat you, receive payment for services they render to you, or conduct certain healthcare operations, such as quality assessment and improvement activities, reviewing the quality and competence of healthcare professionals, or for health care fraud and abuse detection or compliance.",
@@ -135,14 +135,14 @@ export default function NoticeOfPrivacyPractices() {
           heading: "A. Use or Disclosure with Your Authorization.",
           level: 3,
           body: [
-            "We must obtain your written authorization for uses and disclosures of PHI for marketing purposes and disclosures that constitute the sale of PHI. Additionally, other uses and disclosures of PHI not described in this Notice will be made only when you give us your written permission on an authorization form ("Your Authorization"). For instance, you will need to complete and sign an authorization form before we can send your PHI to your life insurance company or to the attorney representing the other party in a lawsuit in which you are involved.",
+            `We must obtain your written authorization for uses and disclosures of PHI for marketing purposes and disclosures that constitute the sale of PHI. Additionally, other uses and disclosures of PHI not described in this Notice will be made only when you give us your written permission on an authorization form ("Your Authorization"). For instance, you will need to complete and sign an authorization form before we can send your PHI to your life insurance company or to the attorney representing the other party in a lawsuit in which you are involved.`,
           ],
         },
         {
           heading: "B. Uses and Disclosures of Your Highly Confidential Information.",
           level: 3,
           body: [
-            "Federal and state law requires special privacy protections for certain highly confidential information about you ("Highly Confidential Information"). This Highly Confidential Information may include the subset of your PHI that: (1) is about mental health and developmental disabilities services; (2) is about alcohol and drug abuse prevention, treatment and referral; (3) is about HIV/AIDS testing, diagnosis or treatment; (4) is about sexually-transmitted disease(s); (5) is about genetic testing; (6) is about child abuse and neglect; (7) is about domestic abuse of an adult with a disability; or (8) is about sexual assault. In order for us to disclose your Highly Confidential Information for a purpose other than those permitted by law, we must have Your Authorization.",
+            `Federal and state law requires special privacy protections for certain highly confidential information about you ("Highly Confidential Information"). This Highly Confidential Information may include the subset of your PHI that: (1) is about mental health and developmental disabilities services; (2) is about alcohol and drug abuse prevention, treatment and referral; (3) is about HIV/AIDS testing, diagnosis or treatment; (4) is about sexually-transmitted disease(s); (5) is about genetic testing; (6) is about child abuse and neglect; (7) is about domestic abuse of an adult with a disability; or (8) is about sexual assault. In order for us to disclose your Highly Confidential Information for a purpose other than those permitted by law, we must have Your Authorization.`,
           ],
         },
         {

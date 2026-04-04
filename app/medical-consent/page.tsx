@@ -63,7 +63,7 @@ export default function MedicalConsent() {
           heading: "HIPAA Consent",
           level: 3,
           body: [
-            "The Health Insurance Portability and Accountability Act (HIPAA) provides safeguards to protect your privacy. Implementation of HIPAA requirements officially began on April 14, 2003. This form is a "friendly" version. A more complete text is available through the office.",
+            `The Health Insurance Portability and Accountability Act (HIPAA) provides safeguards to protect your privacy. Implementation of HIPAA requirements officially began on April 14, 2003. This form is a "friendly" version. A more complete text is available through the office.`,
             "Specifically, there are rules and restrictions on who may see or be notified of your Protected Health Information (PHI). These restrictions do not include the normal interchange of information necessary to provide you with office services. HIPAA provides certain rights and protections to you as the patient. We balance these needs with our goal of providing you with quality professional service and care. Additional information is available from the U.S. Department of Health and Human Services. www.hhs.gov.",
           ],
         },
