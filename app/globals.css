@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&family=Red+Hat+Text:wght@400;500;600&family=Onest:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #faf9f7;
+  --color-dark: #242220;
+  --color-green: #2e936f;
+  --color-gold: #c6a673;
+  --color-purple: #956bad;
+  --color-salmon: #eb8771;
+  --color-pink: #d690b3;
+  --color-teal: #8cb0b2;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 600;
+}
