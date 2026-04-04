@@ -1,206 +1,249 @@
-# v0 Prompt — MEDVi Telehealth Landing Page Recreation
+# MEDVi — Full-Site Reference & v0 Build Prompt
 
-Paste this entire prompt into v0.dev:
+This repository is a **pixel-accurate reference implementation** of the MEDVi telehealth platform (home.medvi.org, glp.medvi.org, meals.medvi.org, quad.medvi.org). All pages, components, copy, and design tokens have been extracted via Playwright scraping and screenshot capture.
+
+**When building with v0:** Use the existing TSX files in `app/` as your source of truth. The screenshots in `public/` show exactly what each page should look like. Do not invent copy or layouts — match the files here precisely.
 
 ---
 
-Create a full-page telehealth marketing landing page called "MEDVi" that closely matches the following design spec. Use Next.js, Tailwind CSS, and shadcn/ui components.
+## Project Structure
+
+```
+app/
+  layout.tsx                    — Root layout (fonts, global styles)
+  page.tsx                      — Homepage (/)
+  components/
+    Nav.tsx                     — Shared sticky nav (dark #242220)
+    Footer.tsx                  — Shared white footer
+    LegalPage.tsx               — Shared legal page shell
+  glp/
+    page.tsx                    — GLP-1 marketing page (/glp)
+    intake/page.tsx             — GLP-1 intake quiz (/glp/intake)
+  quad/
+    page.tsx                    — Men's health marketing page (/quad)
+    intake/page.tsx             — QUAD intake quiz (/quad/intake)
+  meals/
+    page.tsx                    — MEDVi Meals landing (/meals)
+    how-it-works/page.tsx       — Meals how-it-works (/meals/how-it-works)
+    programs/page.tsx           — Meal plan builder (/meals/programs)
+    faq/page.tsx                — Meals FAQ accordion (/meals/faq)
+  weight-loss/page.tsx          — Weight loss detail page (/weight-loss)
+  terms-and-conditions/page.tsx
+  privacy-policy/page.tsx
+  notice-of-privacy-practices/page.tsx
+  cancellation-and-refund-policy/page.tsx
+  medical-consent/page.tsx
+  privacy-statement-california/page.tsx
+  bill-of-rights/page.tsx
+public/
+  home_medvi_org_.png           — Homepage desktop screenshot
+  home_medvi_org__mobile.png    — Homepage mobile screenshot
+  glp_medvi_org_.png            — GLP page screenshot
+  quad_medvi_org_.png           — QUAD page screenshot
+  meals_medvi_org_.png          — Meals page screenshot
+  (+ 150 more screenshots)
+```
 
 ---
 
 ## Design System
 
-**Colors:**
-- Background: `#faf9f7` (off-white, warm)
-- Primary text: `#242220` (near-black, warm)
-- Dark text alt: `#1a1a1a`
-- Accent green (primary CTA): `#2e936f`
-- Accent purple: `#956bad`
-- Accent tan/gold: `#c6a673`
-- Accent salmon: `#eb8771`
-- Accent pink: `#d690b3`
-- Accent teal: `#8cb0b2`
-- Muted brown: `#a58979`
-- Light sage bg: `#f1f5e9`
-- White: `#ffffff`
+### Colors
+| Token | Value | Usage |
+|-------|-------|-------|
+| Background warm | `#faf9f7` | Page background |
+| Text primary | `#242220` | Body text, dark nav |
+| Text muted | `#24222099` | Subtext, paragraphs |
+| Text faint | `#24222066` | Footer links, captions |
+| Accent green | `#2e936f` | CTAs, highlights |
+| Hero green (deep) | `#172B1F` | Homepage hero background |
+| Near-black | `#1a1a1a` | Trust bar background |
+| White | `#ffffff` | Sections, footer |
+| QUAD navy | `#060d1f` | QUAD page background |
+| Purple | `#956bad` | Women's health accent |
+| Tan/gold | `#c6a673` | Supplements accent |
+| Salmon | `#eb8771` | Hair/skin accent |
+| Pink | `#d690b3` | Women's health accent |
+| Teal | `#8cb0b2` | Peptides accent |
+| Border | `#e8e5e0` | Dividers, card borders |
 
-**Typography:**
-- Headings (h2/h3/h4): `Red Hat Display` or `Red Hat Text`, semibold (600)
-- Body / paragraphs: `Red Hat Text`, regular (400)
-- Eyebrow labels (h6 uppercase): `Onest`, medium (500), ~10px, wide letter-spacing
-- Accent/subheadings: `Montserrat`
-- H2 size: ~50px desktop, ~32px mobile
-- H3 size: ~30px
-- Body: 14–16px
+### Typography
+- **Display headings (h1/h2):** `Red Hat Display`, 700, sizes 2.25rem–3.5rem
+- **Section headings (h2/h3):** `Red Hat Display`, 600–700
+- **Body:** `Red Hat Text`, 400, 14–16px
+- **Eyebrow labels:** `Onest`, 500, 10–11px, uppercase, wide letter-spacing
+- **Accent/pill text:** `Montserrat`
 
-**Buttons:**
-- Primary CTA: background `#2e936f`, white text, rounded-full, uppercase, font-weight 600, px-8 py-3
-- Secondary: outlined, same green border/text
-- Border radius: pill-shaped (rounded-full) for CTAs
+### Buttons
+- **Primary CTA:** `bg-[#2e936f]` white text `rounded-full` uppercase font-semibold px-8 py-3
+- **Dark CTA:** `bg-[#242220]` white text `rounded-full`
+- **Outline:** border green, green text, `rounded-full`
+- **Coming Soon badge:** small pill, green or accent color, uppercase
 
----
+### Images (all from Framer CDN)
+Base URL: `https://framerusercontent.com/images/`
 
-## Page Sections (in order)
-
-### 1. Sticky Navbar
-- Logo: "MEDVi" wordmark (white text on dark bg, or dark on light bg)
-- Nav links: Weight Loss | Peptides & Longevity | Men's Health | Women's Health
-- Right side CTA button: "GET STARTED" (green, pill-shaped)
-- Background: dark near-black (`#242220`) or transparent that turns solid on scroll
-
-### 2. Hero Section
-- Full-width, dark background (`#242220` or deep charcoal)
-- Marquee/ticker strip at top: "LICENSED MEDICAL PROVIDERS · 100% ONLINE · CLEAR PRICING · SHIPPED TO YOUR DOOR" repeating
-- Badge: "Join 500,000+ MEDVi patients"
-- Large headline (split across lines with line breaks):
-  ```
-  Healthcare,
-  redefined for real life.
-  ```
-- Subtext: "We provide medical care online—simple, direct, and led by licensed providers. No waiting rooms. No unnecessary steps. Just care that works."
-- 4 pill-shaped nav tags below: "Weight Loss" | "Peptides & Longevity" | "Men's Health" | "Women's Health"
-- Right side: lifestyle photo of person (use a placeholder)
-
-### 3. Service Section — Weight Loss (GLP-1)
-- id="weight-loss"
-- Eyebrow label (H6 uppercase): "DOCTOR-GUIDED GLP-1 CARE"
-- H2: "Weight loss made easy with personalized care"
-- H3: "A smarter approach to weight loss, built around you"
-- 5 feature bullet points with checkmarks:
-  - Prescription to fast, effective GLP-1
-  - 1:1 physician guidance
-  - 24/7 support
-  - Weight loss guarantee
-  - Fast & discreet shipping
-- CTA button: "GET STARTED" → links to glp.medvi.org
-- Right side: phone mockup showing patient portal (use placeholder)
-- Background: light warm white `#faf9f7`
-
-### 4. Service Section — Women's Health
-- Eyebrow: "CARE DESIGNED FOR WOMEN'S HEALTH"
-- H2: "Whole-body care for her balance, vitality, and confidence"
-- H3: "Support that evolves with your body"
-- Bullet points: Hormone balance | Healthy weight management | Hair strength & growth support | Skin health & radiance | Fast & discreet shipping
-- Copy: "Doctor-guided care for weight, hormones, hair, and skin, with personalized treatment plans designed to support your health through every stage of life."
-- Badge: "COMING SOON"
-- Background: light sage `#f1f5e9` or soft warm tone
-
-### 5. Service Section — Metabolic Nutrition / Meals
-- Eyebrow: "METABOLIC NUTRITION"
-- H2: "Fuel your transformation, protect your progress"
-- H3: "Skip the hassle of meal planning and prepping"
-- Bullets: Meal prep made simple | Chef-made, portion-controlled | Weekly rotating meals | Nutritionally balanced | Macro-friendly options | Completely hassle-free
-- Copy: "MEDVi Meals is the perfect partner for your GLP-1 journey—delivering chef-prepared, medically aligned nutrition designed to help you lose fat while preserving muscle."
-- CTA: "GET STARTED" → meals.medvi.org
-- Background: white
-
-### 6. Service Section — Supplements
-- Eyebrow: "PURPOSE-DRIVEN SUPPLEMENTATION"
-- H2: "Supplements with the power to boost real results"
-- H3: "Support that helps you feel better over time"
-- Bullets: Clean, transparent ingredients | Built to support daily health | Evidence-based dosing | Doctor-formulated blends | High-quality sourcing
-- Copy: "Doctor-designed formulas made with quality ingredients and evidence-based dosing to support your body day after day."
-- Badge: "COMING SOON"
-
-### 7. Service Section — Men's Health
-- id="mens-health"
-- Eyebrow: "CARE FOR ENERGY, HORMONES, AND PERFORMANCE"
-- H2: "Men's healthcare, built for men who expect more"
-- H3: "Care designed to help you feel stronger, sharper, and more in control"
-- Bullets: Physical performance | Hormone balance | Energy levels | Mental focus | Fast & discreet shipping
-- CTA: "GET STARTED" → quad.medvi.org
-
-### 8. Service Section — Peptides & Longevity
-- id="peptides"
-- Eyebrow: "ADVANCED PEPTIDE SUPPORT"
-- H2: "Targeted support for recovery, performance, and longevity"
-- H3: "Support that works below the surface"
-- Bullets: Recovery support (BPC-157, TB-500) | Performance (CJC-1295, Ipamorelin) | Recovery cycles (Sermorelin, MK-677) | Strength (Tesamorelin) | And more
-- Badge: "COMING SOON"
-
-### 9. Service Section — Hair Restoration
-- Eyebrow: "TARGETED HAIR RESTORATION"
-- H2: "Proven care for thinning hair and regrowth"
-- H3: "Advanced hair regrowth care to help you look and feel your best"
-- Bullets: Clinically backed regrowth ingredients | Targeted scalp and follicle support | Long-term hair density approach | Fast shipping
-- Badge: "COMING SOON"
-
-### 10. Service Section — Skincare
-- Eyebrow: "PERSONALIZED CARE FOR HEALTHIER, CLEARER SKIN."
-- H2: "Skincare that goes deeper than the surface"
-- H3: "Skincare designed to treat the root cause—not just cover it up."
-- Bullets: Clinician-guided tailored care | Prescription-strength options | Simple daily routines | Visible skin results | Personalized treatment plans
-- Badge: "COMING SOON"
-
-### 11. "Why MEDVi" / Features Section
-- Eyebrow: "BETTER IS POSSIBLE—AND WE BUILT FOR IT."
-- H2: "Modern healthcare, built around you"
-- H3: "Care coaching and nutrition support"
-- Copy: "Our care coaching team, led by certified medical assistants and registered dietitians, helps answer questions about your medication, program, and day-to-day lifestyle changes."
-- 4-column trust grid:
-  | Icon | Title | Description |
-  |------|-------|-------------|
-  | Shield | Licensed and regulated | Care is provided by licensed clinicians and filled through FDA-regulated pharmacies. |
-  | Laptop | 100% online medical care | Appointments, follow-ups, and treatment all take place online. |
-  | Truck | Shipping that's fast & discreet | Orders arrive quickly and in plain packaging to protect your privacy. |
-  | Headset | Unlimited 24/7 support | Medical support continues throughout your care, whenever you need it. |
-
-### 12. Doctors Section
-- Eyebrow: "OUR INCREDIBLE DOCTORS"
-- H2: "Medical care from leading health experts"
-- 2 doctor cards side-by-side:
-  - Dr. Ana Lisa Carr
-  - Dr. Kelly Tenbrink — St. George's University, School of Medicine / American Board of Emergency Medicine
-- Each card: photo placeholder, name, credentials, brief bio
-
-### 13. Reviews / Testimonials Section
-- Eyebrow: "THOSE WHO CHOSE MEDVI"
-- H2: "There's a reason people are raving about us."
-- Scrollable/grid layout of review cards. Each card has: reviewer name, star rating (5 stars), quote text
-- Reviews:
-  1. Billy — "Ms. Gonzalez was great! She listened to my needs and provided details of the meds and any issues that rise."
-  2. Terika — "The provider was knowledgeable and helpful. She answered all my questions and made me feel as if this was not our first time meeting."
-  3. Jamie — "The questions are to the point and easy to navigate. I'm able to voice my concerns if needed and ask questions of MEDVi. They are quick to respond."
-  4. Jacqueline — "My experience is very positive. I am doing very well. Slowly and surely reaching my goals with MEDVi's help."
-  5. Diana — "The staff has been so friendly and caring. I didn't expect that! If I call, I get an immediate answer from a real person!"
-  6. Donna — "The Physician was very knowledgeable and ready to answer all my concerns. She even told me about future checkups needed throughout my journey."
-  7. Terri — "Losing weight without a crazy diet, without cardio...it just felt like magic. I was a snacker, but not anymore."
-  8. Greg — "I was ready to give up. Wow. I would pay 10x as much if I had to. Dieting days are over. Thanks to the guys at medvi for the metabolic fix - game changer."
-
-### 14. Bottom CTA / Trust Bar
-- 4 trust badges in a horizontal bar:
-  - MEDVi guarantee
-  - Free, expedited delivery
-  - Doctor-led plans & coaching
-  - No hidden fees
-
-### 15. Footer
-- Logo: MEDVi
-- Contact info:
-  - help@medvi.org
-  - (323) 690-1564
-  - 131 Continental Dr. Ste 305, Newark, DE 19713
-- Footer links: Terms & Conditions | Privacy Policy | Privacy Practices | Refund Policy | Medical Consent | For California Residents | Bill of Rights
-- Copyright: © 2026 MEDVi. All rights reserved
-- Small legal disclaimer text (gray, 11px)
-- Background: dark `#242220`
+Key images referenced across the site:
+- MEDVi logo (dark bg): `1BRDkIzVV7TxG8fJDyUWdUDDE.png`
+- GLP hero phone: `DLDTFlOSb2FnS4jzqGt3DORzQ.png`
+- Meals hero food: `S6GwNHJ43LwHkHsaF7FHF89E.jpg`
+- QUAD hero: `rkR26FDLhJH3M6LbYGUvT9Tbtw.jpg`
+- LegitScript seal: `q2uWrYWiZmMyus58IGeMLSbGI.png`
 
 ---
 
-## Layout Notes
-- Alternate service sections left/right (image left + text right, then text left + image right)
-- Each service section has ~80-100px vertical padding
-- Smooth scroll between sections
-- All "COMING SOON" badges: small pill badge, accent color (green or tan), uppercase
-- Use `next/font` to load Red Hat Display, Red Hat Text, Onest, Montserrat from Google Fonts
-- Mobile: stack all two-column layouts vertically, hamburger nav menu
+## Page Specs
+
+### `/` — Homepage (`app/page.tsx`)
+**Screenshot:** `public/home_medvi_org_.png`
+
+Structure:
+1. **Nav** — sticky dark (`#242220`), MEDVi logo left, links center (Weight Loss / Peptides & Longevity / Men's Health / Women's Health), green GET STARTED button right
+2. **Hero** — deep forest green `#172B1F`, full-width. Static badge strip at top: "LICENSED MEDICAL PROVIDERS · 100% ONLINE · CLEAR PRICING · SHIPPED TO YOUR DOOR". Centered content: badge "Join 500,000+ MEDVi patients", H1 "Healthcare, redefined for real life.", subtext. 4 category pill tabs below. Thumbnail category cards (rounded, real CDN images).
+3. **Service sections** (alternating left/right layout, 8 total):
+   - Weight Loss, Women's Health (COMING SOON), Metabolic Nutrition/Meals, Supplements (COMING SOON), Men's Health, Peptides & Longevity (COMING SOON), Hair Restoration (COMING SOON), Skincare (COMING SOON)
+4. **Why MEDVi** — white background, 4 photo cards (grid), 2 feature text cards ("Everything all in one place" / "Unlimited 24/7 support")
+5. **Trust bar** — near-black `#1a1a1a`, 4 trust badges horizontal
+6. **Footer** — white
+
+### `/glp` — GLP-1 Marketing (`app/glp/page.tsx`)
+**Screenshot:** `public/glp_medvi_org_.png`
+
+- Separate dark nav: "Our Products / Real Results / How It Works / FAQs" + green GET STARTED
+- Hero: centered, "Finally serious about weight loss? So are we."
+- 5 pricing cards: GLP-1 Injections $179/mo (Popular), GLP-1 Tablets $249/mo, Wegovy® Pill $99+med, Wegovy® Injection $99+med, Zepbound® $99+med
+- Stats bar: 500k+ patients / 94% satisfaction / 87% hit goal / licensed providers
+- Science section, 4-step how it works, reviews
+- CTA to intake form
+
+### `/glp/intake` — GLP Intake Quiz (`app/glp/intake/page.tsx`)
+**Screenshot:** `public/glp_medvi_org_intakeform_php_afid_org.png`
+
+- `"use client"` component
+- Split layout: dark image left panel, form right panel
+- Progress bar at top (step X of Y)
+- Multi-step: height/weight inputs → goals → medical history → contact info
+- Next button disabled until required field filled
+
+### `/quad` — Men's Health Marketing (`app/quad/page.tsx`)
+**Screenshot:** `public/quad_medvi_org_.png`
+
+- Dark navy background `#060d1f` throughout
+- Hero: "Speed. Strength. Stamina." large centered headline
+- 4-in-1 formula explanation section
+- 3-step how it works
+- CTA to intake
+
+### `/quad/intake` — QUAD Intake Quiz (`app/quad/intake/page.tsx`)
+**Screenshot:** `public/quad_medvi_org_intake_nwpck.png`
+
+- `"use client"` component
+- Dark theme matching QUAD brand
+- Opening headline: "You Deserve a Better Sex Life."
+- Step 1: 5 radio goal cards with colored icons (Performance, Stamina, Energy, Confidence, All of the above)
+- Multi-step quiz flow, up to 15 steps
+
+### `/meals` — MEDVi Meals Landing (`app/meals/page.tsx`)
+**Screenshot:** `public/meals_medvi_org_.png`
+
+- **Separate brand identity** — uses "M" logo not MEDVi wordmark
+- Announcement bar with countdown timer at very top
+- Food photo hero with meal plan CTA
+- 3-step how it works (Choose → Delivered → Enjoy)
+- 8-meal photo grid
+- Plan builder: 6/10/14/18 meals per week options
+- Email signup section
+
+### `/meals/how-it-works` (`app/meals/how-it-works/page.tsx`)
+- 4-step alternating text/image layout
+- Dotted connecting line between steps
+
+### `/meals/programs` (`app/meals/programs/page.tsx`)
+- `"use client"` — interactive plan builder
+- Live price calculation as user selects meal count
+- "Add to Cart" / checkout flow
+
+### `/meals/faq` (`app/meals/faq/page.tsx`)
+- `"use client"` — accordion FAQ
+- 9 questions: 8 about ordering, 1 about meals
+- Click to expand/collapse
+
+### Legal Pages (all use `<LegalPage>` component)
+All at routes: `/terms-and-conditions`, `/privacy-policy`, `/notice-of-privacy-practices`, `/cancellation-and-refund-policy`, `/medical-consent`, `/privacy-statement-california`, `/bill-of-rights`
+
+**Screenshot example:** `public/home_medvi_org_cancellation_and_refund_policy.png`
+
+The `LegalPage` component accepts:
+```tsx
+interface LegalPageProps {
+  title: string;
+  lastUpdated?: string;
+  sections: {
+    heading?: string;
+    level?: 1 | 2 | 3;
+    body: string[];
+  }[];
+}
+```
 
 ---
 
-## Pricing (for a separate /pricing or glp page):
-- GLP-1 Injections: Starting at $179/month (Popular badge)
-- GLP-1 Tablets: Starting at $249/month
-- Wegovy® Pill: $99 Membership + Medication Cost
-- Wegovy® Injection: $99 Membership + Medication Cost
-- Zepbound® Injection: $99 Membership + Medication Cost
-- Note: "No membership or hidden fees!" for the base plans
+## Shared Components
+
+### `Nav.tsx`
+- Sticky, `position: sticky; top: 0; z-index: 50`
+- Background: `#242220`
+- MEDVi logo (white) left — links to `/`
+- Center nav links (white text, hover green): Weight Loss | Peptides & Longevity | Men's Health | Women's Health
+- Right: GET STARTED button (`bg-[#2e936f]` white text rounded-full)
+
+### `Footer.tsx`
+- Background: white `#ffffff`
+- Top row: MEDVi logo left, contact info right (help@medvi.org / (323) 690-1564 / 131 Continental Dr. Ste 305, Newark, DE 19713)
+- Legal links row: Terms & Conditions | Privacy Policy | Privacy Practices | Refund Policy | Medical Consent | For California Residents | Bill of Rights
+- Bottom row: "© 2026 MEDVi. All rights reserved" + LegitScript seal (links to legitscript.com verification)
+- Disclaimer text (tiny, gray): note about assessments, OpenLoop Health, FDA-regulated pharmacies, compounded GLP-1s
+
+---
+
+## Implementation Notes
+
+1. **All images load from Framer CDN** — use `next/image` with `unoptimized` prop and the full `https://framerusercontent.com/images/[ID]` URL. Never use local paths for images.
+
+2. **Meals and QUAD have separate brand identities** — do NOT use the shared `Nav`/`Footer` on those pages. They have their own nav bars.
+
+3. **"use client"** is required on any page with React state (intake quizzes, FAQ accordion, plan builder).
+
+4. **No apostrophe/quote escaping issues** — all legal page strings use backtick template literals for any string containing double quotes internally.
+
+5. **Tailwind + inline styles** — the codebase mixes both. Complex color values use `style={{ color: "#..." }}` since they're not in the default Tailwind palette.
+
+6. **Font loading** — fonts are loaded via `next/font/google` in `app/layout.tsx` and applied via CSS variables.
+
+---
+
+## Screenshots Index
+
+All screenshots are in `public/`. Key ones:
+
+| File | Shows |
+|------|-------|
+| `home_medvi_org_.png` | Homepage desktop |
+| `home_medvi_org__mobile.png` | Homepage mobile |
+| `glp_medvi_org_.png` | GLP marketing page |
+| `glp_medvi_org_intakeform_php_afid_org.png` | GLP intake form step 1 |
+| `quad_medvi_org_.png` | QUAD landing page |
+| `quad_medvi_org_intake_nwpck.png` | QUAD quiz step 1 |
+| `meals_medvi_org_.png` | Meals landing page |
+| `meals_medvi_org_pages_how_it_works.png` | Meals how-it-works |
+| `home_medvi_org_cancellation_and_refund_policy.png` | Legal page example |
+
+---
+
+## How to Use This Repo in v0
+
+1. Connect this GitHub repo to v0.dev
+2. v0 will read this file (`v0-prompt.md`) as context
+3. Reference existing files: e.g., "update app/glp/page.tsx to match the screenshot in public/glp_medvi_org_.png"
+4. All design decisions are documented above — no guessing needed
+5. The full scraped page data is in `public/all-pages.json` for any copy/content questions
