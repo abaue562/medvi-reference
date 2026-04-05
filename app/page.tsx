@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Nav from "./components/Nav";
 
 const CDN = "https://framerusercontent.com/images";
 
@@ -81,22 +82,7 @@ export default function Home() {
     <main style={{ fontFamily: "'Red Hat Text', sans-serif", backgroundColor: "#faf9f7", color: "#242220" }}>
 
       {/* ── Navbar ─────────────────────────────────────────────────── */}
-      <nav style={{ backgroundColor: "#242220", position: "sticky", top: 0, zIndex: 50 }}
-        className="px-6 lg:px-16 py-4 flex items-center justify-between">
-        <a href="/">
-          <Image src={IMG.logo} alt="ClínicaRenova" width={110} height={24} className="h-6 w-auto" unoptimized />
-        </a>
-        <div className="hidden md:flex gap-8 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
-          {[["Pérdida de Peso","#weight-loss"],["Péptidos y Longevidad","#peptides"],["Salud Masculina","#mens-health"],["Salud Femenina","#womens-health"]].map(([l,h])=>(
-            <a key={l} href={h} className="hover:text-white transition-colors">{l}</a>
-          ))}
-        </div>
-        <a href="/glp"
-          className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#2e936f" }}>
-          COMENZAR
-        </a>
-      </nav>
+      <Nav />
 
       {/* ── Hero — deep forest green ────────────────────────────────── */}
       <section style={{ backgroundColor: "#172B1F", position: "relative", overflow: "hidden" }}
