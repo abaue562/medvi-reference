@@ -129,13 +129,14 @@ export default function Home() {
         </p>
 
         {/* Category thumbnail cards */}
-        <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden grid grid-cols-4 mb-0"
+        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden grid grid-cols-5 mb-0"
           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
           {[
-            { label: "Pérdida de Peso",          img: IMG.heroThumbWL,  href: "#weight-loss" },
-            { label: "Péptidos y Longevidad", img: IMG.heroThumbPep, href: "#peptides" },
-            { label: "Salud Masculina",         img: IMG.heroThumbMen, href: "#mens-health" },
-            { label: "Salud Femenina",       img: IMG.heroThumbWom, href: "#womens-health" },
+            { label: "Pérdida de Peso",       img: IMG.heroThumbWL,  href: "#weight-loss" },
+            { label: "Nutrición",             img: IMG.meals,        href: "/meals" },
+            { label: "Salud Masculina",       img: IMG.heroThumbMen, href: "#mens-health" },
+            { label: "Salud Femenina",        img: IMG.heroThumbWom, href: "#womens-health" },
+            { label: "Péptidos",              img: IMG.heroThumbPep, href: "#peptides" },
           ].map(({ label, img, href }) => (
             <a key={label} href={href}
               className="flex flex-col items-center gap-3 p-5 hover:bg-white/5 transition-colors border-r last:border-r-0"

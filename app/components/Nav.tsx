@@ -21,7 +21,7 @@ export default function Nav() {
       <div className="hidden md:flex gap-8 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
         {[
           ["Pérdida de Peso", "/#weight-loss"],
-          ["Péptidos y Longevidad", "/#peptides"],
+          ["Nutrición", "/meals"],
           ["Salud Masculina", "/#mens-health"],
           ["Salud Femenina", "/#womens-health"],
         ].map(([label, href]) => (
