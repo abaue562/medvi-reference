@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -129,24 +130,33 @@ export default function MealsContactPage() {
 
       <MealsNav />
 
-      {/* Page Header */}
-      <section className="py-14 px-6 text-center" style={{ backgroundColor: "#f3f0eb" }}>
-        <div className="max-w-3xl mx-auto">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden" style={{ minHeight: "300px" }}>
+        <Image
+          src="https://framerusercontent.com/images/naCtfcJucSb08iZrMiFEu70fwNw.jpg"
+          alt="Contáctanos"
+          fill
+          unoptimized
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.60)" }} />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6" style={{ minHeight: "300px" }}>
           <p
-            className="text-xs font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#2e936f", fontFamily: "'Onest', sans-serif" }}
+            className="text-xs font-semibold tracking-widest uppercase mb-3 text-white/70"
+            style={{ fontFamily: "'Onest', sans-serif" }}
           >
             SOPORTE AL CLIENTE
           </p>
           <h1
-            className="text-4xl md:text-5xl font-black tracking-tight mb-4"
-            style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+            className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white"
+            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
             Contáctanos
           </h1>
           <p
-            className="text-base max-w-xl mx-auto"
-            style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
+            className="text-base max-w-xl mx-auto text-white/80"
+            style={{ fontFamily: "'Red Hat Text', sans-serif" }}
           >
             Nuestro equipo de atención al cliente está listo para ayudarte con cualquier duda.
             Escríbenos y te responderemos lo antes posible.

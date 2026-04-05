@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -126,18 +127,33 @@ const weekMenus: Record<number, Meal[]> = {
 
 const weeks = [110, 111, 112, 113, 114];
 
-function MealCard({ meal }: { meal: Meal }) {
+const mealImages = [
+  "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
+  "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
+  "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
+  "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
+  "https://framerusercontent.com/images/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png",
+  "https://framerusercontent.com/images/zmJZrAHLgexbSUaBuE8JSFohl8.png",
+  "https://framerusercontent.com/images/3YQLMZEk5tHlkmMh4CjpAifaEc.jpg",
+  "https://framerusercontent.com/images/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg",
+];
+
+function MealCard({ meal, index }: { meal: Meal; index: number }) {
+  const imgSrc = mealImages[index % mealImages.length];
   return (
     <div
       className="rounded-2xl overflow-hidden bg-white border"
       style={{ borderColor: "#e8e5e0" }}
     >
-      {/* Photo placeholder */}
-      <div
-        className="aspect-[4/3] flex items-center justify-center text-5xl"
-        style={{ backgroundColor: meal.color }}
-      >
-        {meal.emoji}
+      {/* Meal photo */}
+      <div className="aspect-[4/3] relative overflow-hidden">
+        <Image
+          src={imgSrc}
+          alt={meal.name}
+          fill
+          unoptimized
+          className="object-cover"
+        />
       </div>
 
       {/* Content */}
@@ -204,24 +220,33 @@ export default function MealsMenuPage() {
 
       <MealsNav />
 
-      {/* Page Header */}
-      <section className="py-14 px-6 text-center" style={{ backgroundColor: "#f3f0eb" }}>
-        <div className="max-w-3xl mx-auto">
+      {/* Hero Banner */}
+      <section className="relative overflow-hidden" style={{ minHeight: "320px" }}>
+        <Image
+          src="https://framerusercontent.com/images/naCtfcJucSb08iZrMiFEu70fwNw.jpg"
+          alt="Menú semanal"
+          fill
+          unoptimized
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.55)" }} />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6" style={{ minHeight: "320px" }}>
           <p
-            className="text-xs font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#2e936f", fontFamily: "'Onest', sans-serif" }}
+            className="text-xs font-semibold tracking-widest uppercase mb-3 text-white/70"
+            style={{ fontFamily: "'Onest', sans-serif" }}
           >
             MENÚ SEMANAL
           </p>
           <h1
-            className="text-4xl md:text-5xl font-black tracking-tight mb-4"
-            style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+            className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white"
+            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
             SELECCIONES DEL MENÚ SEMANAL
           </h1>
           <p
-            className="text-base max-w-xl mx-auto"
-            style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
+            className="text-base max-w-xl mx-auto text-white/80"
+            style={{ fontFamily: "'Red Hat Text', sans-serif" }}
           >
             Más de 75 comidas rotativas curadas por chefs, preparadas frescas cada semana.
             Cada plato está optimizado para tus metas con macros balanceados.
@@ -258,8 +283,8 @@ export default function MealsMenuPage() {
 
           {/* Meal Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 pb-16">
-            {weekMenus[selectedWeek].map((meal) => (
-              <MealCard key={meal.name} meal={meal} />
+            {weekMenus[selectedWeek].map((meal, idx) => (
+              <MealCard key={meal.name} meal={meal} index={idx} />
             ))}
           </div>
 

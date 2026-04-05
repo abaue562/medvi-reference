@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,12 +9,13 @@ function MealsNav() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/meals">
-          <span
-            className="text-3xl font-black text-black"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            M
-          </span>
+          <Image
+            src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+            alt="Meals logo"
+            width={40}
+            height={40}
+            unoptimized
+          />
         </Link>
 
         <div className="flex items-center gap-3">
@@ -41,6 +43,14 @@ type SelectedMeal = {
   color: string;
   emoji: string;
 };
+
+const orderMealImages = [
+  "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
+  "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
+  "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
+  "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
+  "https://framerusercontent.com/images/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png",
+];
 
 const orderMeals: SelectedMeal[] = [
   { name: "Bowl de Pollo BBQ", qty: 2, cal: 420, color: "#fcd5b5", emoji: "🍗" },
@@ -184,17 +194,20 @@ export default function MealsOrderPage() {
                 </h2>
 
                 <div className="space-y-3">
-                  {meals.map((meal) => (
+                  {meals.map((meal, idx) => (
                     <div
                       key={meal.name}
                       className="flex items-center gap-4 p-3 rounded-xl"
                       style={{ backgroundColor: "#faf9f7" }}
                     >
-                      <div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
-                        style={{ backgroundColor: meal.color }}
-                      >
-                        {meal.emoji}
+                      <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0 relative">
+                        <Image
+                          src={orderMealImages[idx % orderMealImages.length]}
+                          alt={meal.name}
+                          fill
+                          unoptimized
+                          className="object-cover"
+                        />
                       </div>
                       <div className="flex-1 min-w-0">
                         <p

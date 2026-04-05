@@ -70,6 +70,17 @@ export default function QuadApprovalPage() {
 
       {/* Hero — Approval Banner */}
       <section className="pt-16 pb-12 px-6 text-center relative overflow-hidden">
+        {/* Hero background image */}
+        <div className="absolute inset-0 overflow-hidden">
+          <Image
+            src="https://framerusercontent.com/images/6YhaoNUtBTiFwuXYBUD7Gi0ss.jpg"
+            alt="QUAD hero"
+            fill
+            unoptimized
+            className="object-cover opacity-20"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(6,13,31,0.6) 0%, rgba(6,13,31,0.85) 100%)" }} />
+        </div>
         {/* Background glow */}
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full opacity-25 blur-3xl pointer-events-none"
@@ -182,25 +193,39 @@ export default function QuadApprovalPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-            {qualifications.map((q) => (
-              <div
-                key={q.label}
-                className="p-5 rounded-2xl flex items-center gap-3"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(59,130,246,0.15)",
-                }}
-              >
-                <span className="text-2xl flex-shrink-0">{q.icon}</span>
-                <p
-                  className="text-sm font-medium text-white/80"
-                  style={{ fontFamily: "'Red Hat Text', sans-serif" }}
+          <div className="grid md:grid-cols-2 gap-8 mb-10 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              {qualifications.map((q) => (
+                <div
+                  key={q.label}
+                  className="p-5 rounded-2xl flex items-center gap-3"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(59,130,246,0.15)",
+                  }}
                 >
-                  {q.label}
-                </p>
+                  <span className="text-2xl flex-shrink-0">{q.icon}</span>
+                  <p
+                    className="text-sm font-medium text-white/80"
+                    style={{ fontFamily: "'Red Hat Text', sans-serif" }}
+                  >
+                    {q.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+            {/* Product image */}
+            <div className="flex justify-center">
+              <div className="relative" style={{ width: "280px", height: "320px" }}>
+                <Image
+                  src="https://framerusercontent.com/images/nrGxwSsRFp57MwVq6ihfcnRm8bA.png"
+                  alt="QUAD product"
+                  fill
+                  unoptimized
+                  className="object-contain"
+                />
               </div>
-            ))}
+            </div>
           </div>
 
           {/* Ingredients */}
@@ -217,6 +242,16 @@ export default function QuadApprovalPage() {
             >
               FÓRMULA 4 EN 1 — INGREDIENTES ACTIVOS
             </p>
+            {/* Ingredients image */}
+            <div className="relative w-full rounded-xl overflow-hidden mb-5" style={{ height: "200px" }}>
+              <Image
+                src="https://framerusercontent.com/images/ntqVQOpXgrrjXKAUz9BTmnE2u0I.png"
+                alt="QUAD ingredientes"
+                fill
+                unoptimized
+                className="object-cover"
+              />
+            </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 { name: "Apomorfina", role: "Activa el deseo" },

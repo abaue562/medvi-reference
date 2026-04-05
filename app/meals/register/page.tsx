@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -71,46 +72,38 @@ export default function MealsRegisterPage() {
       <MealsNav />
 
       <div className="flex min-h-[calc(100vh-73px)]">
-        {/* Left — Brand Panel */}
-        <div
-          className="hidden lg:flex flex-col justify-center px-16 w-[480px] flex-shrink-0"
-          style={{ backgroundColor: "#242220" }}
-        >
-          <span
-            className="text-6xl font-black text-white mb-6"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            M
-          </span>
-          <h2
-            className="text-3xl font-black text-white mb-4 leading-tight"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            Comidas saludables listas para comer.
-          </h2>
-          <p
-            className="text-white/60 text-base leading-relaxed mb-8"
-            style={{ fontFamily: "'Red Hat Text', sans-serif" }}
-          >
-            Crea tu cuenta de ClínicaRenova Nutrición para finalizar tu pedido y empezar
-            a recibir comidas frescas cada semana.
-          </p>
-
-          <div className="space-y-3">
-            {[
-              "✓  Más de 75 comidas para elegir cada semana",
-              "✓  Entregadas frescas, no congeladas",
-              "✓  Cancela cuando quieras",
-              "✓  Envío gratuito en todo el país",
-            ].map((item) => (
-              <p
-                key={item}
-                className="text-sm text-white/70"
-                style={{ fontFamily: "'Red Hat Text', sans-serif" }}
-              >
-                {item}
-              </p>
-            ))}
+        {/* Left — Image Panel */}
+        <div className="hidden lg:block relative w-[480px] flex-shrink-0">
+          <Image
+            src="https://framerusercontent.com/images/naCtfcJucSb08iZrMiFEu70fwNw.jpg"
+            alt="Comidas saludables"
+            fill
+            unoptimized
+            className="object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%)" }} />
+          <div className="absolute inset-0 flex flex-col justify-end px-12 pb-14 z-10">
+            <Image
+              src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+              alt="Meals logo"
+              width={56}
+              height={56}
+              unoptimized
+              className="mb-5"
+            />
+            <h2
+              className="text-3xl font-black text-white mb-3 leading-tight"
+              style={{ fontFamily: "'Red Hat Display', sans-serif" }}
+            >
+              Comidas saludables listas para comer.
+            </h2>
+            <p
+              className="text-white/70 text-sm leading-relaxed"
+              style={{ fontFamily: "'Red Hat Text', sans-serif" }}
+            >
+              Crea tu cuenta de ClínicaRenova Nutrición para finalizar tu pedido y empezar
+              a recibir comidas frescas cada semana.
+            </p>
           </div>
         </div>
 

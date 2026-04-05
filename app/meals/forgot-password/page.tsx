@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,12 +9,13 @@ function MealsNav() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/meals">
-          <span
-            className="text-3xl font-black text-black"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            M
-          </span>
+          <Image
+            src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+            alt="Meals logo"
+            width={40}
+            height={40}
+            unoptimized
+          />
         </Link>
 
         <div className="flex items-center gap-3">
@@ -58,6 +60,18 @@ export default function ForgotPasswordPage() {
 
       <div className="flex items-center justify-center min-h-[calc(100vh-73px)] px-6 py-14">
         <div className="w-full max-w-md">
+
+          {/* Food image above card */}
+          <div className="relative w-full rounded-2xl overflow-hidden mb-6" style={{ height: "160px" }}>
+            <Image
+              src="https://framerusercontent.com/images/naCtfcJucSb08iZrMiFEu70fwNw.jpg"
+              alt="Comidas saludables"
+              fill
+              unoptimized
+              className="object-cover"
+            />
+            <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.35)" }} />
+          </div>
 
           {/* Card */}
           <div

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -70,14 +71,14 @@ const priceMap: Record<number, { weekly: string; perMeal: string }> = {
 };
 
 const sampleMeals = [
-  { name: "Bowl de Pollo BBQ", color: "#fcd5b5", emoji: "🍗" },
-  { name: "Pasta Bolognese de Res", color: "#fce4d6", emoji: "🍝" },
-  { name: "Pollo Teriyaki", color: "#d5f5e3", emoji: "🍱" },
-  { name: "Bowl de Bulgogi", color: "#d6eaf8", emoji: "🥢" },
-  { name: "Filete Chimichurri", color: "#d5f5e3", emoji: "🥩" },
-  { name: "Camarones al Ajo", color: "#f9e4b7", emoji: "🦐" },
-  { name: "Wrap César de Pollo", color: "#fef9e7", emoji: "🥙" },
-  { name: "Carnitas Bajo en Carbos", color: "#fde8d8", emoji: "🥑" },
+  { name: "Bowl de Pollo BBQ", color: "#fcd5b5", emoji: "🍗", img: "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png" },
+  { name: "Pasta Bolognese de Res", color: "#fce4d6", emoji: "🍝", img: "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png" },
+  { name: "Pollo Teriyaki", color: "#d5f5e3", emoji: "🍱", img: "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png" },
+  { name: "Bowl de Bulgogi", color: "#d6eaf8", emoji: "🥢", img: "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png" },
+  { name: "Filete Chimichurri", color: "#d5f5e3", emoji: "🥩", img: "https://framerusercontent.com/images/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png" },
+  { name: "Camarones al Ajo", color: "#f9e4b7", emoji: "🦐", img: "https://framerusercontent.com/images/zmJZrAHLgexbSUaBuE8JSFohl8.png" },
+  { name: "Wrap César de Pollo", color: "#fef9e7", emoji: "🥙", img: "https://framerusercontent.com/images/3YQLMZEk5tHlkmMh4CjpAifaEc.jpg" },
+  { name: "Carnitas Bajo en Carbos", color: "#fde8d8", emoji: "🥑", img: "https://framerusercontent.com/images/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg" },
 ];
 
 const faqItems = [
@@ -119,23 +120,32 @@ export default function PlaceFirstOrderPage() {
       <MealsNav />
 
       {/* Hero */}
-      <section className="py-14 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="relative overflow-hidden" style={{ minHeight: "300px" }}>
+        <Image
+          src="https://framerusercontent.com/images/naCtfcJucSb08iZrMiFEu70fwNw.jpg"
+          alt="Primer pedido"
+          fill
+          unoptimized
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.55)" }} />
+        <div className="relative z-10 flex flex-col items-center justify-center text-center py-20 px-6" style={{ minHeight: "300px" }}>
           <p
-            className="text-xs font-semibold tracking-widest uppercase mb-3"
-            style={{ color: "#2e936f", fontFamily: "'Onest', sans-serif" }}
+            className="text-xs font-semibold tracking-widest uppercase mb-3 text-white/70"
+            style={{ fontFamily: "'Onest', sans-serif" }}
           >
             PRIMER PEDIDO
           </p>
           <h1
-            className="text-4xl md:text-5xl font-black tracking-tight mb-4"
-            style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+            className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white"
+            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
             CREA TU PRIMERA CAJA CON CLINICARENOVA NUTRICIÓN
           </h1>
           <p
-            className="text-base max-w-2xl mx-auto"
-            style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
+            className="text-base max-w-2xl mx-auto text-white/80"
+            style={{ fontFamily: "'Red Hat Text', sans-serif" }}
           >
             Descubre más de 75 comidas semanales rotativas, ligeras, deliciosas y ricas en
             macronutrientes. Modifica, pausa o cancela cuando quieras, sin complicaciones.
@@ -329,16 +339,24 @@ export default function PlaceFirstOrderPage() {
             {sampleMeals.map((meal) => (
               <div
                 key={meal.name}
-                className="rounded-2xl overflow-hidden aspect-square flex flex-col items-center justify-center gap-2 p-4"
-                style={{ backgroundColor: meal.color }}
+                className="rounded-2xl overflow-hidden aspect-square relative"
               >
-                <span className="text-3xl">{meal.emoji}</span>
-                <span
-                  className="text-sm font-bold text-center leading-snug"
-                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
-                >
-                  {meal.name}
-                </span>
+                <Image
+                  src={meal.img}
+                  alt={meal.name}
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+                <div className="absolute inset-0" style={{ background: "rgba(0,0,0,0.35)" }} />
+                <div className="absolute inset-0 flex items-end p-3">
+                  <span
+                    className="text-sm font-bold text-white leading-snug"
+                    style={{ fontFamily: "'Red Hat Display', sans-serif" }}
+                  >
+                    {meal.name}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
