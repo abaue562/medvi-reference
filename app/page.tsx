@@ -152,13 +152,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Badge strip (ticker) ────────────────────────────────────── */}
-      <div className="bg-white border-b overflow-x-auto" style={{ borderColor: "#e8e5e0" }}>
-        <div className="flex items-center divide-x divide-[#e8e5e0] min-w-max mx-auto">
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map(({ label }, i) => (
-            <div key={i} className="flex items-center gap-2 px-8 py-4 text-xs font-semibold tracking-widest uppercase whitespace-nowrap"
-              style={{ color: "#242220", fontFamily: "'Onest', sans-serif" }}>
-              <span className="w-4 h-4 rounded-full inline-block" style={{ backgroundColor: "#2e936f", opacity: 0.3 }} />
+      {/* ── Badge strip (continuous marquee) ───────────────────────── */}
+      <div className="bg-white border-b overflow-hidden" style={{ borderColor: "#e8e5e0" }}>
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 18s linear infinite;
+          }
+        `}</style>
+        <div className="marquee-track">
+          {[...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS].map(({ label }, i) => (
+            <div key={i} className="flex items-center gap-2 px-8 py-4 text-xs font-semibold tracking-widest uppercase whitespace-nowrap border-r"
+              style={{ color: "#242220", fontFamily: "'Onest', sans-serif", borderColor: "#e8e5e0" }}>
+              <span className="w-4 h-4 rounded-full inline-block shrink-0" style={{ backgroundColor: "#2e936f", opacity: 0.3 }} />
               {label}
             </div>
           ))}
