@@ -247,7 +247,7 @@ export default function Home() {
       <section id="womens-health" className="px-6 lg:px-16 py-20" style={{ backgroundColor: "#faf9f7" }}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Photos */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pointer-events-none">
             <Image src={IMG.womens1} alt="" width={619} height={823} className="w-1/2 rounded-3xl object-cover" unoptimized />
             <Image src={IMG.womens2} alt="" width={800} height={966} className="w-1/2 rounded-3xl object-cover mt-10" unoptimized />
           </div>
@@ -288,7 +288,7 @@ export default function Home() {
             <CTAButton href="/meals">COMENZAR</CTAButton>
           </div>
           {/* Food photo */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pointer-events-none">
             <Image src={IMG.meals} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover" unoptimized />
             <Image src={IMG.meals2} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover mt-10" unoptimized />
           </div>
@@ -345,7 +345,7 @@ export default function Home() {
             <CTAButton href="/quad">COMENZAR</CTAButton>
           </div>
           {/* Photos */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pointer-events-none">
             <Image src={IMG.mens1} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover" unoptimized />
             <Image src={IMG.mens2} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover mt-10" unoptimized />
           </div>
@@ -356,7 +356,7 @@ export default function Home() {
       <section id="peptides" className="px-6 lg:px-16 py-20" style={{ backgroundColor: "#faf9f7" }}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Photos */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pointer-events-none">
             <Image src={IMG.peptides1} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover" unoptimized />
             <Image src={IMG.peptides2} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover mt-10" unoptimized />
           </div>
@@ -397,7 +397,7 @@ export default function Home() {
             <ComingSoon />
           </div>
           {/* Photos */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pointer-events-none">
             <Image src={IMG.hair1} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover" unoptimized />
             <Image src={IMG.hair2} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover mt-10" unoptimized />
           </div>
@@ -408,7 +408,7 @@ export default function Home() {
       <section id="skincare" className="px-6 lg:px-16 py-20" style={{ backgroundColor: "#faf9f7" }}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Photos */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 pointer-events-none">
             <Image src={IMG.skin1} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover" unoptimized />
             <Image src={IMG.skin2} alt="" width={604} height={892} className="w-1/2 rounded-3xl object-cover mt-10" unoptimized />
           </div>
