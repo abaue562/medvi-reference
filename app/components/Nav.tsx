@@ -23,7 +23,7 @@ export default function Nav() {
   return (
     <>
       <nav
-        style={{ backgroundColor: "#242220", position: "sticky", top: 0, zIndex: 50 }}
+        style={{ backgroundColor: "#172B1F", position: "sticky", top: 0, zIndex: 50 }}
         className="px-6 lg:px-16 py-4 flex items-center justify-between"
       >
         {/* Logo */}
@@ -69,7 +69,7 @@ export default function Nav() {
         >
           <div
             className="absolute top-[57px] right-0 w-72 shadow-2xl"
-            style={{ backgroundColor: "#242220" }}
+            style={{ backgroundColor: "#172B1F" }}
             onClick={e => e.stopPropagation()}
           >
             <div className="flex flex-col py-4">
