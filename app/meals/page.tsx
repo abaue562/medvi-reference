@@ -2,14 +2,34 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const NAV_LINKS = [
+  { label: "MENÚ SEMANAL", href: "/meals/menu" },
+  { label: "PROGRAMAS", href: "/meals/programs" },
+  { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
+  { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
+  { label: "CONTACTO", href: "/meals/contact" },
+];
 
 function MealsNav() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/meals">
+        {/* Left: hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="flex flex-col gap-1.5 p-1 focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <span className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-gray-800 transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+        </button>
+
+        {/* Center: logo */}
+        <Link href="/meals" className="absolute left-1/2 -translate-x-1/2">
           <Image
             src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
             alt="ClínicaRenova Nutrición"
@@ -19,49 +39,69 @@ function MealsNav() {
           />
         </Link>
 
-        {/* Center Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {[
-            { label: "MENÚ SEMANAL", href: "/meals/menu" },
-            { label: "PROGRAMAS", href: "/meals/programs" },
-            { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-            { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-            { label: "CONTACTO", href: "/meals/contact" },
-          ].map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className="text-xs font-semibold tracking-widest text-gray-700 hover:text-black transition-colors"
-              style={{ fontFamily: "'Onest', sans-serif" }}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
-
-        {/* Right buttons */}
+        {/* Right: login + sign up */}
         <div className="flex items-center gap-3">
-          <Link
-            href="/meals/login"
-            className="px-4 py-2 rounded-pill text-sm font-semibold border transition-colors hover:bg-gray-50"
-            style={{
-              borderColor: "#d1d5db",
-              color: "#242220",
-              fontFamily: "'Red Hat Text', sans-serif",
-            }}
-          >
+          <Link href="/meals/login"
+            className="text-xs font-bold tracking-widest uppercase px-4 py-2 border rounded-full transition-colors hover:bg-gray-50"
+            style={{ borderColor: "#d1d5db", color: "#242220", fontFamily: "'Onest', sans-serif" }}>
             INGRESAR
           </Link>
-          <Link
-            href="/meals/programs"
-            className="px-5 py-2 rounded-pill text-sm font-bold text-white transition-all hover:opacity-90"
-            style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            Suscribirme
+          <Link href="/meals/place-first-order"
+            className="text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full text-white transition-opacity hover:opacity-90"
+            style={{ backgroundColor: "#2e936f", fontFamily: "'Onest', sans-serif" }}>
+            REGISTRARSE
           </Link>
         </div>
       </div>
+
+      {/* Dropdown menu */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white border-b shadow-lg z-50">
+          <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
+            {NAV_LINKS.map((link) => (
+              <Link key={link.label} href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-sm font-bold tracking-widest uppercase text-gray-800 hover:text-black transition-colors py-2 border-b border-gray-100 last:border-0"
+                style={{ fontFamily: "'Onest', sans-serif" }}>
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
+  );
+}
+
+const SLIDE_IMGS = [
+  "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
+  "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
+  "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
+  "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
+  "https://framerusercontent.com/images/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png",
+  "https://framerusercontent.com/images/zmJZrAHLgexbSUaBuE8JSFohl8.png",
+  "https://framerusercontent.com/images/3YQLMZEk5tHlkmMh4CjpAifaEc.jpg",
+  "https://framerusercontent.com/images/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg",
+];
+
+function MealSlider() {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setCurrent(c => (c + 1) % SLIDE_IMGS.length), 2500);
+    return () => clearInterval(t);
+  }, []);
+  // Show 4 images starting from current, wrapping around
+  const visible = [0, 1, 2, 3].map(i => SLIDE_IMGS[(current + i) % SLIDE_IMGS.length]);
+  return (
+    <div className="flex gap-3 mb-10 max-w-2xl mx-auto overflow-hidden">
+      {visible.map((src, i) => (
+        <div key={src + i}
+          className="flex-1 aspect-square rounded-2xl overflow-hidden relative transition-all duration-700"
+          style={{ opacity: i === 0 ? 0.7 : 1, transform: i === 0 ? "scale(0.95)" : "scale(1)" }}>
+          <Image src={src} alt="" fill unoptimized className="object-cover" />
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -113,22 +153,8 @@ export default function MealsPage() {
       {/* Hero */}
       <section className="py-16 px-6" style={{ backgroundColor: "#faf9f7" }}>
         <div className="max-w-5xl mx-auto text-center">
-          {/* Food collage */}
-          <div className="grid grid-cols-4 gap-3 mb-10 max-w-2xl mx-auto">
-            {[
-              "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
-              "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
-              "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
-              "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
-            ].map((src, i) => (
-              <div
-                key={i}
-                className="aspect-square rounded-2xl overflow-hidden relative"
-              >
-                <Image src={src} alt="" fill unoptimized className="object-cover" />
-              </div>
-            ))}
-          </div>
+          {/* Auto-sliding meal carousel */}
+          <MealSlider />
 
           <h1
             className="text-7xl md:text-8xl font-black tracking-tight mb-4"
