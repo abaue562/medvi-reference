@@ -242,17 +242,19 @@ export default function GlpIntakePage() {
               </div>
             </div>
 
-            <button
-              disabled={!isValid}
-              className="w-full mt-8 py-4 rounded-pill text-base font-bold text-white transition-all"
+            <a
+              href={isValid ? "/glp/intake" : undefined}
+              aria-disabled={!isValid}
+              className="w-full mt-8 py-4 rounded-pill text-base font-bold text-white transition-all block text-center"
               style={{
                 backgroundColor: isValid ? "#2e936f" : "#d1d5db",
                 cursor: isValid ? "pointer" : "not-allowed",
                 fontFamily: "'Red Hat Display', sans-serif",
+                pointerEvents: isValid ? "auto" : "none",
               }}
             >
               Siguiente →
-            </button>
+            </a>
 
             <p
               className="text-center text-xs mt-4"

@@ -120,7 +120,7 @@ export default function MealsLoginPage() {
               </p>
             </div>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.location.href = "/meals/place-first-order"; }}>
               {/* Email */}
               <div>
                 <label

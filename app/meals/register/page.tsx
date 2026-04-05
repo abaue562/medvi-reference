@@ -126,7 +126,7 @@ export default function MealsRegisterPage() {
               </p>
             </div>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.location.href = "/meals/place-first-order"; }}>
               {/* Name row */}
               <div className="grid grid-cols-2 gap-4">
                 <div>

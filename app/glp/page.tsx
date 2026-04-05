@@ -103,8 +103,17 @@ export default function GlpPage() {
       <GlpNav />
 
       {/* Hero */}
-      <section className="py-20 px-6 text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-20 px-6 text-center relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://framerusercontent.com/images/3b210go7xrqsX3cBCZkQjPg7lc.png"
+            alt=""
+            fill
+            unoptimized
+            className="object-cover opacity-15"
+          />
+        </div>
+        <div className="max-w-3xl mx-auto relative z-10">
           <h1
             className="text-5xl md:text-6xl font-bold leading-tight mb-6"
             style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}

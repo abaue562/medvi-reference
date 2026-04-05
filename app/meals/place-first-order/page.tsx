@@ -276,7 +276,7 @@ export default function PlaceFirstOrderPage() {
             >
               3. VERIFICA TU CÓDIGO POSTAL
             </h3>
-            <div className="flex gap-3">
+            <form className="flex gap-3" onSubmit={(e) => e.preventDefault()}>
               <input
                 type="text"
                 placeholder="Código postal"
@@ -288,12 +288,13 @@ export default function PlaceFirstOrderPage() {
                 }}
               />
               <button
+                type="submit"
                 className="px-6 py-3 rounded-xl text-sm font-bold text-white whitespace-nowrap"
                 style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
               >
                 Verificar
               </button>
-            </div>
+            </form>
             <p
               className="text-xs mt-3"
               style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
@@ -436,12 +437,13 @@ export default function PlaceFirstOrderPage() {
       <footer className="bg-white border-t py-10 px-6" style={{ borderColor: "#e8e5e0" }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
-            <span
-              className="text-3xl font-black text-black"
-              style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-            >
-              M
-            </span>
+            <Image
+              src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+              alt="ClínicaRenova Nutrición"
+              width={40}
+              height={40}
+              unoptimized
+            />
             <div className="flex flex-wrap justify-center gap-6">
               {[
                 { label: "MENÚ SEMANAL", href: "/meals/menu" },

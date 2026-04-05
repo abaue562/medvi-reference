@@ -268,12 +268,13 @@ export default function MealsHowItWorksPage() {
       <footer className="bg-white border-t py-10 px-6" style={{ borderColor: "#e8e5e0" }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
-            <span
-              className="text-3xl font-black text-black"
-              style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-            >
-              M
-            </span>
+            <Image
+              src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+              alt="ClínicaRenova Nutrición"
+              width={40}
+              height={40}
+              unoptimized
+            />
             <div className="flex flex-wrap justify-center gap-6">
               {[
                 { label: "MENÚ SEMANAL", href: "/meals/menu" },
