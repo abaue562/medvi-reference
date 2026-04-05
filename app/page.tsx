@@ -6,7 +6,7 @@ const IMG = {
   logo:          `${CDN}/1BRDkIzVV7TxG8fJDyUWdUDDE.png`,
   // Hero thumbnails
   heroThumbWL:   `${CDN}/M9XaNbbDAjo8pUf3JffgMRQ44.png`,
-  heroThumbPep:  `${CDN}/zmJZrAHLgexbSUaBuE8JSFohl8.png`,
+  heroThumbPep:  `${CDN}/eNSyOYR4nWN2eC2kBvfFakC0Jc.png`,
   heroThumbMen:  `${CDN}/6NG7JMcShVQy0ZvhiVszVR6REZg.jpg`,
   heroThumbWom:  `${CDN}/vyhgfyTZdnvKgcOFSsKadXmcI.png`,
   // Weight loss
@@ -26,8 +26,8 @@ const IMG = {
   mens1:         `${CDN}/nrGxwSsRFp57MwVq6ihfcnRm8bA.png`,
   mens2:         `${CDN}/9WyYelkv3EfaJFi50PZydNSt2ws.png`,
   // Peptides
-  peptides1:     `${CDN}/WUFCBuh0wNjDvRv5B5ZqEH4mjA.png`,
-  peptides2:     `${CDN}/ihBupsd47mUBkztGVAMt31VNRN4.png`,
+  peptides1:     `${CDN}/h93zMm4ey20O082JGj8IZMrl3I.png`,
+  peptides2:     `${CDN}/ntqVQOpXgrrjXKAUz9BTmnE2u0I.png`,
   // Hair
   hair1:         `${CDN}/paOnEoR3Gqf2LWRZGYBJ2Uokw.png`,
   hair2:         `${CDN}/vC7EYvFVXWs3QWn7JLdi51Vvd7s.png`,
