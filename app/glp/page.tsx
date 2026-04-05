@@ -6,6 +6,17 @@ import { useState, useEffect } from "react";
 
 const BASE = "https://framerusercontent.com/images/";
 
+// ─── ANNOUNCEMENT BAR ───────────────────────────────────────────────────────
+function AnnouncementBar() {
+  return (
+    <div className="w-full text-center py-2.5 px-4 text-sm font-semibold" style={{ backgroundColor: "#ffffff", borderBottom: "1px solid #e8e5e0" }}>
+      <span style={{ color: "#2e936f", fontFamily: "'Red Hat Text', sans-serif" }}>
+        ¡Promo de <strong>PRIMAVERA</strong>! Solo $179 + Envío Rápido y Gratuito
+      </span>
+    </div>
+  );
+}
+
 // ─── NAV ────────────────────────────────────────────────────────────────────
 function GlpNav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,72 +39,69 @@ function GlpNav() {
           <Image
             src={`${BASE}1BRDkIzVV7TxG8fJDyUWdUDDE.png`}
             alt="ClínicaRenova"
-            width={100}
+            width={110}
             height={30}
             unoptimized
-            className="brightness-0 invert"
           />
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              className="text-sm font-medium hover:text-black transition-colors whitespace-nowrap"
-              style={{ color: "#555", fontFamily: "'Red Hat Text', sans-serif" }}
-            >
-              {l.label}
-            </a>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <Link
-          href="/glp/intake"
-          className="hidden lg:inline-block px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all hover:opacity-90 whitespace-nowrap"
-          style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
-        >
-          COMENZAR
-        </Link>
-
-        {/* Mobile hamburger */}
-        <button
-          className="lg:hidden text-gray-800"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menú"
-        >
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            {menuOpen
-              ? <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              : <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />}
-          </svg>
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div className="lg:hidden px-6 pb-4 border-t" style={{ backgroundColor: "#ffffff", borderColor: "#e8e5e0" }}>
-          {navLinks.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              onClick={() => setMenuOpen(false)}
-              className="block py-2 text-sm hover:text-black transition-colors"
-              style={{ color: "#555", fontFamily: "'Red Hat Text', sans-serif" }}
-            >
-              {l.label}
-            </a>
-          ))}
+        {/* Right: CTA pill + hamburger */}
+        <div className="flex items-center gap-3">
           <Link
             href="/glp/intake"
-            onClick={() => setMenuOpen(false)}
-            className="mt-3 block text-center py-3 rounded-full text-sm font-bold text-white"
-            style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
+            className="px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all hover:opacity-90 whitespace-nowrap"
+            style={{ backgroundColor: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
           >
             COMENZAR
           </Link>
+
+          <button
+            className="flex flex-col gap-1.5 p-1 focus:outline-none"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menú"
+          >
+            <span className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-gray-800 transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-gray-800 transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          </button>
+        </div>
+      </div>
+
+      {/* Dropdown menu */}
+      {menuOpen && (
+        <div
+          className="fixed top-0 left-0 w-full h-full z-40"
+          onClick={() => setMenuOpen(false)}
+        >
+          <div
+            className="absolute right-0 w-72 shadow-2xl border-t"
+            style={{ backgroundColor: "#ffffff", borderColor: "#e8e5e0", top: "65px" }}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className="flex flex-col py-4">
+              {navLinks.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="px-8 py-3.5 text-sm font-semibold tracking-wide border-b hover:bg-gray-50 transition-colors"
+                  style={{ color: "#242220", borderColor: "#f0ede8", fontFamily: "'Red Hat Text', sans-serif" }}
+                >
+                  {l.label}
+                </a>
+              ))}
+              <div className="px-8 pt-5 pb-2">
+                <Link
+                  href="/glp/intake"
+                  onClick={() => setMenuOpen(false)}
+                  className="block text-center text-white text-xs font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#2e936f" }}
+                >
+                  COMENZAR
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </nav>
@@ -118,7 +126,6 @@ function HeroCarousel() {
     const t = setInterval(() => setOffset(o => o + 1), 2000);
     return () => clearInterval(t);
   }, []);
-  // Two columns scrolling at different speeds
   const col1 = [...ALL_LIFESTYLE, ...ALL_LIFESTYLE];
   const col2 = [...ALL_LIFESTYLE.slice(3), ...ALL_LIFESTYLE.slice(0, 3), ...ALL_LIFESTYLE];
   return (
@@ -147,11 +154,9 @@ function HeroCarousel() {
 
 // ─── HERO ───────────────────────────────────────────────────────────────────
 function HeroSection() {
-
   return (
     <section className="relative overflow-hidden py-16 md:py-24 px-6" style={{ backgroundColor: "#faf9f7" }}>
       <div className="max-w-7xl mx-auto">
-        {/* Two-column: text left, grid right on desktop; stacked on mobile */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left: headline + CTA */}
           <div className="lg:w-1/2 text-center lg:text-left">
@@ -204,25 +209,43 @@ function HeroSection() {
 }
 
 // ─── PRESS / TRUST BAR ──────────────────────────────────────────────────────
+const PRESS_LOGOS = [
+  "The New York Times",
+  "Bloomberg",
+  "Forbes",
+  "healthline",
+  "WebMD",
+  "FORTUNE",
+  "FAST COMPANY",
+];
+
 function PressBar() {
-  const logos = [
-    "Yahoo Finance", "Forbes", "Bloomberg", "Healthline", "SELF", "Fortune",
-  ];
   return (
-    <section className="py-8 px-6 border-y" style={{ backgroundColor: "#f3f0eb", borderColor: "#e8e5e0" }}>
-      <div className="max-w-5xl mx-auto">
-        <p className="text-center text-xs tracking-widest uppercase mb-5 text-gray-400"
-          style={{ fontFamily: "'Onest', sans-serif" }}>
-          Presencia en los principales medios
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-8">
-          {logos.map((logo) => (
-            <span key={logo} className="text-gray-300 font-bold text-lg tracking-wide"
-              style={{ fontFamily: "'Red Hat Display', sans-serif" }}>
-              {logo}
-            </span>
-          ))}
-        </div>
+    <section className="py-8 border-y overflow-hidden" style={{ backgroundColor: "#f3f0eb", borderColor: "#e8e5e0" }}>
+      <p className="text-center text-xs tracking-widest uppercase mb-5 text-gray-400"
+        style={{ fontFamily: "'Onest', sans-serif" }}>
+        Orgullosos de aparecer en
+      </p>
+      <style>{`
+        @keyframes pressMarquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .press-track {
+          display: flex;
+          align-items: center;
+          gap: 60px;
+          width: max-content;
+          animation: pressMarquee 18s linear infinite;
+        }
+      `}</style>
+      <div className="press-track">
+        {[...PRESS_LOGOS, ...PRESS_LOGOS].map((logo, i) => (
+          <span key={i} className="font-bold text-lg tracking-wide whitespace-nowrap"
+            style={{ color: "#b0a89a", fontFamily: logo === "healthline" ? "'Red Hat Text', sans-serif" : "'Red Hat Display', sans-serif" }}>
+            {logo}
+          </span>
+        ))}
       </div>
     </section>
   );
@@ -1239,6 +1262,7 @@ function GlpFooter() {
 export default function GlpPage() {
   return (
     <div style={{ backgroundColor: "#faf9f7" }} className="min-h-screen">
+      <AnnouncementBar />
       <GlpNav />
       <HeroSection />
       <PressBar />
