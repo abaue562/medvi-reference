@@ -239,11 +239,17 @@ export default function MealsMenuPage() {
           >
             MENÚ SEMANAL
           </p>
+          <h2
+            className="text-xl font-black tracking-widest uppercase mb-2 text-white/80"
+            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
+          >
+            SELECCIONES DEL MENÚ SEMANAL
+          </h2>
           <h1
             className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white"
             style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            SELECCIONES DEL MENÚ SEMANAL
+            SELECCIONA TU FECHA DE ENTREGA
           </h1>
           <p
             className="text-base max-w-xl mx-auto text-white/80"
@@ -258,6 +264,93 @@ export default function MealsMenuPage() {
       {/* Week Selector */}
       <section className="px-6 pt-10">
         <div className="max-w-7xl mx-auto">
+
+          {/* Filters */}
+          <div className="mb-8 p-6 bg-white rounded-2xl border" style={{ borderColor: "#e8e5e0" }}>
+            <h3
+              className="text-sm font-black tracking-widest uppercase mb-4"
+              style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+            >
+              Filtros
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <div>
+                <h4
+                  className="text-xs font-bold tracking-wider uppercase mb-2"
+                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+                >
+                  Tipo de Proteína
+                </h4>
+                {["Pollo", "Pavo", "Res", "Cerdo", "Mariscos", "Vegetariano", "Desayuno"].map((item) => (
+                  <label key={item} className="flex items-center gap-2 mb-1 cursor-pointer">
+                    <input type="checkbox" className="rounded" />
+                    <span className="text-xs" style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}>{item}</span>
+                  </label>
+                ))}
+              </div>
+              <div>
+                <h4
+                  className="text-xs font-bold tracking-wider uppercase mb-2"
+                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+                >
+                  Alérgenos
+                </h4>
+                {["Sin Aceites de Semilla", "Sin Lácteos", "Sin Gluten", "Sin Huevo", "Sin Soya", "Sin Nueces", "Sin Pescado", "Sin Mariscos"].map((item) => (
+                  <label key={item} className="flex items-center gap-2 mb-1 cursor-pointer">
+                    <input type="checkbox" className="rounded" />
+                    <span className="text-xs" style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}>{item}</span>
+                  </label>
+                ))}
+              </div>
+              <div>
+                <h4
+                  className="text-xs font-bold tracking-wider uppercase mb-2"
+                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+                >
+                  Calorías
+                </h4>
+                {["< 400", "400-500", "> 500"].map((item) => (
+                  <label key={item} className="flex items-center gap-2 mb-1 cursor-pointer">
+                    <input type="checkbox" className="rounded" />
+                    <span className="text-xs" style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}>{item}</span>
+                  </label>
+                ))}
+                <h4
+                  className="text-xs font-bold tracking-wider uppercase mb-2 mt-3"
+                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+                >
+                  Proteína
+                </h4>
+                {["< 20g", "20-30g", "31-40g", "> 40g"].map((item) => (
+                  <label key={item} className="flex items-center gap-2 mb-1 cursor-pointer">
+                    <input type="checkbox" className="rounded" />
+                    <span className="text-xs" style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}>{item}</span>
+                  </label>
+                ))}
+              </div>
+              <div>
+                <h4
+                  className="text-xs font-bold tracking-wider uppercase mb-2"
+                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
+                >
+                  Carbohidratos
+                </h4>
+                {["< 10g", "10-20g", "21-30g"].map((item) => (
+                  <label key={item} className="flex items-center gap-2 mb-1 cursor-pointer">
+                    <input type="checkbox" className="rounded" />
+                    <span className="text-xs" style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}>{item}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+            <button
+              className="mt-4 text-xs font-semibold underline"
+              style={{ color: "#2e936f", fontFamily: "'Red Hat Text', sans-serif" }}
+            >
+              Limpiar todo
+            </button>
+          </div>
+
           <div className="flex items-center gap-3 mb-8 flex-wrap">
             <p
               className="text-xs font-black tracking-widest uppercase mr-2"
@@ -330,11 +423,12 @@ export default function MealsMenuPage() {
             />
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals/menu" },
-                { label: "PROGRAMAS", href: "/meals/programs" },
-                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "/meals/contact" },
+                { label: "Inicio", href: "/meals" },
+                { label: "Menú Semanal", href: "/meals/menu" },
+                { label: "Programas", href: "/meals/programs" },
+                { label: "Preguntas Frecuentes", href: "/meals/faq" },
+                { label: "Contacto", href: "/meals/contact" },
+                { label: "Ingresar", href: "/meals/login" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -351,7 +445,10 @@ export default function MealsMenuPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.{" "}
+            <Link href="/terms-and-conditions" className="underline" style={{ color: "#9ca3af" }}>
+              Términos y Condiciones
+            </Link>
           </p>
         </div>
       </footer>

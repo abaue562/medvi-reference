@@ -153,15 +153,15 @@ export default function MealsContactPage() {
             className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white"
             style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Contáctanos
+            Ponte en Contacto con Nosotros
           </h1>
-          <p
+          <h3
             className="text-base max-w-xl mx-auto text-white/80"
             style={{ fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Nuestro equipo de atención al cliente está listo para ayudarte con cualquier duda.
-            Escríbenos y te responderemos lo antes posible.
-          </p>
+            Nuestro equipo de atención al cliente de ClínicaRenova Nutrición está aquí
+            y listo para ayudarte con lo que necesites.
+          </h3>
         </div>
       </section>
 
@@ -320,18 +320,25 @@ export default function MealsContactPage() {
             {/* Contact Info */}
             <div>
               <h2
-                className="text-xl font-black mb-6"
+                className="text-xl font-black mb-4"
                 style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
               >
                 ATENCIÓN AL CLIENTE
               </h2>
               <p
-                className="text-sm mb-8 leading-relaxed"
+                className="text-sm mb-6 leading-relaxed"
                 style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
               >
                 Nuestro equipo de ClínicaRenova Nutrición está aquí para ayudarte con cualquier
                 cosa que necesites. Encuentra a continuación las distintas formas de ponerte en contacto con nosotros.
               </p>
+              <Link
+                href="/meals/faq"
+                className="inline-block px-6 py-3 rounded-pill text-sm font-bold text-white mb-6 transition-all hover:opacity-90"
+                style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
+              >
+                Ir a Preguntas Frecuentes
+              </Link>
 
               <div className="space-y-4">
                 {contactMethods.map((method) => (
@@ -379,12 +386,12 @@ export default function MealsContactPage() {
                 className="mt-8 rounded-2xl p-6"
                 style={{ backgroundColor: "#f3f0eb", border: "1px solid #e8e5e0" }}
               >
-                <h3
+                <h2
                   className="text-sm font-black tracking-widest uppercase mb-3"
                   style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
                 >
                   OTRAS OPCIONES DE SOPORTE
-                </h3>
+                </h2>
                 <p
                   className="text-sm leading-relaxed"
                   style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
@@ -418,11 +425,12 @@ export default function MealsContactPage() {
             />
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals/menu" },
-                { label: "PROGRAMAS", href: "/meals/programs" },
-                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "/meals/contact" },
+                { label: "Inicio", href: "/meals" },
+                { label: "Menú Semanal", href: "/meals/menu" },
+                { label: "Programas", href: "/meals/programs" },
+                { label: "Preguntas Frecuentes", href: "/meals/faq" },
+                { label: "Contacto", href: "/meals/contact" },
+                { label: "Ingresar", href: "/meals/login" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -439,7 +447,10 @@ export default function MealsContactPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.{" "}
+            <Link href="/terms-and-conditions" className="underline" style={{ color: "#9ca3af" }}>
+              Términos y Condiciones
+            </Link>
           </p>
         </div>
       </footer>

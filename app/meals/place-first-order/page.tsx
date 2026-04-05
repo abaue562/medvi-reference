@@ -446,11 +446,12 @@ export default function PlaceFirstOrderPage() {
             />
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals/menu" },
-                { label: "PROGRAMAS", href: "/meals/programs" },
-                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "/meals/contact" },
+                { label: "Inicio", href: "/meals" },
+                { label: "Menú Semanal", href: "/meals/menu" },
+                { label: "Programas", href: "/meals/programs" },
+                { label: "Preguntas Frecuentes", href: "/meals/faq" },
+                { label: "Contacto", href: "/meals/contact" },
+                { label: "Ingresar", href: "/meals/login" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -467,7 +468,10 @@ export default function PlaceFirstOrderPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.{" "}
+            <Link href="/terms-and-conditions" className="underline" style={{ color: "#9ca3af" }}>
+              Términos y Condiciones
+            </Link>
           </p>
         </div>
       </footer>

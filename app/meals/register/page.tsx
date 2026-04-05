@@ -60,6 +60,8 @@ export default function MealsRegisterPage() {
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
+    zipCode: "",
     password: "",
     confirmPassword: "",
   });
@@ -116,13 +118,13 @@ export default function MealsRegisterPage() {
                 className="text-3xl font-black mb-2"
                 style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
               >
-                Crear Cuenta
+                Registrarse
               </h1>
               <p
                 className="text-sm"
                 style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
               >
-                Crea tu cuenta de ClínicaRenova Nutrición para continuar
+                ¡Crea tu cuenta de ClínicaRenova Nutrición para finalizar tu pedido!
               </p>
             </div>
 
@@ -187,6 +189,52 @@ export default function MealsRegisterPage() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="tu@correo.com"
+                  className="w-full px-4 py-3 rounded-xl border-2 text-sm outline-none transition-colors focus:border-green-500"
+                  style={{
+                    borderColor: "#e8e5e0",
+                    color: "#242220",
+                    fontFamily: "'Red Hat Text', sans-serif",
+                  }}
+                />
+              </div>
+
+              {/* Phone Number */}
+              <div>
+                <label
+                  className="block text-xs font-semibold mb-1.5 tracking-wider uppercase"
+                  style={{ color: "#242220", fontFamily: "'Onest', sans-serif" }}
+                >
+                  Número de Teléfono
+                </label>
+                <input
+                  type="text"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handleChange}
+                  placeholder="(555) 555-5555"
+                  className="w-full px-4 py-3 rounded-xl border-2 text-sm outline-none transition-colors focus:border-green-500"
+                  style={{
+                    borderColor: "#e8e5e0",
+                    color: "#242220",
+                    fontFamily: "'Red Hat Text', sans-serif",
+                  }}
+                />
+              </div>
+
+              {/* Delivery ZIP Code */}
+              <div>
+                <label
+                  className="block text-xs font-semibold mb-1.5 tracking-wider uppercase"
+                  style={{ color: "#242220", fontFamily: "'Onest', sans-serif" }}
+                >
+                  Código Postal de Entrega
+                </label>
+                <input
+                  type="text"
+                  name="zipCode"
+                  value={form.zipCode}
+                  onChange={handleChange}
+                  placeholder="Código postal"
                   className="w-full px-4 py-3 rounded-xl border-2 text-sm outline-none transition-colors focus:border-green-500"
                   style={{
                     borderColor: "#e8e5e0",

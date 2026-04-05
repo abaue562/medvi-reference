@@ -107,6 +107,29 @@ const mealFAQ: FAQItem[] = [
     q: "¿Se pueden personalizar las comidas?",
     a: "No ofrecemos personalización de las comidas listadas en nuestros menús. Si eres alérgico a algún ingrediente o no te gusta alguno en particular, asegúrate de revisar la lista de ingredientes de cada comida antes de hacer tu selección.",
   },
+  {
+    q: "¿Qué tipos de programas ofrecen?",
+    a: "Ofrecemos el programa Clásico: opciones tradicionales de preparación de comidas con porciones estándar. Puedes navegar por el menú semanal y seleccionar las comidas que prefieras.",
+  },
+  {
+    q: "¿Cuánto tiempo duran las comidas en el refrigerador?",
+    a: "Si colocas las comidas directamente en el refrigerador, durarán 7 días desde que llegaron. Mantenemos nuestras comidas extremadamente saludables y limpias sin conservar los ingredientes. Cada envase tiene una fecha de caducidad. Todas las comidas se preparan y entregan frescas.",
+  },
+  {
+    q: "¿Ofrecen descuento para primera compra?",
+    a: "Sí, tenemos una oferta especial para compradores primerizos disponible en las tarjetas del programa cuando te registras. Este es el mejor descuento que ofrecemos para quienes utilizan nuestro servicio por primera vez. El código se ingresará automáticamente durante el proceso de pago.",
+  },
+  {
+    q: "¿Cómo se empaquetan los envíos?",
+    a: "Llegarán en una caja corrugada sellada y totalmente reciclable. La caja estará revestida con 1.5\" de aislamiento también reciclable. Cada pedido incluye paquetes de gel no tóxicos para mantener las comidas a la temperatura adecuada durante el envío. Cada comida está sellada individualmente en un envase 100% libre de BPA y apto para microondas.",
+  },
+];
+
+const nutritionFAQ: FAQItem[] = [
+  {
+    q: "¿Qué macronutrientes tienen las comidas?",
+    a: "Ofrecemos una variedad abundante de comidas diseñadas para proporcionar un programa de nutrición equilibrado. Estas comidas contienen proteínas magras, carbohidratos complejos y grasas saludables. Puedes encontrar los macros exactos de cada comida en la pestaña de Menú Actual en nuestro sitio web, o directamente en el envase cuando lo recibas.",
+  },
 ];
 
 function AccordionSection({
@@ -178,17 +201,30 @@ function AccordionSection({
 export default function MealsFAQPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#faf9f7" }}>
+      {/* Announcement Bar */}
+      <div
+        className="text-center py-2.5 px-4 text-sm font-medium text-white"
+        style={{ backgroundColor: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}
+      >
+        <span className="tracking-wide">
+          PEDIDOS ABIERTOS PARA ENVÍO EL LUNES 13 DE ABRIL
+        </span>
+        <span className="ml-4 text-white/50">|</span>
+        <span className="ml-4 text-white/70 text-xs">
+          ¡Comidas frescas entregadas en todo el país cada semana!
+        </span>
+      </div>
       <MealsNav />
 
       {/* Page Header */}
       <section className="py-16 px-6 text-center" style={{ backgroundColor: "#f3f0eb" }}>
         <div className="max-w-3xl mx-auto">
-          <h2
+          <h1
             className="text-4xl md:text-5xl font-black tracking-wide"
             style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
           >
             PREGUNTAS FRECUENTES
-          </h2>
+          </h1>
         </div>
       </section>
 
@@ -204,6 +240,11 @@ export default function MealsFAQPage() {
             title="PREGUNTAS SOBRE LAS COMIDAS"
             items={mealFAQ}
             idPrefix="meal"
+          />
+          <AccordionSection
+            title="PREGUNTAS SOBRE NUTRICIÓN"
+            items={nutritionFAQ}
+            idPrefix="nutrition"
           />
 
           {/* CTA */}
@@ -247,11 +288,12 @@ export default function MealsFAQPage() {
             />
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals/menu" },
-                { label: "PROGRAMAS", href: "/meals/programs" },
-                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "/meals/contact" },
+                { label: "Inicio", href: "/meals" },
+                { label: "Menú Semanal", href: "/meals/menu" },
+                { label: "Programas", href: "/meals/programs" },
+                { label: "Preguntas Frecuentes", href: "/meals/faq" },
+                { label: "Contacto", href: "/meals/contact" },
+                { label: "Ingresar", href: "/meals/login" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -268,7 +310,10 @@ export default function MealsFAQPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.{" "}
+            <Link href="/terms-and-conditions" className="underline" style={{ color: "#9ca3af" }}>
+              Términos y Condiciones
+            </Link>
           </p>
         </div>
       </footer>

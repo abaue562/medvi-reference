@@ -93,6 +93,19 @@ const steps = [
 export default function MealsHowItWorksPage() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Announcement Bar */}
+      <div
+        className="text-center py-2.5 px-4 text-sm font-medium text-white"
+        style={{ backgroundColor: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}
+      >
+        <span className="tracking-wide">
+          PEDIDOS ABIERTOS PARA ENVÍO EL LUNES 13 DE ABRIL
+        </span>
+        <span className="ml-4 text-white/50">|</span>
+        <span className="ml-4 text-white/70 text-xs">
+          ¡Comidas frescas entregadas en todo el país cada semana!
+        </span>
+      </div>
       <MealsNav />
 
       {/* Hero */}
@@ -277,11 +290,12 @@ export default function MealsHowItWorksPage() {
             />
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals/menu" },
-                { label: "PROGRAMAS", href: "/meals/programs" },
-                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "/meals/contact" },
+                { label: "Inicio", href: "/meals" },
+                { label: "Menú Semanal", href: "/meals/menu" },
+                { label: "Programas", href: "/meals/programs" },
+                { label: "Preguntas Frecuentes", href: "/meals/faq" },
+                { label: "Contacto", href: "/meals/contact" },
+                { label: "Ingresar", href: "/meals/login" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -298,7 +312,10 @@ export default function MealsHowItWorksPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.{" "}
+            <Link href="/terms-and-conditions" className="underline" style={{ color: "#9ca3af" }}>
+              Términos y Condiciones
+            </Link>
           </p>
         </div>
       </footer>

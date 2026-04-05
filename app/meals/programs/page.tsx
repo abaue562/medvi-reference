@@ -169,6 +169,19 @@ export default function MealsProgramsPage() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#faf9f7" }}>
+      {/* Announcement Bar */}
+      <div
+        className="text-center py-2.5 px-4 text-sm font-medium text-white"
+        style={{ backgroundColor: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}
+      >
+        <span className="tracking-wide">
+          PEDIDOS ABIERTOS PARA ENVÍO EL LUNES 13 DE ABRIL
+        </span>
+        <span className="ml-4 text-white/50">|</span>
+        <span className="ml-4 text-white/70 text-xs">
+          ¡Comidas frescas entregadas en todo el país cada semana!
+        </span>
+      </div>
       <MealsNav />
 
       {/* Hero */}
@@ -353,6 +366,20 @@ export default function MealsProgramsPage() {
         </div>
       </section>
 
+      {/* Quality Statement */}
+      <section className="py-16 px-6" style={{ backgroundColor: "#242220" }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2
+            className="text-xl md:text-2xl font-bold leading-relaxed"
+            style={{ color: "#ffffff", fontFamily: "'Red Hat Display', sans-serif" }}
+          >
+            &ldquo;Siempre que es posible, trabajamos con agricultores locales para incluir
+            ingredientes orgánicos en nuestras comidas. Utilizamos únicamente los ingredientes
+            más frescos y de la más alta calidad.&rdquo;
+          </h2>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-white border-t py-10 px-6" style={{ borderColor: "#e8e5e0" }}>
         <div className="max-w-7xl mx-auto">
@@ -366,11 +393,12 @@ export default function MealsProgramsPage() {
             />
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals/menu" },
-                { label: "PROGRAMAS", href: "/meals/programs" },
-                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
-                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "/meals/contact" },
+                { label: "Inicio", href: "/meals" },
+                { label: "Menú Semanal", href: "/meals/menu" },
+                { label: "Programas", href: "/meals/programs" },
+                { label: "Preguntas Frecuentes", href: "/meals/faq" },
+                { label: "Contacto", href: "/meals/contact" },
+                { label: "Ingresar", href: "/meals/login" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -387,7 +415,10 @@ export default function MealsProgramsPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.{" "}
+            <Link href="/terms-and-conditions" className="underline" style={{ color: "#9ca3af" }}>
+              Términos y Condiciones
+            </Link>
           </p>
         </div>
       </footer>

@@ -112,12 +112,12 @@ export default function MealsLoginPage() {
               >
                 Iniciar Sesión
               </h1>
-              <p
-                className="text-sm"
+              <h3
+                className="text-sm font-medium"
                 style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
               >
-                Comidas saludables entregadas directo a tu puerta
-              </p>
+                ¡Comidas saludables entregadas directamente a tu puerta!
+              </h3>
             </div>
 
             <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); window.location.href = "/meals/place-first-order"; }}>
@@ -204,7 +204,7 @@ export default function MealsLoginPage() {
                 className="font-semibold underline"
                 style={{ color: "#2e936f" }}
               >
-                Créala aquí
+                Empezar
               </Link>
             </p>
 
