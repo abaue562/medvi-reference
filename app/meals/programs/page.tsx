@@ -18,11 +18,11 @@ function MealsNav() {
 
         <div className="hidden md:flex items-center gap-8">
           {[
-            { label: "MENÚ SEMANAL", href: "/meals#menu" },
+            { label: "MENÚ SEMANAL", href: "/meals/menu" },
             { label: "PROGRAMAS", href: "/meals/programs" },
             { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
             { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-            { label: "CONTACTO", href: "#contact" },
+            { label: "CONTACTO", href: "/meals/contact" },
           ].map((link) => (
             <Link
               key={link.label}
@@ -36,7 +36,8 @@ function MealsNav() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
+          <Link
+            href="/meals/login"
             className="px-4 py-2 rounded-pill text-sm font-semibold border transition-colors hover:bg-gray-50"
             style={{
               borderColor: "#d1d5db",
@@ -45,7 +46,7 @@ function MealsNav() {
             }}
           >
             INGRESAR
-          </button>
+          </Link>
           <Link
             href="/meals/programs"
             className="px-5 py-2 rounded-pill text-sm font-bold text-white transition-all hover:opacity-90"
@@ -342,11 +343,11 @@ export default function MealsProgramsPage() {
             </span>
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "MENÚ SEMANAL", href: "/meals#menu" },
+                { label: "MENÚ SEMANAL", href: "/meals/menu" },
                 { label: "PROGRAMAS", href: "/meals/programs" },
                 { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
                 { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
-                { label: "CONTACTO", href: "#contact" },
+                { label: "CONTACTO", href: "/meals/contact" },
               ].map((link) => (
                 <Link
                   key={link.label}

@@ -91,7 +91,7 @@ export default function Home() {
             <a key={l} href={h} className="hover:text-white transition-colors">{l}</a>
           ))}
         </div>
-        <a href="https://clinicarenova.org/glp"
+        <a href="/glp"
           className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2e936f" }}>
           COMENZAR
@@ -204,7 +204,7 @@ export default function Home() {
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
               Encuentra el medicamento GLP-1 adecuado con la tranquilidad de saber que está aprobado por médicos y cabe en tu presupuesto.
             </p>
-            <CTAButton href="https://clinicarenova.org/glp">COMENZAR</CTAButton>
+            <CTAButton href="/glp">COMENZAR</CTAButton>
           </div>
 
           {/* Feature cards */}
@@ -285,7 +285,7 @@ export default function Home() {
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
               ClínicaRenova Nutrición es el complemento ideal para tu tratamiento GLP-1: te entrega nutrición preparada por chefs y alineada médicamente, diseñada para ayudarte a perder grasa mientras preservas la masa muscular.
             </p>
-            <CTAButton href="https://clinicarenova.org/meals">COMENZAR</CTAButton>
+            <CTAButton href="/meals">COMENZAR</CTAButton>
           </div>
           {/* Food photo */}
           <div className="flex gap-4">
@@ -342,7 +342,7 @@ export default function Home() {
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
               Atención guiada por médicos para hormonas, energía y rendimiento, con planes de tratamiento personalizados según tus metas y ajustados conforme responde tu cuerpo.
             </p>
-            <CTAButton href="https://clinicarenova.org/quad">COMENZAR</CTAButton>
+            <CTAButton href="/quad">COMENZAR</CTAButton>
           </div>
           {/* Photos */}
           <div className="flex gap-4">
@@ -595,8 +595,16 @@ export default function Home() {
 
           {/* Legal links */}
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs" style={{ color: "#24222066" }}>
-            {["Términos y Condiciones","Política de Privacidad","Prácticas de Privacidad","Política de Reembolso","Consentimiento Médico","Para Residentes de California","Carta de Derechos"].map((l)=>(
-              <a key={l} href={`https://clinicarenova.org/${l.toLowerCase().replace(/ & /g,"-y-").replace(/ /g,"-")}`}
+            {[
+              ["Términos y Condiciones", "/terms-and-conditions"],
+              ["Política de Privacidad", "/privacy-policy"],
+              ["Prácticas de Privacidad", "/notice-of-privacy-practices"],
+              ["Política de Reembolso", "/cancellation-and-refund-policy"],
+              ["Consentimiento Médico", "/medical-consent"],
+              ["Para Residentes de California", "/privacy-statement-california"],
+              ["Carta de Derechos", "/bill-of-rights"],
+            ].map(([l, href])=>(
+              <a key={l} href={href}
                 className="hover:text-current transition-colors">{l}</a>
             ))}
           </div>

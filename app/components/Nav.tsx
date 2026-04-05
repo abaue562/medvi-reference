@@ -31,7 +31,7 @@ export default function Nav() {
         ))}
       </div>
       <a
-        href="https://clinicarenova.org/glp"
+        href="/glp"
         className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
         style={{ backgroundColor: "#2e936f" }}
       >
