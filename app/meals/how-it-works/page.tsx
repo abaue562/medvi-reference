@@ -15,11 +15,11 @@ function MealsNav() {
 
         <div className="hidden md:flex items-center gap-8">
           {[
-            { label: "WEEKLY MENU", href: "/meals#menu" },
-            { label: "PROGRAMS OFFERED", href: "/meals/programs" },
-            { label: "HOW IT WORKS", href: "/meals/how-it-works" },
-            { label: "FAQ", href: "/meals/faq" },
-            { label: "CONTACT", href: "#contact" },
+            { label: "MENÚ SEMANAL", href: "/meals#menu" },
+            { label: "PROGRAMAS", href: "/meals/programs" },
+            { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
+            { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
+            { label: "CONTACTO", href: "#contact" },
           ].map((link) => (
             <Link
               key={link.label}
@@ -41,14 +41,14 @@ function MealsNav() {
               fontFamily: "'Red Hat Text', sans-serif",
             }}
           >
-            LOGIN
+            INGRESAR
           </button>
           <Link
             href="/meals/programs"
             className="px-5 py-2 rounded-pill text-sm font-bold text-white transition-all hover:opacity-90"
             style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Sign Up Now
+            Suscribirme
           </Link>
         </div>
       </div>
@@ -59,29 +59,29 @@ function MealsNav() {
 const steps = [
   {
     number: "01",
-    title: "BYOD (BUILD YOUR OWN DIET)",
-    body: "Choose your favorite meals from our innovative, chef-curated menu which changes weekly.",
+    title: "ARMA TU PROPIA DIETA",
+    body: "Elige tus comidas favoritas de nuestro innovador menú curado por chefs, que cambia cada semana.",
     align: "left",
     emoji: "🥗",
   },
   {
     number: "02",
-    title: "CHEF PREPARED",
-    body: "Our chefs craft fresh, macro-friendly meals that are as nutritious as they are delicious, saving you hours in the kitchen. Made from premium ingredients, we deliver quality, flavor, and convenience, making healthy eating easy. With new meals every week, you'll always look forward to your next MEDVi Meals delivery.",
+    title: "PREPARADO POR CHEFS",
+    body: "Nuestros chefs elaboran comidas frescas, ricas en macronutrientes y tan nutritivas como deliciosas, ahorrándote horas en la cocina. Elaboradas con ingredientes premium, ofrecemos calidad, sabor y comodidad, haciendo que comer sano sea fácil. Con nuevas comidas cada semana, siempre tendrás algo que esperar con tu próxima entrega de ClínicaRenova Nutrición.",
     align: "right",
     emoji: "👨‍🍳",
   },
   {
     number: "03",
-    title: "DELICIOUSNESS DELIVERED TO YOUR DOOR",
-    body: "Enjoy fresh, never-frozen meals delivered right to your door! With reliable shipping and real-time tracking, you'll know exactly when your chef-prepared meals arrive. With a flexible schedule – we're ready when you are!",
+    title: "FRESCURA ENTREGADA EN TU PUERTA",
+    body: "¡Disfruta comidas frescas, nunca congeladas, directamente en tu puerta! Con envíos confiables y seguimiento en tiempo real, sabrás exactamente cuándo llegarán tus comidas preparadas por chefs. Con horarios flexibles, ¡estamos listos cuando tú lo estés!",
     align: "left",
     emoji: "📦",
   },
   {
     number: "04",
-    title: "MEALTIME MADE EFFORTLESS",
-    body: "When hunger strikes, MEDVi Meals has you covered—just heat and eat! Our meals are perfectly portioned, microwave-safe and ready in minutes. No cooking, no cleaning and no hassle—just delicious, convenient meals every time.",
+    title: "COMER BIEN SIN COMPLICACIONES",
+    body: "Cuando el hambre llama, ClínicaRenova Nutrición ya tiene todo listo: ¡solo calienta y come! Nuestras comidas están perfectamente porcionadas, son aptas para microondas y están listas en minutos. Sin cocinar, sin limpiar y sin estrés: solo comidas deliciosas y convenientes en todo momento.",
     align: "right",
     emoji: "⚡",
   },
@@ -110,28 +110,28 @@ export default function MealsHowItWorksPage() {
             className="text-xs tracking-widest uppercase mb-4 font-semibold"
             style={{ color: "#2e936f", fontFamily: "'Onest', sans-serif" }}
           >
-            THE PROCESS
+            EL PROCESO
           </p>
           <h1
             className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight"
             style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Meal Prep Made Simple: Here's How
+            Preparación de Comidas Simplificada: Así Funciona
           </h1>
           <h3
             className="text-base md:text-lg text-white/60 leading-relaxed mb-10 max-w-2xl mx-auto"
             style={{ fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Tired of endless meal prep? MEDVi Meals delivers chef-crafted goodness
-            straight to your door. You're a few clicks away from fresh, never-frozen
-            meals designed to fuel your day the easy way.
+            ¿Cansado de la interminable preparación de comidas? ClínicaRenova Nutrición te entrega
+            delicias preparadas por chefs directamente a tu puerta. Estás a unos pocos clics de
+            disfrutar comidas frescas, nunca congeladas, diseñadas para darte energía de la manera más fácil.
           </h3>
           <Link
             href="/meals/programs"
             className="inline-block px-10 py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90 hover:scale-105"
             style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Sign Up Now
+            Suscribirme
           </Link>
         </div>
       </section>
@@ -249,7 +249,7 @@ export default function MealsHowItWorksPage() {
               className="inline-block px-12 py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90 hover:scale-105"
               style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              Sign Up Now
+              Suscribirme
             </Link>
           </div>
         </div>
@@ -267,11 +267,11 @@ export default function MealsHowItWorksPage() {
             </span>
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "WEEKLY MENU", href: "/meals#menu" },
-                { label: "PROGRAMS", href: "/meals/programs" },
-                { label: "HOW IT WORKS", href: "/meals/how-it-works" },
-                { label: "FAQ", href: "/meals/faq" },
-                { label: "CONTACT", href: "#contact" },
+                { label: "MENÚ SEMANAL", href: "/meals#menu" },
+                { label: "PROGRAMAS", href: "/meals/programs" },
+                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
+                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
+                { label: "CONTACTO", href: "#contact" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -288,7 +288,7 @@ export default function MealsHowItWorksPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 MEDVi Meals. All rights reserved.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
           </p>
         </div>
       </footer>

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MEDVi - Personalized Telehealth Care",
+  title: "ClínicaRenova - Atención Médica Personalizada en Línea",
   description:
-    "Personalized telehealth care from MEDVi. Clinician-guided solutions for weight loss, skincare, hair loss, men's health, and more.",
+    "Atención médica personalizada en línea con ClínicaRenova. Soluciones guiadas por médicos para pérdida de peso, cuidado de la piel, caída del cabello, salud masculina y más.",
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>{children}</body>
     </html>
   );

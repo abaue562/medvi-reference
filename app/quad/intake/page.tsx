@@ -5,11 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const goals = [
-  { id: "stamina", icon: "🟢", label: "Improve stamina & endurance" },
-  { id: "erection", icon: "🔵", label: "Increase erection strength" },
-  { id: "drive", icon: "🩷", label: "Boost sex drive & desire" },
-  { id: "recovery", icon: "🟠", label: "Quicker recovery" },
-  { id: "confidence", icon: "🟣", label: "Boost confidence" },
+  { id: "stamina", icon: "🟢", label: "Mejorar la resistencia y la energía" },
+  { id: "erection", icon: "🔵", label: "Aumentar la firmeza de la erección" },
+  { id: "drive", icon: "🩷", label: "Incrementar el deseo sexual" },
+  { id: "recovery", icon: "🟠", label: "Recuperación más rápida" },
+  { id: "confidence", icon: "🟣", label: "Aumentar la confianza" },
 ];
 
 export default function QuadIntakePage() {
@@ -26,7 +26,7 @@ export default function QuadIntakePage() {
           <Link href="/quad">
             <Image
               src="https://framerusercontent.com/images/1BRDkIzVV7TxG8fJDyUWdUDDE.png"
-              alt="MEDVi"
+              alt="ClínicaRenova"
               width={90}
               height={28}
               unoptimized
@@ -40,7 +40,7 @@ export default function QuadIntakePage() {
               ))}
             </div>
             <span className="text-sm font-medium" style={{ color: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}>
-              Excellent 4.5
+              Excelente 4.5
             </span>
             <span className="text-xs text-gray-400" style={{ fontFamily: "'Red Hat Text', sans-serif" }}>
               | TrustPilot
@@ -54,9 +54,9 @@ export default function QuadIntakePage() {
         <div className="max-w-5xl mx-auto px-6 py-4">
           <div className="flex items-center justify-center gap-2">
             {[
-              { label: "Start", active: true },
-              { label: "Details", active: false },
-              { label: "Eligibility", active: false },
+              { label: "Inicio", active: true },
+              { label: "Detalles", active: false },
+              { label: "Elegibilidad", active: false },
             ].map((step, i) => (
               <div key={step.label} className="flex items-center gap-2">
                 <div className="flex items-center gap-2">
@@ -101,7 +101,7 @@ export default function QuadIntakePage() {
                 className="text-6xl font-black tracking-widest text-white/10"
                 style={{ fontFamily: "'Red Hat Display', sans-serif" }}
               >
-                MEDVi
+                CR
               </span>
             </div>
             <div
@@ -112,16 +112,16 @@ export default function QuadIntakePage() {
                 className="text-xs tracking-widest uppercase mb-2 font-semibold"
                 style={{ color: "#3b82f6", fontFamily: "'Onest', sans-serif" }}
               >
-                MEDVi QUAD
+                QUAD by ClínicaRenova
               </p>
               <h2
                 className="text-2xl font-bold text-white leading-tight"
                 style={{ fontFamily: "'Red Hat Display', sans-serif" }}
               >
-                You Deserve a Better Sex Life.
+                Mereces una vida sexual más plena.
               </h2>
               <p className="text-white/60 text-sm mt-2" style={{ fontFamily: "'Red Hat Text', sans-serif" }}>
-                Arousal &amp; performance. In minutes.
+                Deseo y rendimiento. En minutos.
               </p>
             </div>
           </div>
@@ -132,13 +132,13 @@ export default function QuadIntakePage() {
               className="text-3xl font-bold mb-2"
               style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              See if MEDVi QUAD is right for you.
+              Descubre si QUAD by ClínicaRenova es para ti.
             </h2>
             <p
               className="text-base mb-8"
               style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
             >
-              Select your primary goal:
+              Selecciona tu objetivo principal:
             </p>
 
             <div className="flex flex-col gap-3 mb-6">
@@ -187,14 +187,14 @@ export default function QuadIntakePage() {
                 fontFamily: "'Red Hat Display', sans-serif",
               }}
             >
-              Next →
+              Siguiente →
             </button>
 
             <p
               className="text-center text-xs mt-4"
               style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
             >
-              QUAD medication is only suitable for males
+              El medicamento QUAD está indicado únicamente para hombres
             </p>
           </div>
         </div>

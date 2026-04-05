@@ -19,7 +19,7 @@ export default function GlpIntakePage() {
           <Link href="/glp">
             <Image
               src="https://framerusercontent.com/images/1BRDkIzVV7TxG8fJDyUWdUDDE.png"
-              alt="MEDVi"
+              alt="ClínicaRenova"
               width={90}
               height={28}
               unoptimized
@@ -35,7 +35,7 @@ export default function GlpIntakePage() {
               className="text-sm font-medium"
               style={{ color: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}
             >
-              Excellent 4.7
+              Excelente 4.7
             </span>
             <span
               className="text-xs text-gray-400"
@@ -52,9 +52,9 @@ export default function GlpIntakePage() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-center gap-2">
             {[
-              { label: "Start", active: true },
-              { label: "Details", active: false },
-              { label: "Eligibility", active: false },
+              { label: "Inicio", active: true },
+              { label: "Detalles", active: false },
+              { label: "Elegibilidad", active: false },
             ].map((step, i) => (
               <div key={step.label} className="flex items-center gap-2">
                 <div className="flex items-center gap-2">
@@ -107,7 +107,7 @@ export default function GlpIntakePage() {
                 className="text-8xl font-black tracking-widest text-white"
                 style={{ fontFamily: "'Red Hat Display', sans-serif" }}
               >
-                MEDVi
+                CR
               </span>
             </div>
             <div
@@ -118,13 +118,13 @@ export default function GlpIntakePage() {
                 className="text-2xl md:text-3xl font-bold italic leading-tight mb-2"
                 style={{ color: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
               >
-                Reach your goal weight fast without restrictive diets and exercise.
+                Alcanza tu peso ideal sin dietas restrictivas ni ejercicio extenuante.
               </h2>
               <p
                 className="text-white/60 text-sm"
                 style={{ fontFamily: "'Red Hat Text', sans-serif" }}
               >
-                GLP-1 medication — clinician-prescribed
+                Medicación GLP-1 — prescrita por médicos certificados
               </p>
             </div>
           </div>
@@ -135,20 +135,20 @@ export default function GlpIntakePage() {
               className="text-xs tracking-widest uppercase mb-2 font-semibold"
               style={{ color: "#2e936f", fontFamily: "'Onest', sans-serif" }}
             >
-              STEP 1 OF 3
+              PASO 1 DE 3
             </p>
             <h2
               className="text-3xl font-bold mb-3"
               style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              What is your height and weight?
+              ¿Cuál es tu altura y peso?
             </h2>
             <p
               className="text-base mb-8"
               style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
             >
-              Please answer the following questions so we can qualify you for medical
-              weight loss.
+              Responde las siguientes preguntas para que podamos evaluar tu elegibilidad
+              para el programa de pérdida de peso médica.
             </p>
 
             <div className="space-y-6">
@@ -158,7 +158,7 @@ export default function GlpIntakePage() {
                   className="block text-sm font-semibold mb-2"
                   style={{ color: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}
                 >
-                  Height
+                  Altura
                 </label>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
@@ -220,7 +220,7 @@ export default function GlpIntakePage() {
                   className="block text-sm font-semibold mb-2"
                   style={{ color: "#242220", fontFamily: "'Red Hat Text', sans-serif" }}
                 >
-                  Weight
+                  Peso
                 </label>
                 <div className="relative">
                   <input
@@ -257,14 +257,14 @@ export default function GlpIntakePage() {
                 fontFamily: "'Red Hat Display', sans-serif",
               }}
             >
-              Next →
+              Siguiente →
             </button>
 
             <p
               className="text-center text-xs mt-4"
               style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
             >
-              Your information is secure and confidential
+              Tu información es segura y confidencial
             </p>
           </div>
         </div>

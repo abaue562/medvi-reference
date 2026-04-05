@@ -1,24 +1,24 @@
 /**
- * Central image registry.
+ * Registro central de imágenes.
  *
- * HOW TO REPLACE AN IMAGE WITH YOUR OWN:
- * 1. Drop your file in /public/brand/  (e.g. /public/brand/hero-phone.png)
- * 2. Change the value for that key from `cdn(...)` to `"/brand/hero-phone.png"`
- * 3. Done — every place that image appears on the site updates automatically.
+ * CÓMO REEMPLAZAR UNA IMAGEN CON LA TUYA:
+ * 1. Coloca tu archivo en /public/brand/  (p.ej. /public/brand/hero-phone.png)
+ * 2. Cambia el valor de esa clave de `cdn(...)` a `"/brand/hero-phone.png"`
+ * 3. Listo — cada lugar donde aparece esa imagen en el sitio se actualiza automáticamente.
  *
- * Keys are the Framer CDN image IDs (the filename portion of the CDN URL).
- * Values are either cdn("...") — still using CDN — or a local "/brand/..." path.
+ * Las claves son los IDs de imagen del CDN de Framer (la parte del nombre de archivo de la URL del CDN).
+ * Los valores son cdn("...") — usando el CDN — o una ruta local "/brand/...".
  */
 
 const CDN = "https://framerusercontent.com/images";
 const cdn = (id: string) => `${CDN}/${id}`;
 
 export const IMAGES = {
-  // ── Brand / Logos ────────────────────────────────────────────────────────
-  logoMedvi:          cdn("1BRDkIzVV7TxG8fJDyUWdUDDE.png"),   // MEDVi wordmark (white)
-  legitscript:        cdn("q2uWrYWiZmMyus58IGeMLSbGI.png"),   // LegitScript seal
+  // ── Marca / Logos ────────────────────────────────────────────────────────
+  logoClinicarenova:  cdn("1BRDkIzVV7TxG8fJDyUWdUDDE.png"),   // ClínicaRenova wordmark (blanco)
+  legitscript:        cdn("q2uWrYWiZmMyus58IGeMLSbGI.png"),   // Sello LegitScript
 
-  // ── Icons (SVG) ──────────────────────────────────────────────────────────
+  // ── Íconos (SVG) ─────────────────────────────────────────────────────────
   iconEmail:          cdn("mOouvtzIDHOerqUQ0hDOpizA.svg"),
   iconPhone:          cdn("E2HTcWzFVYj8RkAxT3IGYNuY.svg"),
   iconLocation:       cdn("Ly2H9feVHgGgo55QqMcUBXLE5uo.svg"),
@@ -27,7 +27,7 @@ export const IMAGES = {
   iconStar:           cdn("YNzdkrl3B55n6jdaG6fo6LYESZA.svg"),
   iconQuote:          cdn("QZxfRAhxllYfpGxMEuk6kFVLhU.svg"),
 
-  // ── Homepage ─────────────────────────────────────────────────────────────
+  // ── Página Principal ──────────────────────────────────────────────────────
   heroBackground:     cdn("vyhgfyTZdnvKgcOFSsKadXmcI.png"),
   heroPhone:          cdn("DledV5XhgNZMvvKuNPweP2g.png"),
   categoryWeightLoss: cdn("6DlpR3ftJ6MctTZwyeuvp0hxAY.jpg"),
@@ -35,7 +35,7 @@ export const IMAGES = {
   categoryMensHealth: cdn("a6V9t9YFzI29cz5gMQRbfWgjVS4.jpg"),
   categoryPeptides:   cdn("iZZOz7kuB4YLvdGWAg8yO3avoLQ.jpg"),
 
-  // ── Service Section Images ────────────────────────────────────────────────
+  // ── Imágenes de Secciones de Servicios ───────────────────────────────────
   weightLossPhone:    cdn("9WyYelkv3EfaJFi50PZydNSt2ws.png"),
   womensHealth:       cdn("A1lwE6WKdaWtTNHV4R3xFZ1ljVo.jpg"),
   mealsFood:          cdn("naCtfcJucSb08iZrMiFEu70fwNw.jpg"),
@@ -45,27 +45,27 @@ export const IMAGES = {
   hairRestoration:    cdn("d4SpmpLmhUfMZkWsTOukrdAmhg.jpg"),
   skincare:           cdn("yTHZiTQnD4nN9DjRINV2s2nJf6c.jpg"),
 
-  // ── Why MEDVi / Feature Photos ───────────────────────────────────────────
+  // ── Fotos de ¿Por qué ClínicaRenova? / Características ───────────────────
   whyPhoto1:          cdn("L7wxKZ4YKHUKiODGYQrRlQYvTKo.png"),
   whyPhoto2:          cdn("MoQjUaFVDcKosmLtidv94kjQ3Zk.png"),
   whyPhoto3:          cdn("Mxnbv5mgfdNQdzlTMMRKrfJZJE.png"),
   whyPhoto4:          cdn("M9XaNbbDAjo8pUf3JffgMRQ44.png"),
 
-  // ── Doctors ──────────────────────────────────────────────────────────────
+  // ── Médicos ───────────────────────────────────────────────────────────────
   doctorCarr:         cdn("VlXVSTuHKTz4XzjZzNLWYchfHMQ.png"),
   doctorTenbrink:     cdn("WUFCBuh0wNjDvRv5B5ZqEH4mjA.png"),
 
-  // ── GLP Page ─────────────────────────────────────────────────────────────
+  // ── Página GLP ────────────────────────────────────────────────────────────
   glpHero:            cdn("3b210go7xrqsX3cBCZkQjPg7lc.png"),
   glpPhone:           cdn("eNSyOYR4nWN2eC2kBvfFakC0Jc.png"),
   glpScience:         cdn("h93zMm4ey20O082JGj8IZMrl3I.png"),
 
-  // ── QUAD Page ────────────────────────────────────────────────────────────
+  // ── Página QUAD ───────────────────────────────────────────────────────────
   quadHero:           cdn("6YhaoNUtBTiFwuXYBUD7Gi0ss.jpg"),
   quadProduct:        cdn("nrGxwSsRFp57MwVq6ihfcnRm8bA.png"),
   quadIngredients:    cdn("ntqVQOpXgrrjXKAUz9BTmnE2u0I.png"),
 
-  // ── Meals Page ───────────────────────────────────────────────────────────
+  // ── Página Nutrición ─────────────────────────────────────────────────────
   mealsLogo:          cdn("snLhnFxV1S915H070FVXdFseVw.png"),
   mealsHero:          cdn("paOnEoR3Gqf2LWRZGYBJ2Uokw.png"),
   meal1:              cdn("ihBupsd47mUBkztGVAMt31VNRN4.png"),
@@ -77,7 +77,7 @@ export const IMAGES = {
   meal7:              cdn("3YQLMZEk5tHlkmMh4CjpAifaEc.jpg"),
   meal8:              cdn("u8K8rbgmRaS81RzFu2M7Wl00qI.jpg"),
 
-  // ── Intake / Quiz ────────────────────────────────────────────────────────
+  // ── Formulario de Registro ────────────────────────────────────────────────
   intakeGlpSide:      cdn("vC7EYvFVXWs3QWn7JLdi51Vvd7s.png"),
   intakeQuadSide:     cdn("6ysW5nd4tzXcofaTriOcTvKB7yw.jpg"),
 } as const;

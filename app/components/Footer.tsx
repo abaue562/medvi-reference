@@ -3,13 +3,13 @@ import Image from "next/image";
 const CDN = "https://framerusercontent.com/images";
 
 const LEGAL_LINKS = [
-  ["Terms & Conditions", "/terms-and-conditions"],
-  ["Privacy Policy", "/privacy-policy"],
-  ["Privacy Practices", "/notice-of-privacy-practices"],
-  ["Refund Policy", "/cancellation-and-refund-policy"],
-  ["Medical Consent", "/medical-consent"],
-  ["For California Residents", "/privacy-statement-california"],
-  ["Bill of Rights", "/bill-of-rights"],
+  ["Términos y Condiciones", "/terms-and-conditions"],
+  ["Política de Privacidad", "/privacy-policy"],
+  ["Prácticas de Privacidad", "/notice-of-privacy-practices"],
+  ["Política de Reembolso", "/cancellation-and-refund-policy"],
+  ["Consentimiento Médico", "/medical-consent"],
+  ["Para Residentes de California", "/privacy-statement-california"],
+  ["Carta de Derechos", "/bill-of-rights"],
 ];
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <Image
             src={`${CDN}/1BRDkIzVV7TxG8fJDyUWdUDDE.png`}
-            alt="MEDVi"
+            alt="ClínicaRenova"
             width={110}
             height={24}
             className="h-6 w-auto"
@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-10 gap-y-2 text-sm" style={{ color: "#24222099" }}>
             <span className="flex items-center gap-2">
               <Image src={`${CDN}/mOouvtzIDHOerqUQ0hDOpizA.svg`} alt="" width={16} height={16} className="w-4 h-4 opacity-50" unoptimized />
-              help@medvi.org
+              hola@clinicarenova.org
             </span>
             <span className="flex items-center gap-2">
               <Image src={`${CDN}/E2HTcWzFVYj8RkAxT3IGYNuY.svg`} alt="" width={16} height={16} className="w-4 h-4 opacity-50" unoptimized />
@@ -58,16 +58,16 @@ export default function Footer() {
           style={{ borderColor: "#e8e5e0" }}
         >
           <p className="text-xs" style={{ color: "#24222044" }}>
-            © 2026 MEDVi. All rights reserved
+            © 2026 ClínicaRenova. Todos los derechos reservados
           </p>
           <a
-            href="https://www.legitscript.com/websites/?checker_keywords=medvi.org"
+            href="https://www.legitscript.com/websites/?checker_keywords=clinicarenova.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
               src={`${CDN}/q2uWrYWiZmMyus58IGeMLSbGI.png`}
-              alt="Verify Approval for www.medvi.org"
+              alt="Verificar aprobación para www.clinicarenova.org"
               width={80}
               height={80}
               className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity"
@@ -78,15 +78,8 @@ export default function Footer() {
 
         {/* Disclaimer */}
         <p className="text-xs leading-relaxed max-w-5xl" style={{ color: "#24222044" }}>
-          *The assessment made available on the MEDVi website does not create a doctor-patient
-          relationship. OpenLoop Health, a network of US-licensed doctors, has established
-          exclusionary criteria to determine if an individual does not qualify for GLP-1s.
-          Prescriptions are issued only after an online consultation with an independent licensed
-          provider. Compound medications are dispensed by state-licensed pharmacies but are not FDA
-          approved. Compounded GLP-1s are produced in FDA-regulated facilities. The decision to use
-          compounded drugs is guided by the licensed provider&apos;s medical judgment. Certain
-          materials on this website may be generated or enhanced using artificial intelligence
-          technologies.
+          *La evaluación disponible en el sitio web de ClínicaRenova no establece una relación médico-paciente. La Red de Médicos Certificados, una red de médicos con licencia en EE. UU., ha establecido criterios de exclusión para determinar si un individuo no califica para los GLP-1.
+          Las recetas se emiten únicamente tras una consulta en línea con un proveedor independiente con licencia. Los medicamentos compuestos son dispensados por farmacias autorizadas por el estado, pero no están aprobados por la FDA. Los GLP-1 compuestos se producen en instalaciones reguladas por la FDA. La decisión de usar medicamentos compuestos está guiada por el criterio médico del proveedor con licencia. Ciertos materiales en este sitio web pueden ser generados o mejorados con tecnologías de inteligencia artificial.
         </p>
       </div>
     </footer>

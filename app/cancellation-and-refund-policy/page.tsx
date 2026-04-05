@@ -3,56 +3,56 @@ import LegalPage from "../components/LegalPage";
 export default function CancellationAndRefundPolicy() {
   return (
     <LegalPage
-      title="Cancellation and Refund Policy"
+      title="Política de Cancelación y Reembolso"
       sections={[
         {
-          heading: "Subscription Services",
+          heading: "Servicios de Suscripción",
           level: 2,
           body: [
-            `Your membership in the subscription program ("Subscription Service"), including your ability to access the services, begins when you have completed the intake form at which time you will be charged for the first month of the Subscription Services.`,
-            "The Subscription Services include access to providers, medications where appropriate, and online support.",
-            "Please note if you are disqualified by our medical provider for any medical reason you will receive a full refund.",
-            "There is no guarantee of results or effectiveness due to your participation in the Subscription Services.",
+            `Su membresía en el programa de suscripción ("Servicio de Suscripción"), incluida su capacidad de acceder a los servicios, comienza cuando ha completado el formulario de incorporación, momento en el que se le cobrará el primer mes del Servicio de Suscripción.`,
+            "El Servicio de Suscripción incluye acceso a proveedores, medicamentos cuando corresponda y soporte en línea.",
+            "Tenga en cuenta que si nuestro proveedor médico le descalifica por alguna razón médica, recibirá un reembolso completo.",
+            "No se garantizan resultados ni efectividad por su participación en el Servicio de Suscripción.",
           ],
         },
         {
-          heading: "Cancellation Policy",
+          heading: "Política de Cancelación",
           level: 2,
           body: [
-            "You may cancel your Subscription Service at any time for any reason. To cancel your Subscription Services, please contact customer service (hello@medvi.org) and request a cancellation, or through the chat feature in your patient portal.",
-            "To ensure a smooth process, we require your cancellation request to be received at least 72 hours prior to your billing date. If this notice date is not met, your subscription will be charged on the next billing date, and the cancellation will take effect on the subsequent billing date.",
-            "After cancellation, you will continue to receive the Subscription Services through the end of your billing cycle.",
-            "Please see our Refund Policy below to determine if you are eligible for a refund of your canceled Subscription Service.",
+            "Puede cancelar su Servicio de Suscripción en cualquier momento y por cualquier motivo. Para cancelar su Servicio de Suscripción, comuníquese con servicio al cliente (hola@clinicarenova.org) y solicite la cancelación, o a través de la función de chat en su portal de pacientes.",
+            "Para garantizar un proceso fluido, requerimos que su solicitud de cancelación se reciba al menos 72 horas antes de su fecha de facturación. Si no se cumple este plazo, se le cobrará la suscripción en la próxima fecha de facturación y la cancelación entrará en vigor en la siguiente fecha de facturación.",
+            "Después de la cancelación, continuará recibiendo el Servicio de Suscripción hasta el final de su ciclo de facturación.",
+            "Consulte nuestra Política de Reembolso a continuación para determinar si tiene derecho a un reembolso por la cancelación de su Servicio de Suscripción.",
           ],
         },
         {
-          heading: "Refund Policy",
+          heading: "Política de Reembolso",
           level: 3,
           body: [
-            "If your Subscription Service is cancelled due to disqualification by our medical provider, you will be issued a refund for the remainder of your Subscription Service charges following the disqualification.",
-            "Other than cancellation due to medical disqualification, IN NO EVENT SHALL YOU BE ISSUED A REFUND UPON CANCELLATION OF THE SUBSCRIPTION SERVICES.",
-            "Federal law generally prohibits the return of prescription medications to pharmacies for refund or reuse once they have been ordered to a patient in order to protect public health and safety. This policy ensures that all medications provided are handled and dispensed with utmost care and compliance. If approved, refunds will only be issued for your most recent billing cycle and will not be issued for past billing cycles.\n\nDamaged or Incorrect items: Please inspect your medication immediately upon receipt. If the medication appears to be damaged or incorrect, please contact customer service immediately at hello@medvi.org.\n\nDamaged items: Damaged items may be replaced by the pharmacy upon receipt of evidence of damage.\n\nIncorrect items: Incorrect medications will be replaced by the pharmacy.",
+            "Si su Servicio de Suscripción se cancela por descalificación de nuestro proveedor médico, se le emitirá un reembolso por el resto de los cargos del Servicio de Suscripción posteriores a la descalificación.",
+            "Salvo la cancelación por descalificación médica, EN NINGÚN CASO SE LE EMITIRÁ UN REEMBOLSO AL CANCELAR EL SERVICIO DE SUSCRIPCIÓN.",
+            "La ley federal generalmente prohíbe la devolución de medicamentos recetados a farmacias para su reembolso o reutilización una vez que han sido ordenados a un paciente, con el fin de proteger la salud y seguridad pública. Esta política garantiza que todos los medicamentos proporcionados sean manejados y dispensados con el mayor cuidado y cumplimiento normativo. Si se aprueba, los reembolsos solo se emitirán por su ciclo de facturación más reciente y no se emitirán por ciclos de facturación anteriores.\n\nArtículos dañados o incorrectos: Inspeccione su medicamento inmediatamente al recibirlo. Si el medicamento parece estar dañado o es incorrecto, comuníquese de inmediato con servicio al cliente a hola@clinicarenova.org.\n\nArtículos dañados: Los artículos dañados pueden ser reemplazados por la farmacia previa presentación de evidencia del daño.\n\nArtículos incorrectos: Los medicamentos incorrectos serán reemplazados por la farmacia.",
           ],
         },
         {
-          heading: "Subscription Services FAQs",
+          heading: "Preguntas Frecuentes sobre el Servicio de Suscripción",
           level: 3,
           body: [],
         },
         {
-          heading: "What is included in my Subscription Services price?",
+          heading: "¿Qué incluye el precio de mi Servicio de Suscripción?",
           level: 3,
           body: [
-            "Your Subscription Services represents a single price for the subscription purchased. This may include consultations both live and via electronic form submissions and reviews with a Provider for medications that are fulfilled through a pharmacy or other health care services on which we collect payments, lab services, care support, 24/7 patient support line and other services to support your medical weight loss journey. Services, labs and medications covered with the single Subscription Service price may vary.",
+            "Su Servicio de Suscripción representa un precio único por la suscripción adquirida. Esto puede incluir consultas tanto en vivo como mediante formularios electrónicos y revisiones con un Proveedor para medicamentos dispensados a través de una farmacia u otros servicios de salud sobre los que cobramos pagos, servicios de laboratorio, apoyo en el cuidado, línea de soporte al paciente 24/7 y otros servicios para apoyar su proceso de pérdida de peso médica. Los servicios, laboratorios y medicamentos cubiertos con el precio único del Servicio de Suscripción pueden variar.",
           ],
         },
         {
-          heading: "What if my provider determines I am no longer eligible for the Subscription Services?",
+          heading: "¿Qué ocurre si mi proveedor determina que ya no soy elegible para el Servicio de Suscripción?",
           level: 3,
           body: [
-            "If your Provider determines you are no longer eligible for the Subscription Services, your subscription will be canceled, and a refund may be issued. If you have questions or concerns about an eligibility-initiated cancellation, please contact our customer service at hello@medvi.org.",
-            "Unless otherwise stated herein, Medvi's Terms and Conditions govern the Subscription Services Cancellation and Refund Policy. https://home.medvi.org/terms-and-conditions",
-            "In all events you are responsible for all fees from services and healthcare Services rendered, this Subscription Services Cancellation and Refund Policy governs fees for Subscription Services only.",
+            "Si su Proveedor determina que ya no es elegible para el Servicio de Suscripción, su suscripción será cancelada y es posible que se emita un reembolso. Si tiene preguntas o inquietudes sobre una cancelación por inelegibilidad, comuníquese con nuestro servicio al cliente a hola@clinicarenova.org.",
+            "Salvo lo indicado de otra manera en este documento, los Términos y Condiciones de ClínicaRenova rigen la Política de Cancelación y Reembolso del Servicio de Suscripción. https://clinicarenova.org/terms-and-conditions",
+            "En todos los casos, usted es responsable de todos los honorarios por servicios y servicios de atención médica prestados. Esta Política de Cancelación y Reembolso del Servicio de Suscripción rige únicamente los honorarios del Servicio de Suscripción.",
           ],
         },
       ]}

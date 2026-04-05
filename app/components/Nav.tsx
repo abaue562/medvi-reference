@@ -11,7 +11,7 @@ export default function Nav() {
       <a href="/">
         <Image
           src={`${CDN}/1BRDkIzVV7TxG8fJDyUWdUDDE.png`}
-          alt="MEDVi"
+          alt="ClínicaRenova"
           width={110}
           height={24}
           className="h-6 w-auto"
@@ -20,10 +20,10 @@ export default function Nav() {
       </a>
       <div className="hidden md:flex gap-8 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
         {[
-          ["Weight Loss", "/#weight-loss"],
-          ["Peptides & Longevity", "/#peptides"],
-          ["Men's Health", "/#mens-health"],
-          ["Women's Health", "/#womens-health"],
+          ["Pérdida de Peso", "/#weight-loss"],
+          ["Péptidos y Longevidad", "/#peptides"],
+          ["Salud Masculina", "/#mens-health"],
+          ["Salud Femenina", "/#womens-health"],
         ].map(([label, href]) => (
           <a key={label} href={href} className="hover:text-white transition-colors">
             {label}
@@ -31,11 +31,11 @@ export default function Nav() {
         ))}
       </div>
       <a
-        href="https://glp.medvi.org"
+        href="https://clinicarenova.org/glp"
         className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
         style={{ backgroundColor: "#2e936f" }}
       >
-        GET STARTED
+        COMENZAR
       </a>
     </nav>
   );

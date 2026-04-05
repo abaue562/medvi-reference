@@ -34,7 +34,7 @@ const IMG = {
   // Skincare
   skin1:         `${CDN}/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png`,
   skin2:         `${CDN}/L7wxKZ4YKHUKiODGYQrRlQYvTKo.png`,
-  // Why MEDVi
+  // Why ClínicaRenova
   whyMain:       `${CDN}/VlXVSTuHKTz4XzjZzNLWYchfHMQ.png`,
   whyBadge:      `${CDN}/keDlEK59Fa69dFZn1FAHPjD1j8.png`,
   whyCard1:      `${CDN}/h93zMm4ey20O082JGj8IZMrl3I.png`,
@@ -59,21 +59,21 @@ const IMG = {
 };
 
 const TICKER_ITEMS = [
-  { label: "LICENSED MEDICAL PROVIDERS" },
-  { label: "100% ONLINE" },
-  { label: "CLEAR PRICING" },
-  { label: "SHIPPED TO YOUR DOOR" },
+  { label: "PROVEEDORES MÉDICOS CERTIFICADOS" },
+  { label: "100% EN LÍNEA" },
+  { label: "PRECIOS TRANSPARENTES" },
+  { label: "ENVÍO A TU DOMICILIO" },
 ];
 
 const REVIEWS = [
-  { name: "Billy",      photo: `${CDN}/OGDQI8XA7V2CREgeUjtv3qMehk.jpg`, quote: "Ms. Gonzalez was great! She listened to my needs and provided details of the meds and any issues that rise." },
-  { name: "Terika",     photo: `${CDN}/d4SpmpLmhUfMZkWsTOukrdAmhg.jpg`, quote: "The provider was knowledgeable and helpful. She answered all my questions and made me feel as if this was not our first time meeting." },
-  { name: "Jamie",      photo: `${CDN}/naCtfcJucSb08iZrMiFEu70fwNw.jpg`, quote: "The questions are to the point and easy to navigate. I'm able to voice my concerns and ask questions. They are quick to respond." },
-  { name: "Jacqueline", photo: `${CDN}/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg`, quote: "My experience is very positive. Slowly and surely reaching my goals with MEDVi's help. They have been very attentive." },
-  { name: "Diana",      photo: `${CDN}/cYEX3QqVD69lMmw1NIEAUOSMB8.jpg`, quote: "The staff has been so friendly and caring. I didn't expect that! If I call, I get an immediate answer from a real person!" },
-  { name: "Donna",      photo: `${CDN}/a6V9t9YFzI29cz5gMQRbfWgjVS4.jpg`, quote: "The Physician was very knowledgeable and ready to answer all my concerns. She even told me about future checkups throughout my journey." },
-  { name: "Terri",      photo: `${CDN}/yTHZiTQnD4nN9DjRINV2s2nJf6c.jpg`, quote: "Losing weight without a crazy diet, without cardio...it just felt like magic. I was a snacker, but not anymore." },
-  { name: "Greg",       photo: `${CDN}/c7UYcEZ9pL7emhQ8SH0e0iV0d8.jpg`, quote: "I was ready to give up. Wow. I would pay 10x as much if I had to. Dieting days are over. Thanks to medvi—game changer." },
+  { name: "Billy",      photo: `${CDN}/OGDQI8XA7V2CREgeUjtv3qMehk.jpg`, quote: "La Dra. González fue excelente. Escuchó mis necesidades y me explicó los medicamentos y los posibles efectos." },
+  { name: "Terika",     photo: `${CDN}/d4SpmpLmhUfMZkWsTOukrdAmhg.jpg`, quote: "La proveedora fue muy conocedora y útil. Respondió todas mis preguntas y me hizo sentir como si nos conociéramos de antes." },
+  { name: "Jamie",      photo: `${CDN}/naCtfcJucSb08iZrMiFEu70fwNw.jpg`, quote: "Las preguntas son directas y fáciles de entender. Puedo expresar mis inquietudes y hacer preguntas. Responden muy rápido." },
+  { name: "Jacqueline", photo: `${CDN}/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg`, quote: "Mi experiencia es muy positiva. Poco a poco alcanzando mis metas con la ayuda de ClínicaRenova. Han sido muy atentos." },
+  { name: "Diana",      photo: `${CDN}/cYEX3QqVD69lMmw1NIEAUOSMB8.jpg`, quote: "El equipo ha sido muy amable y atento. ¡No lo esperaba! Si llamo, recibo respuesta inmediata de una persona real." },
+  { name: "Donna",      photo: `${CDN}/a6V9t9YFzI29cz5gMQRbfWgjVS4.jpg`, quote: "La médica era muy conocedora y estaba lista para responder todas mis preguntas. Incluso me habló de los seguimientos futuros en mi proceso." },
+  { name: "Terri",      photo: `${CDN}/yTHZiTQnD4nN9DjRINV2s2nJf6c.jpg`, quote: "Perder peso sin dietas locas, sin cardio... se sintió como magia. Era adicta al picoteo, pero ya no." },
+  { name: "Greg",       photo: `${CDN}/c7UYcEZ9pL7emhQ8SH0e0iV0d8.jpg`, quote: "Estaba a punto de rendirme. Increíble. Pagaría 10 veces más si tuviera que hacerlo. Los días de dieta quedaron atrás. Gracias a ClínicaRenova, un cambio total." },
 ];
 
 export default function Home() {
@@ -84,17 +84,17 @@ export default function Home() {
       <nav style={{ backgroundColor: "#242220", position: "sticky", top: 0, zIndex: 50 }}
         className="px-6 lg:px-16 py-4 flex items-center justify-between">
         <a href="/">
-          <Image src={IMG.logo} alt="MEDVi" width={110} height={24} className="h-6 w-auto" unoptimized />
+          <Image src={IMG.logo} alt="ClínicaRenova" width={110} height={24} className="h-6 w-auto" unoptimized />
         </a>
         <div className="hidden md:flex gap-8 text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>
-          {[["Weight Loss","#weight-loss"],["Peptides & Longevity","#peptides"],["Men's Health","#mens-health"],["Women's Health","#womens-health"]].map(([l,h])=>(
+          {[["Pérdida de Peso","#weight-loss"],["Péptidos y Longevidad","#peptides"],["Salud Masculina","#mens-health"],["Salud Femenina","#womens-health"]].map(([l,h])=>(
             <a key={l} href={h} className="hover:text-white transition-colors">{l}</a>
           ))}
         </div>
-        <a href="https://glp.medvi.org"
+        <a href="https://clinicarenova.org/glp"
           className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2e936f" }}>
-          GET STARTED
+          COMENZAR
         </a>
       </nav>
 
@@ -102,41 +102,41 @@ export default function Home() {
       <section style={{ backgroundColor: "#172B1F", position: "relative", overflow: "hidden" }}
         className="px-6 lg:px-16 pt-20 pb-0 text-center">
 
-        {/* Large watermark "MEDVi" background text */}
+        {/* Large watermark background text */}
         <div style={{
           position: "absolute", bottom: 120, right: -40,
           fontSize: "22vw", fontWeight: 900, color: "rgba(255,255,255,0.04)",
           fontFamily: "'Red Hat Display', sans-serif", lineHeight: 1, userSelect: "none", pointerEvents: "none",
-        }}>MEDVi</div>
+        }}>CR</div>
 
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-xs font-semibold tracking-wide"
           style={{ backgroundColor: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.75)" }}>
-          Join{" "}<strong style={{ color: "#fff" }}>500,000+</strong>{" "}MEDVi patients
+          Únete a{" "}<strong style={{ color: "#fff" }}>más de 500.000</strong>{" "}pacientes de ClínicaRenova
         </div>
 
         {/* Headline */}
         <h1 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, lineHeight: 1.05, color: "#ffffff" }}
           className="text-5xl md:text-6xl lg:text-7xl mb-6">
-          Healthcare,<br />
-          <em style={{ color: "#6aaa84", fontStyle: "italic" }}>redefined</em>{" "}for real life.
+          Salud,<br />
+          <em style={{ color: "#6aaa84", fontStyle: "italic" }}>redefinida</em>{" "}para la vida real.
         </h1>
 
         {/* Subtext */}
         <p className="text-base max-w-md mx-auto mb-12" style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.7 }}>
-          We provide medical care online—simple, direct, and led by licensed providers.
-          No waiting rooms. No unnecessary steps. Just care that works.
+          Ofrecemos atención médica en línea: simple, directa y a cargo de proveedores certificados.
+          Sin salas de espera. Sin pasos innecesarios. Solo atención que funciona.
         </p>
 
         {/* Category thumbnail cards */}
         <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden grid grid-cols-4 mb-0"
           style={{ backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)" }}>
           {[
-            { label: "Weight Loss",          img: IMG.heroThumbWL,  href: "#weight-loss" },
-            { label: "Peptides & Longevity", img: IMG.heroThumbPep, href: "#peptides" },
-            { label: "Men's Health",         img: IMG.heroThumbMen, href: "#mens-health" },
-            { label: "Women's Health",       img: IMG.heroThumbWom, href: "#womens-health" },
-          ].map(({ label, img, href }, i) => (
+            { label: "Pérdida de Peso",          img: IMG.heroThumbWL,  href: "#weight-loss" },
+            { label: "Péptidos y Longevidad", img: IMG.heroThumbPep, href: "#peptides" },
+            { label: "Salud Masculina",         img: IMG.heroThumbMen, href: "#mens-health" },
+            { label: "Salud Femenina",       img: IMG.heroThumbWom, href: "#womens-health" },
+          ].map(({ label, img, href }) => (
             <a key={label} href={href}
               className="flex flex-col items-center gap-3 p-5 hover:bg-white/5 transition-colors border-r last:border-r-0"
               style={{ borderColor: "rgba(255,255,255,0.08)" }}>
@@ -170,28 +170,28 @@ export default function Home() {
 
           {/* Top row: eyebrow + H2 */}
           <div className="space-y-3">
-            <Eyebrow>DOCTOR-GUIDED GLP-1 CARE</Eyebrow>
+            <Eyebrow>ATENCIÓN GLP-1 GUIADA POR MÉDICOS</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2.2rem,4vw,3.5rem)", lineHeight: 1.1 }}>
-              Weight loss <em style={{ color: "#2e936f", fontStyle: "normal" }}>made easy</em><br />
-              with personalized care
+              Pérdida de peso <em style={{ color: "#2e936f", fontStyle: "normal" }}>simplificada</em><br />
+              con atención personalizada
             </h2>
           </div>
 
           {/* Two-column: image | bullets */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="rounded-3xl overflow-hidden">
-              <Image src={IMG.wlProduct} alt="GLP-1 medication" width={752} height={670} className="w-full h-auto object-cover" unoptimized />
+              <Image src={IMG.wlProduct} alt="Medicación GLP-1" width={752} height={670} className="w-full h-auto object-cover" unoptimized />
             </div>
             <div className="space-y-5">
               <h4 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1rem" }}>
-                Everything you need—included:
+                Todo lo que necesitas, incluido:
               </h4>
               <Bullets items={[
-                "Prescription to fast, effective GLP-1",
-                "1:1 physician guidance",
-                "24/7 support",
-                "Weight loss guarantee",
-                "Fast & discreet shipping",
+                "Receta para GLP-1 rápido y efectivo",
+                "Orientación médica personalizada",
+                "Soporte 24/7",
+                "Garantía de pérdida de peso",
+                "Envío rápido y discreto",
               ]} />
             </div>
           </div>
@@ -199,12 +199,12 @@ export default function Home() {
           {/* Subheading + copy + CTA */}
           <div className="max-w-2xl space-y-4">
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.6rem" }}>
-              A smarter approach to weight loss, built around you
+              Un enfoque más inteligente para la pérdida de peso, diseñado para ti
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Find the right GLP-1 medication with the confidence that comes from knowing it is doctor-approved and budget-friendly.
+              Encuentra el medicamento GLP-1 adecuado con la tranquilidad de saber que está aprobado por médicos y cabe en tu presupuesto.
             </p>
-            <CTAButton href="https://glp.medvi.org">GET STARTED</CTAButton>
+            <CTAButton href="https://clinicarenova.org/glp">COMENZAR</CTAButton>
           </div>
 
           {/* Feature cards */}
@@ -215,10 +215,10 @@ export default function Home() {
               </div>
               <div className="space-y-1">
                 <p style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1rem" }}>
-                  Everything,{" "}<em style={{ color: "#2e936f", fontStyle: "normal" }}>all in one place</em>
+                  Todo,{" "}<em style={{ color: "#2e936f", fontStyle: "normal" }}>en un solo lugar</em>
                 </p>
                 <p className="text-xs leading-relaxed" style={{ color: "#24222099" }}>
-                  Track your progress, check in with your provider, and manage your care in your all-in-one patient portal.
+                  Monitorea tu progreso, comunícate con tu médico y gestiona tu atención desde tu portal de paciente todo en uno.
                 </p>
               </div>
             </div>
@@ -228,17 +228,17 @@ export default function Home() {
               </div>
               <div className="space-y-1">
                 <p style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1rem" }}>
-                  Unlimited{" "}<em style={{ color: "#2e936f", fontStyle: "normal" }}>24/7 support</em>
+                  Soporte{" "}<em style={{ color: "#2e936f", fontStyle: "normal" }}>24/7 ilimitado</em>
                 </p>
                 <p className="text-xs leading-relaxed" style={{ color: "#24222099" }}>
-                  Medical support continues throughout your care, whenever you need it.
+                  El apoyo médico continúa durante toda tu atención, siempre que lo necesites.
                 </p>
               </div>
             </div>
           </div>
 
           <p className="text-xs" style={{ color: "#24222055" }}>
-            Prescriptions are issued only after an online consultation with an independent licensed provider. Compound medications are dispensed by state-licensed pharmacies but are not FDA approved.
+            Las recetas se emiten únicamente tras una consulta en línea con un proveedor independiente con licencia. Los medicamentos compuestos son dispensados por farmacias autorizadas por el estado, pero no están aprobados por la FDA.
           </p>
         </div>
       </section>
@@ -253,16 +253,16 @@ export default function Home() {
           </div>
           {/* Text */}
           <div className="space-y-6">
-            <Eyebrow>CARE DESIGNED FOR WOMEN&apos;S HEALTH</Eyebrow>
+            <Eyebrow>ATENCIÓN DISEÑADA PARA LA SALUD FEMENINA</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Whole-body care for her balance, vitality, and confidence
+              Atención integral para su equilibrio, vitalidad y confianza
             </h2>
-            <Bullets items={["Hormone balance","Healthy weight management","Hair strength & growth support","Skin health & radiance","Fast & discreet shipping"]} />
+            <Bullets items={["Equilibrio hormonal","Control saludable del peso","Fortaleza y crecimiento del cabello","Salud y luminosidad de la piel","Envío rápido y discreto"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Support that evolves with your body
+              Apoyo que evoluciona con tu cuerpo
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Doctor-guided care for weight, hormones, hair, and skin, with personalized treatment plans designed to support your health through every stage of life.
+              Atención guiada por médicos para el peso, las hormonas, el cabello y la piel, con planes de tratamiento personalizados diseñados para acompañarte en cada etapa de tu vida.
             </p>
             <ComingSoon />
           </div>
@@ -274,18 +274,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text left */}
           <div className="space-y-6">
-            <Eyebrow>METABOLIC NUTRITION</Eyebrow>
+            <Eyebrow>NUTRICIÓN METABÓLICA</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Fuel your transformation,<br />protect your progress
+              Alimenta tu transformación,<br />protege tu progreso
             </h2>
-            <Bullets items={["Meal prep made simple","Chef-made, portion-controlled","Weekly rotating meals","Nutritionally balanced","Macro-friendly options","Completely hassle-free"]} />
+            <Bullets items={["Preparación de comidas simplificada","Elaboradas por chefs, perfectamente porcionadas","Menú semanal rotativo","Nutricionalmente balanceadas","Opciones ricas en macros","Sin complicaciones"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Skip the hassle of meal planning and prepping
+              Olvídate de planificar y preparar tus comidas
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              MEDVi Meals is the perfect partner for your GLP-1 journey—delivering chef-prepared, medically aligned nutrition designed to help you lose fat while preserving muscle.
+              ClínicaRenova Nutrición es el complemento ideal para tu tratamiento GLP-1: te entrega nutrición preparada por chefs y alineada médicamente, diseñada para ayudarte a perder grasa mientras preservas la masa muscular.
             </p>
-            <CTAButton href="https://meals.medvi.org">GET STARTED</CTAButton>
+            <CTAButton href="https://clinicarenova.org/meals">COMENZAR</CTAButton>
           </div>
           {/* Food photo */}
           <div className="flex gap-4">
@@ -300,26 +300,26 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Product images */}
           <div>
-            <Image src={IMG.supp} alt="MEDVi supplements" width={1352} height={658} className="w-full rounded-2xl object-contain" unoptimized />
+            <Image src={IMG.supp} alt="Suplementos ClínicaRenova" width={1352} height={658} className="w-full rounded-2xl object-contain" unoptimized />
           </div>
           {/* Text */}
           <div className="space-y-6">
-            <Eyebrow>PURPOSE-DRIVEN SUPPLEMENTATION</Eyebrow>
+            <Eyebrow>SUPLEMENTACIÓN CON PROPÓSITO</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Supplements with the power to boost real results
+              Suplementos con el poder de potenciar tus resultados
             </h2>
-            <Bullets items={["Clean, transparent ingredients","Built to support daily health","Evidence-based dosing","Doctor-formulated blends","High-quality sourcing"]} />
+            <Bullets items={["Ingredientes limpios y transparentes","Diseñados para apoyar la salud diaria","Dosificación basada en evidencia","Fórmulas elaboradas por médicos","Fuentes de alta calidad"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Support that helps you feel better over time
+              Apoyo que te ayuda a sentirte mejor con el tiempo
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Doctor-designed formulas made with quality ingredients and evidence-based dosing to support your body day after day.
+              Fórmulas diseñadas por médicos con ingredientes de calidad y dosificación basada en evidencia para apoyar tu cuerpo día a día.
             </p>
             <ComingSoon />
             {/* Doctor formulated card */}
             <div className="rounded-2xl p-5" style={{ backgroundColor: "#f0f4ec" }}>
               <p style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1rem" }}>
-                Doctor-formulated blends designed to support how your body works best.
+                Fórmulas elaboradas por médicos, diseñadas para apoyar cómo tu cuerpo funciona mejor.
               </p>
             </div>
           </div>
@@ -331,18 +331,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <div className="space-y-6">
-            <Eyebrow>CARE FOR ENERGY, HORMONES, AND PERFORMANCE</Eyebrow>
+            <Eyebrow>ATENCIÓN PARA ENERGÍA, HORMONAS Y RENDIMIENTO</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Men&apos;s healthcare, built for men who expect more
+              Salud masculina, diseñada para hombres que esperan más
             </h2>
-            <Bullets items={["Physical performance","Hormone balance","Energy levels","Mental focus","Fast & discreet shipping"]} />
+            <Bullets items={["Rendimiento físico","Equilibrio hormonal","Niveles de energía","Enfoque mental","Envío rápido y discreto"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Care designed to help you feel stronger, sharper, and more in control
+              Atención diseñada para ayudarte a sentirte más fuerte, más enfocado y con mayor control
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Doctor-guided care for hormones, energy, and performance, with treatment plans tailored to your goals and adjusted as your body responds.
+              Atención guiada por médicos para hormonas, energía y rendimiento, con planes de tratamiento personalizados según tus metas y ajustados conforme responde tu cuerpo.
             </p>
-            <CTAButton href="https://quad.medvi.org">GET STARTED</CTAButton>
+            <CTAButton href="https://clinicarenova.org/quad">COMENZAR</CTAButton>
           </div>
           {/* Photos */}
           <div className="flex gap-4">
@@ -362,16 +362,16 @@ export default function Home() {
           </div>
           {/* Text */}
           <div className="space-y-6">
-            <Eyebrow>ADVANCED PEPTIDE SUPPORT</Eyebrow>
+            <Eyebrow>APOYO AVANZADO CON PÉPTIDOS</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Targeted support for recovery, performance, and longevity
+              Apoyo dirigido para recuperación, rendimiento y longevidad
             </h2>
-            <Bullets items={["Recovery support (BPC-157, TB-500)","Performance (CJC-1295, Ipamorelin)","Recovery cycles (Sermorelin, MK-677)","Strength (Tesamorelin)","And more—all to support your goals"]} />
+            <Bullets items={["Recuperación (BPC-157, TB-500)","Rendimiento (CJC-1295, Ipamorelin)","Ciclos de recuperación (Sermorelin, MK-677)","Fuerza (Tesamorelin)","Y más, todo para apoyar tus metas"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Support that works below the surface
+              Apoyo que trabaja por debajo de la superficie
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Peptide therapy is designed to support how your body recovers, performs, and repairs over time—with targeted options for recovery, strength, sleep, and overall optimization.
+              La terapia con péptidos está diseñada para apoyar cómo tu cuerpo se recupera, rinde y repara con el tiempo, con opciones específicas para recuperación, fuerza, sueño y optimización general.
             </p>
             <ComingSoon />
           </div>
@@ -383,16 +383,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text */}
           <div className="space-y-6">
-            <Eyebrow>TARGETED HAIR RESTORATION</Eyebrow>
+            <Eyebrow>RESTAURACIÓN CAPILAR DIRIGIDA</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Proven care for thinning hair and regrowth
+              Tratamiento probado para el cabello fino y la regeneración capilar
             </h2>
-            <Bullets items={["Clinically backed regrowth ingredients","Targeted scalp and follicle support","Long-term hair density approach","Fast shipping"]} />
+            <Bullets items={["Ingredientes de recrecimiento con respaldo clínico","Apoyo específico para el cuero cabelludo y los folículos","Enfoque a largo plazo para mayor densidad capilar","Envío rápido"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Advanced hair regrowth care to help you look and feel your best
+              Atención avanzada para la regeneración capilar que te ayuda a verte y sentirte mejor
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Revitalize your roots and restore fuller-looking hair with our powerful hair regrowth serum, formulated to nourish the scalp and support visibly thicker, healthier strands.
+              Revitaliza tus raíces y restaura un cabello de aspecto más lleno con nuestro potente suero de regeneración capilar, formulado para nutrir el cuero cabelludo y promover hebras visiblemente más gruesas y saludables.
             </p>
             <ComingSoon />
           </div>
@@ -414,36 +414,36 @@ export default function Home() {
           </div>
           {/* Text */}
           <div className="space-y-6">
-            <Eyebrow>PERSONALIZED CARE FOR HEALTHIER, CLEARER SKIN.</Eyebrow>
+            <Eyebrow>ATENCIÓN PERSONALIZADA PARA UNA PIEL MÁS SANA Y LUMINOSA.</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.2vw,3rem)", lineHeight: 1.15 }}>
-              Skincare that goes deeper than the surface
+              Cuidado de la piel que va más allá de la superficie
             </h2>
-            <Bullets items={["Clinician-guided tailored care","Prescription-strength options","Simple daily routines","Visible skin results","Personalized treatment plans"]} />
+            <Bullets items={["Atención personalizada guiada por médicos","Opciones de fuerza con receta","Rutinas diarias sencillas","Resultados visibles en la piel","Planes de tratamiento personalizados"]} />
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.3rem" }}>
-              Skincare designed to treat the root cause—not just cover it up.
+              Cuidado de la piel diseñado para tratar la causa raíz, no solo cubrirla.
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              From acne and aging to sensitivity and texture, every plan is built for real, visible improvement.
+              Desde el acné y el envejecimiento hasta la sensibilidad y la textura, cada plan está diseñado para lograr mejoras reales y visibles.
             </p>
             <ComingSoon />
           </div>
         </div>
       </section>
 
-      {/* ── Why MEDVi — LIGHT background ────────────────────────────── */}
+      {/* ── Why ClínicaRenova — LIGHT background ────────────────────────────── */}
       <section className="px-6 lg:px-16 py-20 bg-white">
         <div className="max-w-7xl mx-auto space-y-16">
 
           {/* Headline */}
           <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
             <div className="space-y-3 max-w-xl">
-              <Eyebrow>BETTER IS POSSIBLE—AND WE BUILT FOR IT.</Eyebrow>
+              <Eyebrow>LO MEJOR ES POSIBLE—Y LO CONSTRUIMOS PARA TI.</Eyebrow>
               <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.5vw,3.2rem)", lineHeight: 1.1 }}>
-                Modern healthcare,{" "}<em style={{ color: "#2e936f", fontStyle: "normal" }}>built around you</em>
+                Atención médica moderna,{" "}<em style={{ color: "#2e936f", fontStyle: "normal" }}>diseñada para ti</em>
               </h2>
               <p style={{ color: "#24222066", fontSize: "0.9rem" }}>
-                We&apos;re creating a better healthcare experience, and the details matter.<br />
-                <strong style={{ color: "#2e936f" }}>We&apos;re here for those details</strong>
+                Estamos creando una mejor experiencia de salud y los detalles importan.<br />
+                <strong style={{ color: "#2e936f" }}>Estamos aquí para esos detalles</strong>
               </p>
             </div>
             <div className="shrink-0">
@@ -454,10 +454,10 @@ export default function Home() {
           {/* H3: care coaching */}
           <div className="max-w-2xl space-y-3">
             <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1.4rem" }}>
-              Care coaching and nutrition support
+              Coaching de atención y apoyo nutricional
             </h3>
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
-              Our care coaching team, led by certified medical assistants and registered dietitians, helps answer questions about your medication, program, and day-to-day lifestyle changes—so you have the guidance you need to stay on track and see results.
+              Nuestro equipo de coaching de atención, liderado por asistentes médicos certificados y dietistas registrados, ayuda a responder preguntas sobre tu medicamento, programa y cambios cotidianos, para que tengas la orientación necesaria para mantenerte en camino y ver resultados.
             </p>
           </div>
 
@@ -473,10 +473,10 @@ export default function Home() {
           {/* 4 feature text cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Licensed and regulated",        body: "Care is provided by licensed clinicians and filled through FDA-regulated pharmacies." },
-              { title: "100% online medical care",      body: "Appointments, follow-ups, and treatment all take place online." },
-              { title: "Shipping that's fast & discreet", body: "Orders arrive quickly and in plain packaging to protect your privacy." },
-              { title: "Unlimited 24/7 support",        body: "Medical support continues throughout your care, whenever you need it." },
+              { title: "Certificado y regulado",        body: "La atención es prestada por clínicos con licencia y dispensada por farmacias reguladas por la FDA." },
+              { title: "Atención médica 100% en línea",      body: "Las citas, seguimientos y tratamientos se realizan completamente en línea." },
+              { title: "Envío rápido y discreto", body: "Los pedidos llegan rápidamente y en embalaje sin marca para proteger tu privacidad." },
+              { title: "Soporte 24/7 ilimitado",        body: "El apoyo médico continúa durante toda tu atención, siempre que lo necesites." },
             ].map((card) => (
               <div key={card.title} className="space-y-2">
                 <h3 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 600, fontSize: "1rem" }}>{card.title}</h3>
@@ -491,18 +491,18 @@ export default function Home() {
       <section style={{ backgroundColor: "#faf9f7" }} className="px-6 lg:px-16 py-20">
         <div className="max-w-7xl mx-auto space-y-14">
           <div className="text-center space-y-4">
-            <Eyebrow centered>OUR INCREDIBLE DOCTORS</Eyebrow>
+            <Eyebrow centered>NUESTROS INCREÍBLES MÉDICOS</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.5vw,3.2rem)" }}>
-              Medical care from leading health experts
+              Atención médica de manos de los mejores expertos en salud
             </h2>
             <p className="text-sm max-w-lg mx-auto" style={{ color: "#24222099", lineHeight: 1.7 }}>
-              The doctors we&apos;ve partnered with are here to guide you every step of the way, bringing both their expertise and genuine care to help you feel supported.
+              Los médicos con quienes nos hemos asociado están aquí para guiarte en cada paso, aportando tanto su experiencia como su genuina dedicación para que te sientas acompañado.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {[
-              { name: "Dr. Ana Lisa Carr",  creds: "St. George's University, School of Medicine",      photo: IMG.doctorAna,   w: 604, h: 892 },
-              { name: "Dr. Kelly Tenbrink", creds: "American Board of Emergency Medicine",             photo: IMG.doctorKelly, w: 604, h: 892 },
+              { name: "Dra. Ana Lisa Carr",  creds: "St. George's University, School of Medicine",      photo: IMG.doctorAna,   w: 604, h: 892 },
+              { name: "Dra. Kelly Tenbrink", creds: "American Board of Emergency Medicine",             photo: IMG.doctorKelly, w: 604, h: 892 },
             ].map((doc) => (
               <div key={doc.name} className="rounded-3xl overflow-hidden bg-white shadow-sm relative">
                 <Image src={doc.photo} alt={doc.name} width={doc.w} height={doc.h} className="w-full h-80 object-cover object-top" unoptimized />
@@ -521,14 +521,14 @@ export default function Home() {
       <section className="bg-white px-6 lg:px-16 py-20">
         <div className="max-w-7xl mx-auto space-y-14">
           <div className="text-center space-y-4">
-            <Eyebrow centered>THOSE WHO CHOSE MEDVI</Eyebrow>
+            <Eyebrow centered>QUIENES ELIGIERON CLINICARENOVA</Eyebrow>
             <h2 style={{ fontFamily: "'Red Hat Display', sans-serif", fontWeight: 700, fontSize: "clamp(2rem,3.5vw,3.2rem)" }}>
-              There&apos;s a reason people are{" "}
-              <em style={{ color: "#2e936f" }}>raving about us.</em>
+              Hay una razón por la que la gente{" "}
+              <em style={{ color: "#2e936f" }}>nos recomienda.</em>
             </h2>
             <p className="text-sm" style={{ color: "#24222099" }}>
-              Join the multitude of people who have trusted MEDVi to help change their lives,<br />
-              achieving significant, lasting weight loss.
+              Únete a las miles de personas que han confiado en ClínicaRenova para cambiar su vida,<br />
+              logrando una pérdida de peso significativa y duradera.
             </p>
           </div>
 
@@ -554,10 +554,10 @@ export default function Home() {
       <section style={{ backgroundColor: "#1a1a1a" }} className="px-6 lg:px-16 py-10">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center md:justify-between items-center gap-8">
           {[
-            { img: IMG.badgeMoney,  label: "MEDVi guarantee" },
-            { img: IMG.badgeShip,   label: "Free, expedited delivery" },
-            { img: IMG.badgeDoctor, label: "Doctor-led plans & coaching" },
-            { img: IMG.badgeFee,    label: "No hidden fees" },
+            { img: IMG.badgeMoney,  label: "Garantía ClínicaRenova" },
+            { img: IMG.badgeShip,   label: "Entrega gratuita y expedita" },
+            { img: IMG.badgeDoctor, label: "Planes y coaching dirigidos por médicos" },
+            { img: IMG.badgeFee,    label: "Sin costos ocultos" },
           ].map(({ img, label }) => (
             <div key={label} className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full flex items-center justify-center shrink-0"
@@ -576,11 +576,11 @@ export default function Home() {
 
           {/* Top row: logo + contact */}
           <div className="flex flex-col md:flex-row justify-between gap-8">
-            <Image src={IMG.logo} alt="MEDVi" width={110} height={24} className="h-6 w-auto" unoptimized />
+            <Image src={IMG.logo} alt="ClínicaRenova" width={110} height={24} className="h-6 w-auto" unoptimized />
             <div className="flex flex-wrap gap-x-10 gap-y-2 text-sm" style={{ color: "#24222099" }}>
               <span className="flex items-center gap-2">
                 <Image src={IMG.iconEmail} alt="" width={16} height={16} className="w-4 h-4 opacity-50" unoptimized />
-                help@medvi.org
+                hola@clinicarenova.org
               </span>
               <span className="flex items-center gap-2">
                 <Image src={IMG.iconPhone} alt="" width={16} height={16} className="w-4 h-4 opacity-50" unoptimized />
@@ -595,23 +595,23 @@ export default function Home() {
 
           {/* Legal links */}
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs" style={{ color: "#24222066" }}>
-            {["Terms & Conditions","Privacy Policy","Privacy Practices","Refund Policy","Medical Consent","For California Residents","Bill of Rights"].map((l)=>(
-              <a key={l} href={`https://home.medvi.org/${l.toLowerCase().replace(/ & /g,"-and-").replace(/ /g,"-")}`}
+            {["Términos y Condiciones","Política de Privacidad","Prácticas de Privacidad","Política de Reembolso","Consentimiento Médico","Para Residentes de California","Carta de Derechos"].map((l)=>(
+              <a key={l} href={`https://clinicarenova.org/${l.toLowerCase().replace(/ & /g,"-y-").replace(/ /g,"-")}`}
                 className="hover:text-current transition-colors">{l}</a>
             ))}
           </div>
 
           {/* Bottom: copyright + legitscript */}
           <div className="flex justify-between items-center pt-4 border-t" style={{ borderColor: "#e8e5e0" }}>
-            <p className="text-xs" style={{ color: "#24222044" }}>© 2026 MEDVi. All rights reserved</p>
-            <a href="https://www.legitscript.com/websites/?checker_keywords=medvi.org" target="_blank" rel="noopener noreferrer">
-              <Image src={IMG.legitScript} alt="Verify Approval for www.medvi.org" width={80} height={80} className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity" unoptimized />
+            <p className="text-xs" style={{ color: "#24222044" }}>© 2026 ClínicaRenova. Todos los derechos reservados</p>
+            <a href="https://www.legitscript.com/websites/?checker_keywords=clinicarenova.org" target="_blank" rel="noopener noreferrer">
+              <Image src={IMG.legitScript} alt="Verificar aprobación para www.clinicarenova.org" width={80} height={80} className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity" unoptimized />
             </a>
           </div>
 
           {/* Disclaimer */}
           <p className="text-xs leading-relaxed max-w-5xl" style={{ color: "#24222044" }}>
-            *The assessment made available on the MEDVi website does not create a doctor-patient relationship. OpenLoop Health, a network of US-licensed doctors, has established exclusionary criteria to determine if an individual does not qualify for GLP-1s. Prescriptions are issued only after an online consultation with an independent licensed provider. Compound medications are dispensed by state-licensed pharmacies but are not FDA approved. Compounded GLP-1s are produced in FDA-regulated facilities. The decision to use compounded drugs is guided by the licensed provider&apos;s medical judgment.
+            *La evaluación disponible en el sitio web de ClínicaRenova no establece una relación médico-paciente. La Red de Médicos Certificados, una red de médicos con licencia en EE. UU., ha establecido criterios de exclusión para determinar si un individuo no califica para los GLP-1. Las recetas se emiten únicamente tras una consulta en línea con un proveedor independiente con licencia. Los medicamentos compuestos son dispensados por farmacias autorizadas por el estado, pero no están aprobados por la FDA. Los GLP-1 compuestos se producen en instalaciones reguladas por la FDA. La decisión de usar medicamentos compuestos está guiada por el criterio médico del proveedor con licencia.
           </p>
         </div>
       </footer>
@@ -659,7 +659,7 @@ function ComingSoon() {
   return (
     <span className="inline-block text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full"
       style={{ backgroundColor: "#2e936f", color: "#ffffff" }}>
-      COMING SOON
+      PRÓXIMAMENTE
     </span>
   );
 }

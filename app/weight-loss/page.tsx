@@ -5,12 +5,12 @@ import Footer from "../components/Footer";
 const CDN = "https://framerusercontent.com/images";
 
 const NAV_ITEMS = [
-  "Our Products",
-  "Real Results",
-  "The Numbers",
-  "What To Expect",
-  "24/7 Support",
-  "Testimonials",
+  "Nuestros Productos",
+  "Resultados Reales",
+  "Los Números",
+  "Qué Esperar",
+  "Soporte 24/7",
+  "Testimonios",
 ];
 
 interface PricingCard {
@@ -23,30 +23,30 @@ interface PricingCard {
 
 const PRICING_CARDS: PricingCard[] = [
   {
-    name: "GLP-1 Injections",
-    price: "Starting at $179",
+    name: "Inyecciones GLP-1",
+    price: "Desde $179",
     badge: "Popular",
-    description: "One simple injection per week",
+    description: "Una sencilla inyección por semana",
   },
   {
-    name: "GLP-1 Tablets",
-    price: "Starting at $249",
-    description: "One dissolvable tablet per day",
+    name: "Tabletas GLP-1",
+    price: "Desde $249",
+    description: "Una tableta disoluble al día",
   },
   {
-    name: "Wegovy® Pill",
-    price: "$99 Membership + Medication Cost",
-    description: "One pill per day",
+    name: "Wegovy® en Pastilla",
+    price: "$99 Membresía + Costo del Medicamento",
+    description: "Una pastilla al día",
   },
   {
-    name: "Wegovy® Injection",
-    price: "$99 Membership + Medication Cost",
-    description: "Availability is subject to change",
+    name: "Wegovy® Inyectable",
+    price: "$99 Membresía + Costo del Medicamento",
+    description: "Disponibilidad sujeta a cambios",
   },
   {
-    name: "Zepbound® Injection",
-    price: "$99 Membership + Medication Cost",
-    description: "Availability is subject to change",
+    name: "Zepbound® Inyectable",
+    price: "$99 Membresía + Costo del Medicamento",
+    description: "Disponibilidad sujeta a cambios",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function WeightLoss() {
         <a href="/">
           <Image
             src={`${CDN}/1BRDkIzVV7TxG8fJDyUWdUDDE.png`}
-            alt="MEDVi"
+            alt="ClínicaRenova"
             width={110}
             height={24}
             className="h-6 w-auto"
@@ -78,11 +78,11 @@ export default function WeightLoss() {
           ))}
         </div>
         <a
-          href="https://glp.medvi.org"
+          href="https://clinicarenova.org/glp"
           className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2e936f" }}
         >
-          GET STARTED
+          COMENZAR
         </a>
       </nav>
 
@@ -102,7 +102,7 @@ export default function WeightLoss() {
             border: "1px solid rgba(46,147,111,0.35)",
           }}
         >
-          500,000+ patients
+          Más de 500.000 pacientes
         </div>
 
         <h1
@@ -116,8 +116,8 @@ export default function WeightLoss() {
           }}
           className="mb-5"
         >
-          Finally serious about weight loss?{" "}
-          <span style={{ color: "#6eddb8" }}>So are we.</span>
+          ¿Por fin decidido a perder peso?{" "}
+          <span style={{ color: "#6eddb8" }}>Nosotros también.</span>
         </h1>
 
         <p
@@ -129,15 +129,15 @@ export default function WeightLoss() {
           }}
           className="mb-10"
         >
-          Fat loss made easy with personalized care and GLP-1 medication
+          Pérdida de grasa simplificada con atención personalizada y medicación GLP-1
         </p>
 
         <a
-          href="https://glp.medvi.org"
+          href="https://clinicarenova.org/glp"
           className="text-white font-bold tracking-widest uppercase px-10 py-4 rounded-full text-sm transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2e936f" }}
         >
-          AM I QUALIFIED?
+          ¿CALIFICO?
         </a>
       </section>
 
@@ -148,7 +148,7 @@ export default function WeightLoss() {
             className="text-xs font-bold tracking-widest uppercase mb-4 text-center"
             style={{ fontFamily: "'Onest', sans-serif", color: "#2e936f" }}
           >
-            Choose Your Plan
+            Elige Tu Plan
           </div>
           <h2
             style={{
@@ -160,7 +160,7 @@ export default function WeightLoss() {
             }}
             className="mb-12"
           >
-            Personalized GLP-1 programs for every lifestyle
+            Programas GLP-1 personalizados para cada estilo de vida
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -194,7 +194,7 @@ export default function WeightLoss() {
                     className="text-xs font-semibold tracking-widest uppercase mb-1"
                     style={{ fontFamily: "'Onest', sans-serif", color: "#2e936f" }}
                   >
-                    Medication
+                    Medicamento
                   </p>
                   <h3
                     style={{
@@ -224,14 +224,14 @@ export default function WeightLoss() {
                 </p>
 
                 <a
-                  href="https://glp.medvi.org"
+                  href="https://clinicarenova.org/glp"
                   className="mt-2 text-center text-sm font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-opacity hover:opacity-90"
                   style={{
                     backgroundColor: card.badge ? "#2e936f" : "#242220",
                     color: "#ffffff",
                   }}
                 >
-                  GET STARTED
+                  COMENZAR
                 </a>
               </div>
             ))}
@@ -256,10 +256,10 @@ export default function WeightLoss() {
                 lineHeight: 1,
               }}
             >
-              500,000+
+              500.000+
             </p>
             <p className="mt-3 text-sm font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>
-              patients on the MEDVi platform
+              pacientes en la plataforma ClínicaRenova
             </p>
           </div>
           <div>
@@ -275,7 +275,7 @@ export default function WeightLoss() {
               93%
             </p>
             <p className="mt-3 text-sm font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>
-              kept the weight off for good
+              mantuvo el peso perdido de forma definitiva
             </p>
           </div>
         </div>
@@ -288,7 +288,7 @@ export default function WeightLoss() {
             className="text-xs font-bold tracking-widest uppercase mb-4"
             style={{ fontFamily: "'Onest', sans-serif", color: "#2e936f" }}
           >
-            The Science
+            La Ciencia
           </div>
           <h2
             style={{
@@ -300,11 +300,11 @@ export default function WeightLoss() {
             }}
             className="mb-6"
           >
-            Want to reach your goal weight fast?
+            ¿Quieres alcanzar tu peso ideal rápidamente?
           </h2>
           <p className="text-base leading-relaxed" style={{ color: "#24222099", fontSize: "1.0625rem" }}>
-            It&apos;s not magic&mdash;it&apos;s metabolic science. GLP-1 is a naturally occurring hormone that
-            regulates appetite and blood sugar, improving your metabolism and knocking out cravings.
+            No es magia&mdash;es ciencia metabólica. El GLP-1 es una hormona natural que
+            regula el apetito y el azúcar en sangre, mejora tu metabolismo y elimina los antojos.
           </p>
         </div>
       </section>
@@ -321,7 +321,7 @@ export default function WeightLoss() {
               className="text-xs font-bold tracking-widest uppercase mb-4"
               style={{ fontFamily: "'Onest', sans-serif", color: "#2e936f" }}
             >
-              How It Works
+              Cómo Funciona
             </div>
             <h2
               style={{
@@ -333,18 +333,18 @@ export default function WeightLoss() {
               }}
               className="mb-5"
             >
-              We will fix your broken metabolism.
+              Vamos a reactivar tu metabolismo.
             </h2>
             <p className="text-base leading-relaxed" style={{ color: "#24222099" }}>
-              Traditional diets don&apos;t work because nearly 70% of weight is genetically determined.
-              With medication, you will work with your body rather than against it.
+              Las dietas tradicionales no funcionan porque cerca del 70% del peso está determinado genéticamente.
+              Con medicación, trabajarás con tu cuerpo en lugar de contra él.
             </p>
             <a
-              href="https://glp.medvi.org"
+              href="https://clinicarenova.org/glp"
               className="inline-block mt-8 text-sm font-bold tracking-widest uppercase px-8 py-3.5 rounded-full transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#2e936f", color: "#ffffff" }}
             >
-              GET STARTED
+              COMENZAR
             </a>
           </div>
 
@@ -352,23 +352,23 @@ export default function WeightLoss() {
             {[
               {
                 step: "01",
-                title: "Complete your assessment",
-                body: "Answer a few medical questions so a licensed provider can review your eligibility.",
+                title: "Completa tu evaluación",
+                body: "Responde unas preguntas médicas para que un proveedor con licencia pueda revisar tu elegibilidad.",
               },
               {
                 step: "02",
-                title: "Meet your provider",
-                body: "A board-certified clinician reviews your intake and creates your personalized plan.",
+                title: "Conoce a tu médico",
+                body: "Un clínico certificado revisa tu formulario y crea tu plan personalizado.",
               },
               {
                 step: "03",
-                title: "Receive your medication",
-                body: "Your GLP-1 medication ships directly to your door with free, expedited delivery.",
+                title: "Recibe tu medicamento",
+                body: "Tu medicación GLP-1 se envía directamente a tu domicilio con entrega urgente gratuita.",
               },
               {
                 step: "04",
-                title: "Track your progress",
-                body: "Your care team checks in regularly to adjust dosing and keep you on track.",
+                title: "Monitorea tu progreso",
+                body: "Tu equipo médico te hace seguimiento regular para ajustar la dosis y mantenerte en camino.",
               },
             ].map(({ step, title, body }) => (
               <div key={step} className="flex gap-5 items-start">
@@ -406,7 +406,7 @@ export default function WeightLoss() {
             className="text-xs font-bold tracking-widest uppercase mb-4"
             style={{ fontFamily: "'Onest', sans-serif", color: "#2e936f" }}
           >
-            Real Results
+            Resultados Reales
           </div>
           <h2
             style={{
@@ -418,18 +418,18 @@ export default function WeightLoss() {
             }}
             className="mb-6"
           >
-            Join 500,000+ patients who finally found what works.
+            Únete a más de 500.000 pacientes que por fin encontraron lo que funciona.
           </h2>
           <p className="text-base leading-relaxed mb-10" style={{ color: "#24222099" }}>
-            Our members lose an average of 1&ndash;2 lbs per week. Doctor-led plans, free expedited
-            delivery, no hidden fees, and 24/7 support.
+            Nuestros miembros pierden un promedio de 1&ndash;2 libras por semana. Planes guiados por médicos, entrega urgente gratuita,
+            sin costos ocultos y soporte 24/7.
           </p>
           <a
-            href="https://glp.medvi.org"
+            href="https://clinicarenova.org/glp"
             className="inline-block text-white font-bold tracking-widest uppercase px-10 py-4 rounded-full text-sm transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#2e936f" }}
           >
-            AM I QUALIFIED?
+            ¿CALIFICO?
           </a>
         </div>
       </section>

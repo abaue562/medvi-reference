@@ -3,242 +3,242 @@ import LegalPage from "../components/LegalPage";
 export default function NoticeOfPrivacyPractices() {
   return (
     <LegalPage
-      title="Notice of Privacy Practices"
-      lastUpdated="January 1, 2024"
+      title="Aviso de Prácticas de Privacidad"
+      lastUpdated="1 de enero de 2024"
       sections={[
         {
           body: [
-            "THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.",
-            `This Notice of Privacy Practices ("Notice") describes the privacy practices of MEDVi, LLC and its affiliates, including certain affiliated professional entities, their physicians, health care practitioners, and other personnel ("we" or "us").`,
+            "ESTE AVISO DESCRIBE CÓMO PUEDE USARSE Y DIVULGARSE LA INFORMACIÓN MÉDICA SOBRE USTED Y CÓMO PUEDE ACCEDER A DICHA INFORMACIÓN. POR FAVOR LÉALO DETENIDAMENTE.",
+            `Este Aviso de Prácticas de Privacidad ("Aviso") describe las prácticas de privacidad de ClínicaRenova, LLC y sus filiales, incluidas ciertas entidades profesionales afiliadas, sus médicos, profesionales de la salud y demás personal ("nosotros" o "nos").`,
           ],
         },
         {
-          heading: "I. Who We Are",
+          heading: "I. Quiénes Somos",
           level: 2,
           body: [],
         },
         {
-          heading: "II. Our Privacy Obligations",
+          heading: "II. Nuestras Obligaciones de Privacidad",
           level: 2,
           body: [
-            `We are required by law to maintain the privacy of your health information ("Protected Health Information" or "PHI") and to provide you with this Notice of our legal duties and privacy practices with respect to your PHI. We are also obligated to notify you following a Breach of unsecured PHI. When we use or disclose your PHI, we are required to abide by the terms of this Notice (or other notice in effect at the time of the use or disclosure).`,
+            `La ley nos exige mantener la privacidad de su información de salud ("Información de Salud Protegida" o "PHI") y proporcionarle este Aviso sobre nuestras obligaciones legales y prácticas de privacidad con respecto a su PHI. También estamos obligados a notificarle en caso de una Violación de PHI no asegurada. Cuando usamos o divulgamos su PHI, debemos cumplir con los términos de este Aviso (o del aviso vigente en el momento del uso o la divulgación).`,
           ],
         },
         {
-          heading: "III. Permissible Uses and Disclosures Without Your Written Authorization",
+          heading: "III. Usos y Divulgaciones Permitidos Sin Su Autorización Escrita",
           level: 3,
           body: [
-            "In certain situations, which we describe in Section IV below, we must obtain your written authorization in order to use and/or disclose your PHI. We do not need any type of authorization, however, for the following uses and disclosures:",
+            "En ciertas situaciones, que describimos en la Sección IV a continuación, debemos obtener su autorización escrita para usar y/o divulgar su PHI. Sin embargo, no necesitamos ningún tipo de autorización para los siguientes usos y divulgaciones:",
           ],
         },
         {
-          heading: "A. Uses and Disclosures For Treatment, Payment and Health Care Operations.",
+          heading: "A. Usos y Divulgaciones para Tratamiento, Pago y Operaciones de Atención Médica.",
           level: 3,
           body: [
-            `We may use and disclose PHI, but not your "Highly Confidential Information" (defined in Section IV.B below), in order to treat you, obtain payment for services provided to you, and conduct our "Healthcare Operations" as detailed below:`,
-            "Treatment. We may use and disclose your PHI to provide treatment, for example, to diagnose and treat your injury or illness. We may also disclose PHI to other health care providers involved in your treatment.",
-            "Payment. In most cases, we may use and disclose your PHI to obtain payment for services that we provide to you.",
-            "Healthcare Operations. We may use and disclose your PHI for our healthcare operations which include internal administration and planning and various activities that improve the quality and cost effectiveness of the care that we deliver to you. For example, we may use PHI to evaluate the quality and competence of our physicians and other health care practitioners. We may also disclose PHI in order to resolve any complaints you may have. We may also disclose PHI to your other healthcare providers when such PHI is required for them to treat you, receive payment for services they render to you, or conduct certain healthcare operations, such as quality assessment and improvement activities, reviewing the quality and competence of healthcare professionals, or for health care fraud and abuse detection or compliance.",
+            `Podemos usar y divulgar PHI, pero no su "Información Altamente Confidencial" (definida en la Sección IV.B a continuación), para tratarle, obtener pago por los servicios que le prestamos y llevar a cabo nuestras "Operaciones de Atención Médica" como se detalla a continuación:`,
+            "Tratamiento. Podemos usar y divulgar su PHI para brindar tratamiento; por ejemplo, para diagnosticar y tratar su lesión o enfermedad. También podemos divulgar PHI a otros proveedores de atención médica involucrados en su tratamiento.",
+            "Pago. En la mayoría de los casos, podemos usar y divulgar su PHI para obtener pago por los servicios que le prestamos.",
+            "Operaciones de Atención Médica. Podemos usar y divulgar su PHI para nuestras operaciones de atención médica, que incluyen administración interna, planificación y diversas actividades que mejoran la calidad y rentabilidad de la atención que le brindamos. Por ejemplo, podemos usar PHI para evaluar la calidad y competencia de nuestros médicos y otros profesionales de la salud. También podemos divulgar PHI para resolver cualquier queja que pueda tener. Asimismo, podemos divulgar PHI a sus otros proveedores de atención médica cuando sea necesaria para que le traten, reciban pago por los servicios que le prestan o lleven a cabo ciertas operaciones de atención médica, como actividades de evaluación y mejora de la calidad, revisión de la competencia de los profesionales de la salud, o para la detección o cumplimiento relacionados con el fraude en atención médica.",
           ],
         },
         {
-          heading: "B. Disclosure to Relatives, Close Friends and Other Caregivers.",
+          heading: "B. Divulgación a Familiares, Amigos Cercanos y Otros Cuidadores.",
           level: 3,
           body: [
-            "We may use or disclose your PHI to a family member, other relative, a close personal friend, or any other person identified by you when you are present for, or otherwise available prior to the disclosure, if we (1) obtain your agreement; (2) provide you with the opportunity to object to the disclosure and you do not object; or (3) reasonably infer that you do not object to the disclosure.",
-            "If you are not present, or the opportunity to agree or object to a use or disclosure cannot practicably be provided because of your incapacity or an emergency circumstance, we may exercise our professional judgment to determine whether a disclosure is in your best interests. If we disclose information to a family member, other relative or a close personal friend, we would disclose only information that we believe is directly relevant to the person's involvement with your health care or payment related to your health care. We may also disclose your PHI in order to notify (or assist in notifying) such persons of your location, general condition, or death.",
+            "Podemos usar o divulgar su PHI a un familiar, otro pariente, un amigo íntimo o cualquier otra persona que usted identifique cuando esté presente durante la divulgación o cuando exista disponibilidad previa a ella, si (1) obtenemos su acuerdo; (2) le damos la oportunidad de objetar la divulgación y no objeta; o (3) inferimos razonablemente que no se opone a la divulgación.",
+            "Si no está presente, o si no es posible ofrecer la oportunidad de acordar u objetar una divulgación debido a su incapacidad o una situación de emergencia, podemos ejercer nuestro juicio profesional para determinar si la divulgación es en su mejor interés. Si divulgamos información a un familiar, otro pariente o un amigo íntimo, solo divulgaremos la información que creamos sea directamente relevante para la participación de esa persona en su atención médica o en el pago relacionado con ella. También podemos divulgar su PHI para notificar (o ayudar a notificar) a dichas personas sobre su ubicación, condición general o fallecimiento.",
           ],
         },
         {
-          heading: "C. Public Health Activities.",
+          heading: "C. Actividades de Salud Pública.",
           level: 3,
           body: [
-            "We may disclose your PHI for the following public health activities: (1) to report health information to public health authorities for the purpose of preventing or controlling disease, injury or disability; (2) to report child abuse and neglect to public health authorities or other government authorities authorized by law to receive such reports; (3) to report information about products and services under the jurisdiction of the U.S. Food and Drug Administration; (4) to alert a person who may have been exposed to a communicable disease or may otherwise be at risk of contracting or spreading a disease or condition; and (5) to report information to your employer as required under laws addressing work-related illnesses and injuries or workplace medical surveillance.",
+            "Podemos divulgar su PHI para las siguientes actividades de salud pública: (1) informar datos de salud a autoridades de salud pública con el fin de prevenir o controlar enfermedades, lesiones o discapacidades; (2) reportar el abuso y negligencia infantil a autoridades de salud pública u otras autoridades gubernamentales autorizadas por ley para recibir dichos informes; (3) informar datos sobre productos y servicios bajo la jurisdicción de la Administración de Alimentos y Medicamentos de los EE. UU.; (4) alertar a una persona que pueda haber estado expuesta a una enfermedad transmisible o que pueda estar en riesgo de contraer o propagar una enfermedad o condición; y (5) informar datos a su empleador según lo exijan las leyes que regulan enfermedades y lesiones relacionadas con el trabajo o la vigilancia médica en el lugar de trabajo.",
           ],
         },
         {
-          heading: "D. Victims of Abuse, Neglect or Domestic Violence.",
+          heading: "D. Víctimas de Abuso, Negligencia o Violencia Doméstica.",
           level: 3,
           body: [
-            "If we reasonably believe you are a victim of abuse, neglect, or domestic violence, we may disclose your PHI to a governmental authority, including a social service or protective services agency, authorized by law to receive reports of such abuse, neglect, or domestic violence.",
+            "Si razonablemente creemos que usted es víctima de abuso, negligencia o violencia doméstica, podemos divulgar su PHI a una autoridad gubernamental, incluida una agencia de servicios sociales o de protección, autorizada por ley para recibir informes de dicho abuso, negligencia o violencia doméstica.",
           ],
         },
         {
-          heading: "E. Health Oversight Activities.",
+          heading: "E. Actividades de Supervisión de Salud.",
           level: 3,
           body: [
-            "We may disclose your PHI to a health oversight agency that oversees the health care system and is charged with responsibility for ensuring compliance with the rules of government health programs, such as Medicare or Medicaid.",
+            "Podemos divulgar su PHI a una agencia de supervisión de salud que supervise el sistema de atención médica y sea responsable de garantizar el cumplimiento de las reglas de los programas de salud del gobierno, como Medicare o Medicaid.",
           ],
         },
         {
-          heading: "F. Judicial and Administrative Proceedings.",
+          heading: "F. Procedimientos Judiciales y Administrativos.",
           level: 3,
           body: [
-            "We may disclose your PHI in the course of a judicial or administrative proceeding in response to a legal order or other lawful process.",
+            "Podemos divulgar su PHI en el curso de un procedimiento judicial o administrativo en respuesta a una orden legal u otro proceso legal.",
           ],
         },
         {
-          heading: "G. Law Enforcement Officers.",
+          heading: "G. Agentes del Orden Público.",
           level: 3,
           body: [
-            "We may disclose your PHI to the police or other law enforcement officials as required or permitted by law or in compliance with a court order or a grand jury or administrative subpoena.",
+            "Podemos divulgar su PHI a la policía u otros funcionarios encargados del cumplimiento de la ley según lo exija o permita la ley o en cumplimiento de una orden judicial o una citación de gran jurado o administrativa.",
           ],
         },
         {
-          heading: "H. Decedents.",
+          heading: "H. Fallecidos.",
           level: 3,
           body: [
-            "We may disclose your PHI to a coroner, medical examiner, or funeral director as authorized by law.",
+            "Podemos divulgar su PHI a un médico forense, perito médico o director de pompas fúnebres según lo autorice la ley.",
           ],
         },
         {
-          heading: "I. Research.",
+          heading: "I. Investigación.",
           level: 3,
           body: [
-            "We may use or disclose your PHI without your consent or authorization if an Institutional Review Board or Privacy Board approves a waiver of authorization for disclosure.",
+            "Podemos usar o divulgar su PHI sin su consentimiento o autorización si una Junta de Revisión Institucional o una Junta de Privacidad aprueba una exención de autorización para la divulgación.",
           ],
         },
         {
-          heading: "J. Health or Safety.",
+          heading: "J. Salud o Seguridad.",
           level: 3,
           body: [
-            "We may use or disclose your PHI to prevent or lessen a serious and imminent threat to a person's or the public's health or safety.",
+            "Podemos usar o divulgar su PHI para prevenir o disminuir una amenaza grave e inminente para la salud o la seguridad de una persona o del público.",
           ],
         },
         {
-          heading: "K. Specialized Government Functions.",
+          heading: "K. Funciones Gubernamentales Especializadas.",
           level: 3,
           body: [
-            "We may use and disclose your PHI to units of the government with special functions, such as the U.S. military or the U.S. Department of State under certain circumstances.",
+            "Podemos usar y divulgar su PHI a unidades del gobierno con funciones especiales, como las Fuerzas Armadas de los EE. UU. o el Departamento de Estado de los EE. UU., en determinadas circunstancias.",
           ],
         },
         {
-          heading: "L. Workers' Compensation.",
+          heading: "L. Compensación Laboral.",
           level: 3,
           body: [
-            "We may disclose your PHI as authorized by and to the extent necessary to comply with state law relating to workers' compensation or other similar programs.",
+            "Podemos divulgar su PHI según lo autorice y sea necesario para cumplir con las leyes estatales relacionadas con la compensación laboral u otros programas similares.",
           ],
         },
         {
-          heading: "M. As Required By Law.",
+          heading: "M. Según lo Exija la Ley.",
           level: 3,
           body: [
-            "We may use and disclose your PHI when required to do so by any other law not already referred to in the preceding categories.",
+            "Podemos usar y divulgar su PHI cuando así lo exija cualquier otra ley no mencionada en las categorías anteriores.",
           ],
         },
         {
-          heading: "IV. Uses and Disclosures Requiring Your Written Authorization",
+          heading: "IV. Usos y Divulgaciones que Requieren Su Autorización Escrita",
           level: 3,
           body: [],
         },
         {
-          heading: "A. Use or Disclosure with Your Authorization.",
+          heading: "A. Uso o Divulgación con Su Autorización.",
           level: 3,
           body: [
-            `We must obtain your written authorization for uses and disclosures of PHI for marketing purposes and disclosures that constitute the sale of PHI. Additionally, other uses and disclosures of PHI not described in this Notice will be made only when you give us your written permission on an authorization form ("Your Authorization"). For instance, you will need to complete and sign an authorization form before we can send your PHI to your life insurance company or to the attorney representing the other party in a lawsuit in which you are involved.`,
+            `Debemos obtener su autorización escrita para usos y divulgaciones de PHI con fines de marketing y divulgaciones que constituyan la venta de PHI. Además, otros usos y divulgaciones de PHI no descritos en este Aviso solo se realizarán cuando usted nos otorgue su permiso escrito en un formulario de autorización ("Su Autorización"). Por ejemplo, deberá completar y firmar un formulario de autorización antes de que podamos enviar su PHI a su compañía de seguros de vida o al abogado que representa a la otra parte en un juicio en el que usted esté involucrado.`,
           ],
         },
         {
-          heading: "B. Uses and Disclosures of Your Highly Confidential Information.",
+          heading: "B. Usos y Divulgaciones de Su Información Altamente Confidencial.",
           level: 3,
           body: [
-            `Federal and state law requires special privacy protections for certain highly confidential information about you ("Highly Confidential Information"). This Highly Confidential Information may include the subset of your PHI that: (1) is about mental health and developmental disabilities services; (2) is about alcohol and drug abuse prevention, treatment and referral; (3) is about HIV/AIDS testing, diagnosis or treatment; (4) is about sexually-transmitted disease(s); (5) is about genetic testing; (6) is about child abuse and neglect; (7) is about domestic abuse of an adult with a disability; or (8) is about sexual assault. In order for us to disclose your Highly Confidential Information for a purpose other than those permitted by law, we must have Your Authorization.`,
+            `La ley federal y estatal exige protecciones de privacidad especiales para cierta información altamente confidencial sobre usted ("Información Altamente Confidencial"). Esta Información Altamente Confidencial puede incluir el subconjunto de su PHI que: (1) está relacionada con servicios de salud mental y discapacidades del desarrollo; (2) está relacionada con la prevención, tratamiento y derivación del abuso de alcohol y drogas; (3) está relacionada con pruebas, diagnósticos o tratamientos de VIH/SIDA; (4) está relacionada con enfermedades de transmisión sexual; (5) está relacionada con pruebas genéticas; (6) está relacionada con abuso y negligencia infantil; (7) está relacionada con el abuso doméstico de un adulto con discapacidad; o (8) está relacionada con agresión sexual. Para que podamos divulgar su Información Altamente Confidencial con un propósito distinto a los permitidos por la ley, debemos contar con Su Autorización.`,
           ],
         },
         {
-          heading: "C. Revocation of Your Authorization.",
+          heading: "C. Revocación de Su Autorización.",
           level: 3,
           body: [
-            "You may withdraw (revoke) your Authorization, or any written authorization, regarding your Highly Confidential Information (except to the extent that we have acted in reliance upon it) by delivering a written statement to the Privacy Officer identified below. A form of written revocation is available upon request from the Privacy Officer.",
+            "Puede retirar (revocar) su Autorización, o cualquier autorización escrita, relacionada con su Información Altamente Confidencial (excepto en la medida en que hayamos actuado en base a ella) entregando una declaración escrita al Oficial de Privacidad identificado a continuación. Se puede obtener un formulario de revocación escrita previa solicitud al Oficial de Privacidad.",
           ],
         },
         {
-          heading: "V. Your Rights Regarding Your Protected Health Information",
+          heading: "V. Sus Derechos con Respecto a Su Información de Salud Protegida",
           level: 3,
           body: [],
         },
         {
-          heading: "A. For Further Information and Complaints.",
+          heading: "A. Para Más Información y Quejas.",
           level: 3,
           body: [
-            "If you would like more information about your privacy rights, if you are concerned that we have violated your privacy rights, or if you disagree with a decision that we made about access to your PHI, you may contact our Compliance and Privacy Officer. Also, you may make a complaint by calling (844) 357-3601. You may also file written complaints with the Director, Office for Civil Rights of the U.S. Department of Health and Human Services. Upon request, the Compliance and Privacy Officer will provide you with the correct address for the Director. We will not retaliate against you if you file a complaint with us or the Director.",
+            "Si desea más información sobre sus derechos de privacidad, si le preocupa que hayamos violado sus derechos de privacidad, o si no está de acuerdo con una decisión que tomamos sobre el acceso a su PHI, puede comunicarse con nuestro Oficial de Cumplimiento y Privacidad. También puede presentar una queja llamando al (844) 357-3601. También puede presentar quejas por escrito ante el Director de la Oficina de Derechos Civiles del Departamento de Salud y Servicios Humanos de los EE. UU. A solicitud, el Oficial de Cumplimiento y Privacidad le proporcionará la dirección correcta del Director. No tomaremos represalias contra usted si presenta una queja ante nosotros o ante el Director.",
           ],
         },
         {
-          heading: "B. Right to Request Additional Restrictions.",
+          heading: "B. Derecho a Solicitar Restricciones Adicionales.",
           level: 3,
           body: [
-            "You have the right to request a restriction on the uses and disclosures of your PHI (1) for treatment, payment, and health care operations purposes, and (2) to individuals (such as a family member, other relative, close personal friend or any other person identified by you) involved in your care or with payment related to your care. For example, you have the right to request that we not disclose your PHI to a health plan for payment or healthcare operations purposes, if that PHI pertains solely to a health care item or service for which we have been involved and which has been paid out of pocket in full. Unless otherwise required by law, we are required to comply with your request for this type of restriction. For all other requests for restrictions on use and disclosures of your PHI, we are not required to agree to your request, but will attempt to accommodate reasonable requests when appropriate. If you wish to request additional restrictions, please obtain a request form from, and return the form to our Compliance and Privacy Officer. We will subsequently respond to your request with a written response.",
+            "Tiene derecho a solicitar una restricción en los usos y divulgaciones de su PHI (1) con fines de tratamiento, pago y operaciones de atención médica, y (2) a personas (como un familiar, otro pariente, amigo íntimo o cualquier otra persona que usted identifique) involucradas en su atención o en el pago relacionado con ella. Por ejemplo, tiene derecho a solicitar que no divulguemos su PHI a un plan de salud con fines de pago u operaciones de atención médica, si dicha PHI se refiere únicamente a un artículo o servicio de atención médica en el que hemos participado y que ha sido pagado íntegramente de su bolsillo. A menos que la ley lo exija de otra manera, estamos obligados a cumplir con su solicitud de este tipo de restricción. Para todas las demás solicitudes de restricción de uso y divulgación de su PHI, no estamos obligados a acceder a su solicitud, pero intentaremos atender solicitudes razonables cuando sea apropiado. Si desea solicitar restricciones adicionales, obtenga un formulario de solicitud del Oficial de Cumplimiento y Privacidad y devuélvalo completado. Le responderemos posteriormente con una respuesta escrita.",
           ],
         },
         {
-          heading: "C. Right to Receive Confidential Communications.",
+          heading: "C. Derecho a Recibir Comunicaciones Confidenciales.",
           level: 3,
           body: [
-            "You may request, and we will accommodate, any reasonable written request for you to receive your PHI by alternative means of communication or at alternative locations.",
+            "Puede solicitar, y atenderemos, cualquier solicitud escrita razonable para recibir su PHI por medios de comunicación alternativos o en ubicaciones alternativas.",
           ],
         },
         {
-          heading: "D. Right to Inspect and Copy Your Health Information.",
+          heading: "D. Derecho a Inspeccionar y Copiar Su Información de Salud.",
           level: 3,
           body: [
-            "You may request access to your medical record file and billing records maintained by us in order to inspect and request copies of the records. Under limited circumstances, we may deny you access to a portion of your records. If you would like to access your records, please request a Release of Information Form from the Privacy Officer and submit the completed form to help@medvi.org. If you request copies, we will charge you a cost-based fee that includes (1) labor for copying the PHI; (2) supplies for creating the paper copy or electronic media if you request an electronic copy on portable media; (3) our postage costs, if you request that we mail the copies to you; and (4) if you agree in advance, the cost of preparing an explanation or summary of the PHI.",
+            "Puede solicitar acceso a su expediente médico y registros de facturación que mantenemos para inspeccionarlos y solicitar copias. En circunstancias limitadas, podemos denegarle el acceso a una parte de sus registros. Si desea acceder a sus registros, solicite un Formulario de Autorización de Divulgación de Información al Oficial de Privacidad y envíe el formulario completado a hola@clinicarenova.org. Si solicita copias, le cobraremos una tarifa basada en el costo que incluye (1) mano de obra para copiar la PHI; (2) suministros para crear la copia en papel o el soporte electrónico si solicita una copia electrónica en medios portátiles; (3) nuestros costos de envío, si solicita que le enviemos las copias por correo; y (4) si acepta de antemano, el costo de preparar una explicación o resumen de la PHI.",
           ],
         },
         {
-          heading: "E. Right to Request to Amend Your Records.",
+          heading: "E. Derecho a Solicitar la Modificación de Sus Registros.",
           level: 3,
           body: [
-            "You have the right to request that we amend PHI maintained in your medical record file or billing records. If you desire to amend your records, please obtain an Amendment Request Form from the Compliance and Privacy Officer and submit the completed form to help@medvi.org. We will comply with your request unless we believe that the information that would be amended is accurate and complete or other special circumstances apply.",
+            "Tiene derecho a solicitar que modifiquemos la PHI que se encuentra en su expediente médico o en los registros de facturación. Si desea modificar sus registros, obtenga un Formulario de Solicitud de Modificación del Oficial de Cumplimiento y Privacidad y envíe el formulario completado a hola@clinicarenova.org. Cumpliremos con su solicitud a menos que consideremos que la información que se modificaría es precisa y completa u otras circunstancias especiales apliquen.",
           ],
         },
         {
-          heading: "F. Right to Receive An Accounting of Disclosures.",
+          heading: "F. Derecho a Recibir un Registro de Divulgaciones.",
           level: 3,
           body: [
-            "Upon request, you may obtain an accounting of certain disclosures of your PHI made by us during any period of time prior to the date of your request provided such period does not exceed six years. If you request an accounting more than once during a twelve (12) month period, we will charge you a reasonable fee for additional accountings of disclosure and will inform you in advance of any fee to provide you with an opportunity to withdraw or modify the request.",
+            "A solicitud, puede obtener un registro de ciertas divulgaciones de su PHI realizadas por nosotros durante cualquier período de tiempo anterior a la fecha de su solicitud, siempre que dicho período no exceda seis años. Si solicita un registro más de una vez en un período de doce (12) meses, le cobraremos una tarifa razonable por registros adicionales y le informaremos de antemano sobre cualquier tarifa para que tenga la oportunidad de retirar o modificar la solicitud.",
           ],
         },
         {
-          heading: "G. Right to Receive A Copy of this Notice.",
+          heading: "G. Derecho a Recibir una Copia de Este Aviso.",
           level: 3,
           body: [
-            "Upon request, you may obtain a copy of this Notice, either by email or in paper format. Please submit your request to:",
-            "MEDVi, LLC\n131 Continental Dr, Ste 305\nNewark, DE 19713\nhelp@medvi.org",
+            "A solicitud, puede obtener una copia de este Aviso, ya sea por correo electrónico o en formato impreso. Envíe su solicitud a:",
+            "ClínicaRenova, LLC\n131 Continental Dr, Ste 305\nNewark, DE 19713\nhola@clinicarenova.org",
           ],
         },
         {
-          heading: "VI. Effective Date and Duration of This Notice",
+          heading: "VI. Fecha de Entrada en Vigor y Duración de Este Aviso",
           level: 3,
           body: [],
         },
         {
-          heading: "A. Effective Date.",
+          heading: "A. Fecha de Entrada en Vigor.",
           level: 3,
           body: [
-            "This Notice is effective on January 1, 2024.",
+            "Este Aviso entra en vigor el 1 de enero de 2024.",
           ],
         },
         {
-          heading: "B. Right to Change Terms of this Notice.",
+          heading: "B. Derecho a Modificar los Términos de Este Aviso.",
           level: 3,
           body: [
-            "We may change the terms of this Notice at any time. If we change this Notice, we may make the new notice terms effective for all Protected Health Information that we maintain, including any information created or received prior to issuing the new notice. If we change this Notice, we will post the new notice on our website at www.medvi.org. You also may obtain any new notice by contacting help@medvi.org.",
+            "Podemos cambiar los términos de este Aviso en cualquier momento. Si lo modificamos, los nuevos términos pueden aplicarse a toda la Información de Salud Protegida que mantenemos, incluida cualquier información creada o recibida antes de la emisión del nuevo aviso. Si cambiamos este Aviso, publicaremos el nuevo aviso en nuestro sitio web en www.clinicarenova.org. También puede obtener cualquier aviso nuevo comunicándose con hola@clinicarenova.org.",
           ],
         },
         {
-          heading: "VII. Privacy Officer",
+          heading: "VII. Oficial de Privacidad",
           level: 3,
           body: [
-            "MEDVi, LLC\n131 Continental Dr, Ste 305\nNewark, DE 19713\nhelp@medvi.org",
+            "ClínicaRenova, LLC\n131 Continental Dr, Ste 305\nNewark, DE 19713\nhola@clinicarenova.org",
           ],
         },
         {
-          heading: "Data Protection Officer Contact Information",
+          heading: "Información de Contacto del Oficial de Protección de Datos",
           level: 3,
           body: [
-            "You may contact our Data Protection Officer at:",
-            "Per Hörbergs Väg 3\n164 50 Bromma\nSweden\np. +46 705085085\nEmail: johanwestin00@gmail.com",
+            "Puede comunicarse con nuestro Oficial de Protección de Datos en:",
+            "Per Hörbergs Väg 3\n164 50 Bromma\nSuecia\nTel: +46 705085085\nCorreo electrónico: johanwestin00@gmail.com",
           ],
         },
       ]}

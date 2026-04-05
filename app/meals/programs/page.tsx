@@ -18,11 +18,11 @@ function MealsNav() {
 
         <div className="hidden md:flex items-center gap-8">
           {[
-            { label: "WEEKLY MENU", href: "/meals#menu" },
-            { label: "PROGRAMS OFFERED", href: "/meals/programs" },
-            { label: "HOW IT WORKS", href: "/meals/how-it-works" },
-            { label: "FAQ", href: "/meals/faq" },
-            { label: "CONTACT", href: "#contact" },
+            { label: "MENÚ SEMANAL", href: "/meals#menu" },
+            { label: "PROGRAMAS", href: "/meals/programs" },
+            { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
+            { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
+            { label: "CONTACTO", href: "#contact" },
           ].map((link) => (
             <Link
               key={link.label}
@@ -44,14 +44,14 @@ function MealsNav() {
               fontFamily: "'Red Hat Text', sans-serif",
             }}
           >
-            LOGIN
+            INGRESAR
           </button>
           <Link
             href="/meals/programs"
             className="px-5 py-2 rounded-pill text-sm font-bold text-white transition-all hover:opacity-90"
             style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Sign Up Now
+            Suscribirme
           </Link>
         </div>
       </div>
@@ -62,43 +62,43 @@ function MealsNav() {
 const planOptions = [6, 10, 14, 18];
 
 const priceMap: Record<number, string> = {
-  6: "$79.99/week",
-  10: "$119.99/week",
-  14: "$154.99/week",
-  18: "$189.99/week",
+  6: "$79.99/semana",
+  10: "$119.99/semana",
+  14: "$154.99/semana",
+  18: "$189.99/semana",
 };
 
 const meals = [
-  { name: "Asian Pork Bowl", color: "#f9e4b7" },
-  { name: "BBQ Brisket", color: "#fcd5b5" },
-  { name: "Chicken Teriyaki", color: "#d5f5e3" },
-  { name: "Turkey Meatballs", color: "#fde8d8" },
-  { name: "Salmon Filet", color: "#d6eaf8" },
-  { name: "Veggie Stir Fry", color: "#d5f5e3" },
-  { name: "Greek Chicken", color: "#fce4d6" },
-  { name: "Beef Tacos", color: "#fef9e7" },
+  { name: "Bowl de Cerdo Asiático", color: "#f9e4b7" },
+  { name: "Pecho de Res BBQ", color: "#fcd5b5" },
+  { name: "Pollo Teriyaki", color: "#d5f5e3" },
+  { name: "Albóndigas de Pavo", color: "#fde8d8" },
+  { name: "Filete de Salmón", color: "#d6eaf8" },
+  { name: "Salteado de Verduras", color: "#d5f5e3" },
+  { name: "Pollo a la Griega", color: "#fce4d6" },
+  { name: "Tacos de Res", color: "#fef9e7" },
 ];
 
 const faqItems = [
   {
-    q: "How do I pause my orders?",
-    a: "You may pause your orders by logging into your account and suspending your program. Pauses must be submitted before the weekly order deadline.",
+    q: "¿Cómo puedo pausar mis pedidos?",
+    a: "Puedes pausar tus pedidos iniciando sesión en tu cuenta y suspendiendo tu programa. Las pausas deben enviarse antes del plazo semanal de pedidos.",
   },
   {
-    q: "What is the order deadline?",
-    a: "All new orders must be received by Wednesday at 11:59pm CST to be included in that week's shipment.",
+    q: "¿Cuál es el plazo para hacer pedidos?",
+    a: "Todos los pedidos nuevos deben recibirse antes del miércoles a las 11:59 p.m. CST para ser incluidos en el envío de esa semana.",
   },
   {
-    q: "Can I change my meals?",
-    a: "You are more than welcome to make any changes to your program each and every week as long as you make those changes prior to the Order Change Deadline of Wednesday by 7:00pm CST.",
+    q: "¿Puedo cambiar mis comidas?",
+    a: "Puedes realizar cambios en tu programa cada semana, siempre que los hagas antes del plazo de cambios del miércoles a las 7:00 p.m. CST.",
   },
   {
-    q: "What is the cancellation policy?",
-    a: "Clients are more than welcome to cancel their program anytime, as long as it is prior to the Order Cancellation Deadline of Wednesday by 7:00pm CST.",
+    q: "¿Cuál es la política de cancelación?",
+    a: "Los clientes pueden cancelar su programa en cualquier momento, siempre que sea antes del plazo de cancelación del miércoles a las 7:00 p.m. CST.",
   },
   {
-    q: "What payment methods do you accept?",
-    a: "We accept Visa, MasterCard, AMEX, and Discover cards at checkout.",
+    q: "¿Qué métodos de pago aceptan?",
+    a: "Aceptamos tarjetas Visa, MasterCard, AMEX y Discover al momento del pago.",
   },
 ];
 
@@ -164,15 +164,14 @@ export default function MealsProgramsPage() {
             className="text-4xl md:text-5xl font-black tracking-tight mb-4"
             style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Create Your First Box With MEDVi Meals
+            Crea Tu Primera Caja con ClínicaRenova Nutrición
           </h1>
           <h3
             className="text-base leading-relaxed"
             style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Discover 75+ weekly rotating meals filled with lean, delicious, and
-            macro-friendly options. Modify, pause, or cancel anything— completely
-            hassle-free.
+            Descubre más de 75 comidas semanales rotativas, ligeras, deliciosas y
+            ricas en macronutrientes. Modifica, pausa o cancela cuando quieras, sin complicaciones.
           </h3>
         </div>
       </section>
@@ -189,7 +188,7 @@ export default function MealsProgramsPage() {
               className="text-xs font-black tracking-widest uppercase mb-5"
               style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              1. SELECT YOUR PROGRAM
+              1. SELECCIONA TU PROGRAMA
             </h3>
             <div
               className="p-5 rounded-xl border-2 cursor-pointer"
@@ -207,13 +206,13 @@ export default function MealsProgramsPage() {
                     className="font-bold text-base"
                     style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
                   >
-                    Classic
+                    Clásico
                   </p>
                   <p
                     className="text-sm"
                     style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
                   >
-                    Traditional meal prep options with standard portion sizes!
+                    Opciones tradicionales de preparación de comidas con porciones estándar.
                   </p>
                 </div>
               </div>
@@ -229,13 +228,13 @@ export default function MealsProgramsPage() {
               className="text-xs font-black tracking-widest uppercase mb-2"
               style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              2. SELECT YOUR PLAN
+              2. SELECCIONA TU PLAN
             </h3>
             <p
               className="text-sm mb-5"
               style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
             >
-              Meals per week:
+              Comidas por semana:
             </p>
             <div className="grid grid-cols-4 gap-3 mb-6">
               {planOptions.map((plan) => (
@@ -264,7 +263,7 @@ export default function MealsProgramsPage() {
                 className="text-xs tracking-widest uppercase mb-1"
                 style={{ color: "#2e936f", fontFamily: "'Onest', sans-serif" }}
               >
-                {selectedPlan} MEALS / WEEK
+                {selectedPlan} COMIDAS / SEMANA
               </p>
               <p
                 className="text-3xl font-black"
@@ -276,7 +275,7 @@ export default function MealsProgramsPage() {
                 className="text-xs mt-1"
                 style={{ color: "#6b7280", fontFamily: "'Red Hat Text', sans-serif" }}
               >
-                Billed weekly · Free shipping · Cancel anytime
+                Cobro semanal · Envío gratuito · Cancela cuando quieras
               </p>
             </div>
           </div>
@@ -285,7 +284,7 @@ export default function MealsProgramsPage() {
             className="w-full py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90"
             style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Sign Up
+            Suscribirme
           </button>
         </div>
       </section>
@@ -297,7 +296,7 @@ export default function MealsProgramsPage() {
             className="text-xl font-black tracking-widest text-center mb-8"
             style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            EXPLORE THE MENU
+            EXPLORA EL MENÚ
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {meals.map((meal) => (
@@ -325,7 +324,7 @@ export default function MealsProgramsPage() {
             className="text-xl font-black tracking-widest text-center mb-10"
             style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            COMMON QUESTIONS
+            PREGUNTAS FRECUENTES
           </h2>
           <FAQAccordion items={faqItems} />
         </div>
@@ -343,11 +342,11 @@ export default function MealsProgramsPage() {
             </span>
             <div className="flex flex-wrap justify-center gap-6">
               {[
-                { label: "WEEKLY MENU", href: "/meals#menu" },
-                { label: "PROGRAMS", href: "/meals/programs" },
-                { label: "HOW IT WORKS", href: "/meals/how-it-works" },
-                { label: "FAQ", href: "/meals/faq" },
-                { label: "CONTACT", href: "#contact" },
+                { label: "MENÚ SEMANAL", href: "/meals#menu" },
+                { label: "PROGRAMAS", href: "/meals/programs" },
+                { label: "CÓMO FUNCIONA", href: "/meals/how-it-works" },
+                { label: "PREGUNTAS FRECUENTES", href: "/meals/faq" },
+                { label: "CONTACTO", href: "#contact" },
               ].map((link) => (
                 <Link
                   key={link.label}
@@ -364,7 +363,7 @@ export default function MealsProgramsPage() {
             className="text-center text-sm"
             style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            Copyright © 2026 MEDVi Meals. All rights reserved.
+            Copyright © 2026 ClínicaRenova Nutrición. Todos los derechos reservados.
           </p>
         </div>
       </footer>

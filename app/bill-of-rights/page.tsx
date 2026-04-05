@@ -3,21 +3,21 @@ import LegalPage from "../components/LegalPage";
 export default function BillOfRights() {
   return (
     <LegalPage
-      title="501.0575 Weight-Loss Consumer Bill of Rights"
+      title="501.0575 Declaración de Derechos del Consumidor de Pérdida de Peso"
       sections={[
         {
           body: [
-            "(1) The Weight-Loss Consumer Bill of Rights shall consist of the following provisions:",
-            "(A) WARNING: RAPID WEIGHT LOSS MAY CAUSE SERIOUS HEALTH PROBLEMS. RAPID WEIGHT LOSS IS WEIGHT LOSS OF MORE THAN 1½ POUNDS TO 2 POUNDS PER WEEK OR WEIGHT LOSS OF MORE THAN 1 PERCENT OF BODY WEIGHT PER WEEK AFTER THE SECOND WEEK OF PARTICIPATION IN A WEIGHT-LOSS PROGRAM.",
-            "(B) CONSULT YOUR PERSONAL PHYSICIAN BEFORE STARTING ANY WEIGHT-LOSS PROGRAM.",
-            "(C) ONLY PERMANENT LIFESTYLE CHANGES, SUCH AS MAKING HEALTHFUL FOOD CHOICES AND INCREASING PHYSICAL ACTIVITY, PROMOTE LONG-TERM WEIGHT LOSS.",
-            "(D) QUALIFICATIONS OF THIS PROVIDER ARE AVAILABLE UPON REQUEST.",
-            "(E) YOU HAVE A RIGHT TO:",
-            "ASK QUESTIONS ABOUT THE POTENTIAL HEALTH RISKS OF THIS PROGRAM AND ITS NUTRITIONAL CONTENT, PSYCHOLOGICAL SUPPORT, AND EDUCATIONAL COMPONENTS.",
-            "RECEIVE AN ITEMIZED STATEMENT OF THE ACTUAL OR ESTIMATED PRICE OF THE WEIGHT-LOSS PROGRAM, INCLUDING EXTRA PRODUCTS, SERVICES, SUPPLEMENTS, EXAMINATIONS, AND LABORATORY TESTS.",
-            "KNOW THE ACTUAL OR ESTIMATED DURATION OF THE PROGRAM.",
-            "KNOW THE NAME, ADDRESS, AND QUALIFICATIONS OF THE DIETITIAN OR NUTRITIONIST WHO HAS REVIEWED AND APPROVED THE WEIGHT-LOSS PROGRAM ACCORDING TO s. 468.505(1)(j), FLORIDA STATUTES.",
-            "(2) The copies of the Weight-Loss Consumer Bill of Rights to be posted according to s. 501.0573(6) shall be printed in at least 24-point boldfaced type on one side of a sign. The palm-sized copies to be distributed according to s. 501.0573(5) shall be in boldfaced type and legible. Each weight-loss provider shall be responsible for producing and printing appropriate copies of the Weight-Loss Consumer Bill of Rights. History.—s. 4, ch. 93-274; s. 45, ch. 2000-154. https://www.flsenate.gov/Laws/Statutes/2015/501.0575",
+            "(1) La Declaración de Derechos del Consumidor de Pérdida de Peso contendrá las siguientes disposiciones:",
+            "(A) ADVERTENCIA: LA PÉRDIDA RÁPIDA DE PESO PUEDE CAUSAR PROBLEMAS DE SALUD GRAVES. SE CONSIDERA PÉRDIDA RÁPIDA DE PESO PERDER MÁS DE 1½ A 2 LIBRAS POR SEMANA O MÁS DEL 1% DEL PESO CORPORAL POR SEMANA DESPUÉS DE LA SEGUNDA SEMANA DE PARTICIPACIÓN EN UN PROGRAMA DE PÉRDIDA DE PESO.",
+            "(B) CONSULTE A SU MÉDICO PERSONAL ANTES DE INICIAR CUALQUIER PROGRAMA DE PÉRDIDA DE PESO.",
+            "(C) SOLO LOS CAMBIOS PERMANENTES EN EL ESTILO DE VIDA, COMO ELEGIR ALIMENTOS SALUDABLES Y AUMENTAR LA ACTIVIDAD FÍSICA, FAVORECEN LA PÉRDIDA DE PESO A LARGO PLAZO.",
+            "(D) LAS CALIFICACIONES DE ESTE PROVEEDOR ESTÁN DISPONIBLES PREVIA SOLICITUD.",
+            "(E) USTED TIENE DERECHO A:",
+            "HACER PREGUNTAS SOBRE LOS POSIBLES RIESGOS PARA LA SALUD DE ESTE PROGRAMA Y SU CONTENIDO NUTRICIONAL, APOYO PSICOLÓGICO Y COMPONENTES EDUCATIVOS.",
+            "RECIBIR UN ESTADO DE CUENTA DETALLADO DEL PRECIO REAL O ESTIMADO DEL PROGRAMA DE PÉRDIDA DE PESO, INCLUIDOS PRODUCTOS ADICIONALES, SERVICIOS, SUPLEMENTOS, EXÁMENES Y ANÁLISIS DE LABORATORIO.",
+            "CONOCER LA DURACIÓN REAL O ESTIMADA DEL PROGRAMA.",
+            "CONOCER EL NOMBRE, LA DIRECCIÓN Y LAS CALIFICACIONES DEL DIETISTA O NUTRICIONISTA QUE HA REVISADO Y APROBADO EL PROGRAMA DE PÉRDIDA DE PESO DE CONFORMIDAD CON LA SECCIÓN 468.505(1)(j) DE LOS ESTATUTOS DE FLORIDA.",
+            "(2) Las copias de la Declaración de Derechos del Consumidor de Pérdida de Peso que se deben publicar según la sección 501.0573(6) deberán imprimirse en tipo negrita de al menos 24 puntos en un lado de un cartel. Las copias del tamaño de la palma de la mano que se distribuirán según la sección 501.0573(5) deberán estar en tipo negrita y ser legibles. Cada proveedor de pérdida de peso será responsable de producir e imprimir las copias correspondientes de la Declaración de Derechos del Consumidor de Pérdida de Peso. Historia: s. 4, ch. 93-274; s. 45, ch. 2000-154. https://www.flsenate.gov/Laws/Statutes/2015/501.0575",
           ],
         },
       ]}

@@ -11,7 +11,7 @@ function QuadNav() {
         <Link href="/quad">
           <Image
             src="https://framerusercontent.com/images/1BRDkIzVV7TxG8fJDyUWdUDDE.png"
-            alt="MEDVi"
+            alt="ClínicaRenova"
             width={100}
             height={32}
             unoptimized
@@ -20,10 +20,10 @@ function QuadNav() {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {["Science", "How it Works", "Testimonials"].map((item) => (
+          {["Ciencia", "Cómo Funciona", "Testimonios"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`#${item.toLowerCase().replace(/\s+/g, "-").replace(/é/g, "e").replace(/ó/g, "o")}`}
               className="text-sm font-medium text-white/70 hover:text-white transition-colors"
               style={{ fontFamily: "'Red Hat Text', sans-serif" }}
             >
@@ -37,7 +37,7 @@ function QuadNav() {
           className="px-5 py-2.5 rounded-pill text-sm font-semibold text-white transition-all hover:opacity-90"
           style={{ backgroundColor: "#3b82f6", fontFamily: "'Red Hat Text', sans-serif" }}
         >
-          GET STARTED →
+          COMENZAR →
         </Link>
       </div>
     </nav>
@@ -48,21 +48,21 @@ export default function QuadPage() {
   const steps = [
     {
       number: "01",
-      title: "Online Visit",
+      title: "Consulta en Línea",
       description:
-        "Answer a few questions on our secure intake form. It takes 3 minutes.",
+        "Responde unas preguntas en nuestro formulario seguro. Solo toma 3 minutos.",
     },
     {
       number: "02",
-      title: "Doctor Approval",
+      title: "Aprobación Médica",
       description:
-        "A US-licensed doctor reviews your case within 24 hours. If approved, your script is issued instantly.",
+        "Un médico con licencia en EE. UU. revisa tu caso en menos de 24 horas. Si es aprobado, tu receta se emite de inmediato.",
     },
     {
       number: "03",
-      title: "Fast Discreet Delivery",
+      title: "Entrega Rápida y Discreta",
       description:
-        "Your treatment arrives in a plain, unmarked package. Free rush shipping included.",
+        "Tu tratamiento llega en un paquete sin etiquetas. Envío urgente gratuito incluido.",
     },
   ];
 
@@ -90,42 +90,42 @@ export default function QuadPage() {
               ))}
             </div>
             <span className="text-white/60 text-sm" style={{ fontFamily: "'Red Hat Text', sans-serif" }}>
-              Excellent 4.5 out of 5 | TrustPilot
+              Excelente 4.5 de 5 | TrustPilot
             </span>
           </div>
 
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-pill mb-8 text-xs font-semibold tracking-widest uppercase"
             style={{ backgroundColor: "rgba(59,130,246,0.15)", color: "#3b82f6", fontFamily: "'Onest', sans-serif" }}>
-            USA Made | Clinician Prescribed
+            Fabricado en EE. UU. | Prescrito por Médicos
           </div>
 
           {/* Title */}
           <p className="text-white/40 text-sm tracking-widest uppercase mb-3" style={{ fontFamily: "'Onest', sans-serif" }}>
-            QUAD by MEDVi
+            QUAD by ClínicaRenova
           </p>
 
           <h1
             className="text-5xl md:text-7xl font-bold leading-tight mb-6"
             style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            Speed.{" "}
-            <span style={{ color: "#3b82f6" }}>Strength.</span>
+            Velocidad.{" "}
+            <span style={{ color: "#3b82f6" }}>Fuerza.</span>
             <br />
-            Stamina.
+            Resistencia.
           </h1>
 
           {/* Labels */}
           <div className="flex items-center justify-center gap-8 mb-8">
             <div className="text-center">
               <p className="text-xs tracking-widest uppercase text-white/40 mb-1" style={{ fontFamily: "'Onest', sans-serif" }}>
-                H5 GLOBALLY RECOGNIZED
+                RECONOCIDO GLOBALMENTE H5
               </p>
             </div>
             <div className="w-px h-8 bg-white/20" />
             <div className="text-center">
               <p className="text-xs tracking-widest uppercase text-white/40" style={{ fontFamily: "'Onest', sans-serif" }}>
-                THE 4-IN-1 BREAKTHROUGH
+                EL AVANCE 4 EN 1
               </p>
             </div>
           </div>
@@ -134,8 +134,8 @@ export default function QuadPage() {
             className="text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed"
             style={{ fontFamily: "'Red Hat Text', sans-serif" }}
           >
-            The world's first 4-in-1 formula that activates your desire and your body.
-            Fast-acting, clinician-prescribed, and delivered discreetly.
+            La primera fórmula 4 en 1 del mundo que activa tu deseo y tu cuerpo.
+            De acción rápida, prescrita por médicos y entregada de forma discreta.
           </p>
 
           <Link
@@ -143,14 +143,14 @@ export default function QuadPage() {
             className="inline-block px-10 py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90 hover:scale-105"
             style={{ backgroundColor: "#3b82f6", fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            SEE IF YOU QUALIFY
+            VER SI CALIFICAS
           </Link>
         </div>
       </section>
 
       {/* Science / Ready Faster Section */}
       <section
-        id="science"
+        id="ciencia"
         className="py-20 px-6"
         style={{ backgroundColor: "#080f24" }}
       >
@@ -161,13 +161,13 @@ export default function QuadPage() {
                 className="text-4xl md:text-5xl font-bold leading-tight mb-6"
                 style={{ fontFamily: "'Red Hat Display', sans-serif" }}
               >
-                Ready Faster,{" "}
-                <span style={{ color: "#3b82f6" }}>Lasts All Weekend.</span>
+                Listo más rápido,{" "}
+                <span style={{ color: "#3b82f6" }}>dura todo el fin de semana.</span>
               </h1>
               <p className="text-white/60 text-lg leading-relaxed mb-8" style={{ fontFamily: "'Red Hat Text', sans-serif" }}>
-                Pills are slow. Our rapid-absorb liquid goes under your tongue and hits
-                your system in{" "}
-                <span className="text-white font-semibold">10 minutes.</span>
+                Las pastillas tardan. Nuestro líquido de absorción rápida se aplica bajo la lengua y
+                llega a tu sistema en{" "}
+                <span className="text-white font-semibold">10 minutos.</span>
               </p>
 
               <div
@@ -177,10 +177,10 @@ export default function QuadPage() {
                 <span style={{ color: "#3b82f6" }} className="text-xl">⚡</span>
                 <div>
                   <p className="text-xs tracking-widest uppercase text-white/40 mb-0.5" style={{ fontFamily: "'Onest', sans-serif" }}>
-                    QUAD STACK — 1 SOLUTION
+                    COMBO QUAD — 1 SOLUCIÓN
                   </p>
                   <p className="text-sm font-semibold text-white" style={{ fontFamily: "'Red Hat Text', sans-serif" }}>
-                    4 powerful ingredients — APOMORPHINE
+                    4 ingredientes potentes — APOMORFINA
                   </p>
                 </div>
               </div>
@@ -188,7 +188,7 @@ export default function QuadPage() {
 
             {/* Ingredient Pills */}
             <div className="grid grid-cols-2 gap-4">
-              {["Apomorphine", "Sildenafil", "Oxytocin", "PT-141"].map((ingredient, i) => (
+              {["Apomorfina", "Sildenafil", "Oxitocina", "PT-141"].map((ingredient, i) => (
                 <div
                   key={ingredient}
                   className="p-5 rounded-2xl border"
@@ -214,18 +214,18 @@ export default function QuadPage() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-6">
+      <section id="como-funciona" className="py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs tracking-widest uppercase text-white/40 mb-3" style={{ fontFamily: "'Onest', sans-serif" }}>
-              SIMPLE PROCESS
+              PROCESO SENCILLO
             </p>
             <h2
               className="text-4xl md:text-5xl font-bold"
               style={{ fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              How It{" "}
-              <span style={{ color: "#3b82f6" }}>Works</span>
+              Cómo{" "}
+              <span style={{ color: "#3b82f6" }}>Funciona</span>
             </h2>
           </div>
 
@@ -264,7 +264,7 @@ export default function QuadPage() {
               className="inline-block px-10 py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90"
               style={{ backgroundColor: "#3b82f6", fontFamily: "'Red Hat Display', sans-serif" }}
             >
-              SEE IF YOU QUALIFY
+              VER SI CALIFICAS
             </Link>
           </div>
         </div>
@@ -272,27 +272,27 @@ export default function QuadPage() {
 
       {/* Testimonials placeholder */}
       <section
-        id="testimonials"
+        id="testimonios"
         className="py-20 px-6"
         style={{ backgroundColor: "#080f24" }}
       >
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs tracking-widest uppercase text-white/40 mb-3" style={{ fontFamily: "'Onest', sans-serif" }}>
-            REAL RESULTS
+            RESULTADOS REALES
           </p>
           <h2
             className="text-4xl md:text-5xl font-bold mb-12"
             style={{ fontFamily: "'Red Hat Display', sans-serif" }}
           >
-            What Our{" "}
-            <span style={{ color: "#3b82f6" }}>Patients Say</span>
+            Lo que dicen{" "}
+            <span style={{ color: "#3b82f6" }}>nuestros pacientes</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: "James R.", quote: "Works exactly as described — fast and effective. Game changer.", stars: 5 },
-              { name: "Michael T.", quote: "Finally something that actually works. Under 10 minutes, no joke.", stars: 5 },
-              { name: "David K.", quote: "The discreet delivery and fast results make this perfect.", stars: 5 },
+              { name: "James R.", quote: "Funciona exactamente como dice. Rápido y efectivo. Un cambio total.", stars: 5 },
+              { name: "Michael T.", quote: "Por fin algo que realmente funciona. En menos de 10 minutos, sin exagerar.", stars: 5 },
+              { name: "David K.", quote: "La entrega discreta y los resultados rápidos lo hacen perfecto.", stars: 5 },
             ].map((t) => (
               <div
                 key={t.name}
@@ -324,17 +324,17 @@ export default function QuadPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <Image
             src="https://framerusercontent.com/images/1BRDkIzVV7TxG8fJDyUWdUDDE.png"
-            alt="MEDVi"
+            alt="ClínicaRenova"
             width={80}
             height={26}
             unoptimized
             className="brightness-0 invert opacity-60"
           />
           <p className="text-white/30 text-sm" style={{ fontFamily: "'Red Hat Text', sans-serif" }}>
-            © 2026 MEDVi. All rights reserved.
+            © 2026 ClínicaRenova. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
-            {["Privacy Policy", "Terms", "Contact"].map((link) => (
+            {["Política de Privacidad", "Términos", "Contacto"].map((link) => (
               <a
                 key={link}
                 href="#"
