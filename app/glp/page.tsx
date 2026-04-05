@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BASE = "https://framerusercontent.com/images/";
 
@@ -19,8 +19,8 @@ function GlpNav() {
 
   return (
     <nav
-      className="sticky top-0 z-50"
-      style={{ backgroundColor: "#242220" }}
+      className="sticky top-0 z-50 border-b"
+      style={{ backgroundColor: "#ffffff", borderColor: "#e8e5e0" }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
@@ -41,8 +41,8 @@ function GlpNav() {
             <a
               key={l.label}
               href={l.href}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors whitespace-nowrap"
-              style={{ fontFamily: "'Red Hat Text', sans-serif" }}
+              className="text-sm font-medium hover:text-black transition-colors whitespace-nowrap"
+              style={{ color: "#555", fontFamily: "'Red Hat Text', sans-serif" }}
             >
               {l.label}
             </a>
@@ -60,7 +60,7 @@ function GlpNav() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-gray-800"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menú"
         >
@@ -74,14 +74,14 @@ function GlpNav() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="lg:hidden px-6 pb-4" style={{ backgroundColor: "#2d2b28" }}>
+        <div className="lg:hidden px-6 pb-4 border-t" style={{ backgroundColor: "#ffffff", borderColor: "#e8e5e0" }}>
           {navLinks.map((l) => (
             <a
               key={l.label}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-2 text-sm text-white/70 hover:text-white transition-colors"
-              style={{ fontFamily: "'Red Hat Text', sans-serif" }}
+              className="block py-2 text-sm hover:text-black transition-colors"
+              style={{ color: "#555", fontFamily: "'Red Hat Text', sans-serif" }}
             >
               {l.label}
             </a>
@@ -100,16 +100,53 @@ function GlpNav() {
   );
 }
 
+// ─── HERO CAROUSEL ──────────────────────────────────────────────────────────
+const ALL_LIFESTYLE = [
+  `${BASE}6DlpR3ftJ6MctTZwyeuvp0hxAY.jpg`,
+  `${BASE}A1lwE6WKdaWtTNHV4R3xFZ1ljVo.jpg`,
+  `${BASE}iZZOz7kuB4YLvdGWAg8yO3avoLQ.jpg`,
+  `${BASE}a6V9t9YFzI29cz5gMQRbfWgjVS4.jpg`,
+  `${BASE}cYEX3QqVD69lMmw1NIEAUOSMB8.jpg`,
+  `${BASE}OGDQI8XA7V2CREgeUjtv3qMehk.jpg`,
+  `${BASE}d4SpmpLmhUfMZkWsTOukrdAmhg.jpg`,
+  `${BASE}yTHZiTQnD4nN9DjRINV2s2nJf6c.jpg`,
+];
+
+function HeroCarousel() {
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setOffset(o => o + 1), 2000);
+    return () => clearInterval(t);
+  }, []);
+  // Two columns scrolling at different speeds
+  const col1 = [...ALL_LIFESTYLE, ...ALL_LIFESTYLE];
+  const col2 = [...ALL_LIFESTYLE.slice(3), ...ALL_LIFESTYLE.slice(0, 3), ...ALL_LIFESTYLE];
+  return (
+    <div className="lg:w-1/2 hidden lg:flex gap-3 overflow-hidden" style={{ height: 480 }}>
+      {/* Column 1 — scrolls up */}
+      <div className="flex-1 flex flex-col gap-3 transition-transform duration-1000 ease-linear"
+        style={{ transform: `translateY(-${(offset % ALL_LIFESTYLE.length) * 13}%)` }}>
+        {col1.map((src, i) => (
+          <div key={i} className="rounded-2xl overflow-hidden shrink-0" style={{ height: 160 }}>
+            <Image src={src} alt="" width={200} height={160} unoptimized className="object-cover w-full h-full" />
+          </div>
+        ))}
+      </div>
+      {/* Column 2 — scrolls down */}
+      <div className="flex-1 flex flex-col gap-3 transition-transform duration-1000 ease-linear"
+        style={{ transform: `translateY(-${((ALL_LIFESTYLE.length - offset) % ALL_LIFESTYLE.length) * 13}%)` }}>
+        {col2.map((src, i) => (
+          <div key={i} className="rounded-2xl overflow-hidden shrink-0" style={{ height: 160 }}>
+            <Image src={src} alt="" width={200} height={160} unoptimized className="object-cover w-full h-full" />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ─── HERO ───────────────────────────────────────────────────────────────────
 function HeroSection() {
-  const lifestyleImages = [
-    { src: `${BASE}6DlpR3ftJ6MctTZwyeuvp0hxAY.jpg`, alt: "" },
-    { src: `${BASE}A1lwE6WKdaWtTNHV4R3xFZ1ljVo.jpg`, alt: "" },
-    { src: `${BASE}iZZOz7kuB4YLvdGWAg8yO3avoLQ.jpg`, alt: "" },
-    { src: `${BASE}a6V9t9YFzI29cz5gMQRbfWgjVS4.jpg`, alt: "" },
-    { src: `${BASE}cYEX3QqVD69lMmw1NIEAUOSMB8.jpg`, alt: "" },
-    { src: `${BASE}OGDQI8XA7V2CREgeUjtv3qMehk.jpg`, alt: "" },
-  ];
 
   return (
     <section className="relative overflow-hidden py-16 md:py-24 px-6" style={{ backgroundColor: "#faf9f7" }}>
@@ -158,21 +195,8 @@ function HeroSection() {
             </div>
           </div>
 
-          {/* Right: lifestyle photo grid */}
-          <div className="lg:w-1/2 grid grid-cols-3 gap-2">
-            {lifestyleImages.map((img, i) => (
-              <div key={i} className="rounded-xl overflow-hidden aspect-square">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  width={200}
-                  height={200}
-                  unoptimized
-                  className="object-cover w-full h-full"
-                />
-              </div>
-            ))}
-          </div>
+          {/* Right: auto-scrolling lifestyle carousel */}
+          <HeroCarousel />
         </div>
       </div>
     </section>
