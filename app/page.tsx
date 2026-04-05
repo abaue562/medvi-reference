@@ -26,8 +26,8 @@ const IMG = {
   mens1:         `${CDN}/nrGxwSsRFp57MwVq6ihfcnRm8bA.png`,
   mens2:         `${CDN}/9WyYelkv3EfaJFi50PZydNSt2ws.png`,
   // Peptides
-  peptides1:     `${CDN}/h93zMm4ey20O082JGj8IZMrl3I.png`,
-  peptides2:     `${CDN}/ntqVQOpXgrrjXKAUz9BTmnE2u0I.png`,
+  peptides1:     `${CDN}/WUFCBuh0wNjDvRv5B5ZqEH4mjA.png`,
+  peptides2:     `${CDN}/ihBupsd47mUBkztGVAMt31VNRN4.png`,
   // Hair
   hair1:         `${CDN}/paOnEoR3Gqf2LWRZGYBJ2Uokw.png`,
   hair2:         `${CDN}/vC7EYvFVXWs3QWn7JLdi51Vvd7s.png`,
@@ -374,7 +374,7 @@ export default function Home() {
             <p className="text-sm leading-relaxed" style={{ color: "#24222099" }}>
               La terapia con péptidos está diseñada para apoyar cómo tu cuerpo se recupera, rinde y repara con el tiempo, con opciones específicas para recuperación, fuerza, sueño y optimización general.
             </p>
-            <ComingSoon />
+            <CTAButton href="/meals">VER MENÚ</CTAButton>
           </div>
         </div>
       </section>
