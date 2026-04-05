@@ -9,12 +9,13 @@ function MealsNav() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/meals">
-          <span
-            className="text-3xl font-black text-black"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            M
-          </span>
+          <Image
+            src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+            alt="ClínicaRenova Nutrición"
+            width={40}
+            height={40}
+            unoptimized
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -213,7 +214,7 @@ export default function MealsLoginPage() {
               style={{ color: "#9ca3af", fontFamily: "'Red Hat Text', sans-serif" }}
             >
               Al iniciar sesión, aceptas nuestros{" "}
-              <a href="#" className="underline">
+              <a href="/terms-and-conditions" className="underline">
                 Términos y Condiciones
               </a>
               .

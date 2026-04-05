@@ -334,14 +334,18 @@ export default function QuadPage() {
             © 2026 ClínicaRenova. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
-            {["Política de Privacidad", "Términos", "Contacto"].map((link) => (
+            {[
+              { label: "Política de Privacidad", href: "/privacy-policy" },
+              { label: "Términos", href: "/terms-and-conditions" },
+              { label: "Contacto", href: "/meals/contact" },
+            ].map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="text-white/30 text-sm hover:text-white/60 transition-colors"
                 style={{ fontFamily: "'Red Hat Text', sans-serif" }}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -9,12 +10,13 @@ function MealsNav() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/meals">
-          <span
-            className="text-3xl font-black text-black"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            M
-          </span>
+          <Image
+            src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+            alt="ClínicaRenova Nutrición"
+            width={40}
+            height={40}
+            unoptimized
+          />
         </Link>
 
         {/* Center Nav */}
@@ -63,6 +65,17 @@ function MealsNav() {
   );
 }
 
+const mealImgList = [
+  "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
+  "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
+  "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
+  "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
+  "https://framerusercontent.com/images/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png",
+  "https://framerusercontent.com/images/zmJZrAHLgexbSUaBuE8JSFohl8.png",
+  "https://framerusercontent.com/images/3YQLMZEk5tHlkmMh4CjpAifaEc.jpg",
+  "https://framerusercontent.com/images/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg",
+];
+
 const meals = [
   { name: "Bowl de Cerdo Asiático", color: "#f9e4b7" },
   { name: "Pecho de Res BBQ", color: "#fcd5b5" },
@@ -100,20 +113,19 @@ export default function MealsPage() {
       {/* Hero */}
       <section className="py-16 px-6" style={{ backgroundColor: "#faf9f7" }}>
         <div className="max-w-5xl mx-auto text-center">
-          {/* Food collage placeholder */}
+          {/* Food collage */}
           <div className="grid grid-cols-4 gap-3 mb-10 max-w-2xl mx-auto">
             {[
-              { emoji: "🍜", bg: "#fff3cd" },
-              { emoji: "🥩", bg: "#fce4d6" },
-              { emoji: "🍣", bg: "#d6eaf8" },
-              { emoji: "🥗", bg: "#d5f5e3" },
-            ].map((item, i) => (
+              "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
+              "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
+              "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
+              "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
+            ].map((src, i) => (
               <div
                 key={i}
-                className="aspect-square rounded-2xl flex items-center justify-center text-4xl"
-                style={{ backgroundColor: item.bg }}
+                className="aspect-square rounded-2xl overflow-hidden relative"
               >
-                {item.emoji}
+                <Image src={src} alt="" fill unoptimized className="object-cover" />
               </div>
             ))}
           </div>
@@ -227,18 +239,26 @@ export default function MealsPage() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-10">
-            {meals.map((meal) => (
+            {meals.map((meal, idx) => (
               <div
                 key={meal.name}
-                className="rounded-2xl overflow-hidden aspect-square flex items-end p-4"
-                style={{ backgroundColor: meal.color }}
+                className="rounded-2xl overflow-hidden aspect-square relative"
               >
-                <span
-                  className="text-sm font-bold"
-                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
-                >
-                  {meal.name}
-                </span>
+                <Image
+                  src={mealImgList[idx % mealImgList.length]}
+                  alt={meal.name}
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 flex items-end p-4" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }}>
+                  <span
+                    className="text-sm font-bold text-white"
+                    style={{ fontFamily: "'Red Hat Display', sans-serif" }}
+                  >
+                    {meal.name}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

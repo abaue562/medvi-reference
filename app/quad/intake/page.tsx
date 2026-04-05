@@ -94,19 +94,20 @@ export default function QuadIntakePage() {
           {/* Left: Hero Image */}
           <div
             className="rounded-2xl overflow-hidden aspect-[3/4] flex items-end relative"
-            style={{ backgroundColor: "#060d1f" }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span
-                className="text-6xl font-black tracking-widest text-white/10"
-                style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-              >
-                CR
-              </span>
-            </div>
+            <Image
+              src="https://framerusercontent.com/images/6ysW5nd4tzXcofaTriOcTvKB7yw.jpg"
+              alt="QUAD intake"
+              fill
+              unoptimized
+              className="object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(to top, rgba(6,13,31,0.9) 0%, transparent 60%)" }}
+            />
             <div
               className="relative z-10 w-full p-8"
-              style={{ background: "linear-gradient(to top, rgba(6,13,31,0.95) 0%, transparent 100%)" }}
             >
               <p
                 className="text-xs tracking-widest uppercase mb-2 font-semibold"
@@ -178,17 +179,18 @@ export default function QuadIntakePage() {
               ))}
             </div>
 
-            <button
-              disabled={!selected}
-              className="w-full py-4 rounded-pill text-base font-bold text-white transition-all"
+            <Link
+              href={selected ? "/quad/approval" : "#"}
+              className="block w-full py-4 rounded-pill text-base font-bold text-white text-center transition-all"
               style={{
                 backgroundColor: selected ? "#2e936f" : "#d1d5db",
                 cursor: selected ? "pointer" : "not-allowed",
                 fontFamily: "'Red Hat Display', sans-serif",
+                pointerEvents: selected ? "auto" : "none",
               }}
             >
               Siguiente →
-            </button>
+            </Link>
 
             <p
               className="text-center text-xs mt-4"

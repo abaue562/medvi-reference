@@ -78,7 +78,7 @@ export default function WeightLoss() {
           ))}
         </div>
         <a
-          href="https://clinicarenova.org/glp"
+          href="/glp/intake"
           className="text-white text-xs font-bold tracking-widest uppercase px-6 py-2.5 rounded-full transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2e936f" }}
         >
@@ -133,7 +133,7 @@ export default function WeightLoss() {
         </p>
 
         <a
-          href="https://clinicarenova.org/glp"
+          href="/glp/intake"
           className="text-white font-bold tracking-widest uppercase px-10 py-4 rounded-full text-sm transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#2e936f" }}
         >
@@ -224,7 +224,7 @@ export default function WeightLoss() {
                 </p>
 
                 <a
-                  href="https://clinicarenova.org/glp"
+                  href="/glp/intake"
                   className="mt-2 text-center text-sm font-bold tracking-widest uppercase px-6 py-3 rounded-full transition-opacity hover:opacity-90"
                   style={{
                     backgroundColor: card.badge ? "#2e936f" : "#242220",
@@ -340,7 +340,7 @@ export default function WeightLoss() {
               Con medicación, trabajarás con tu cuerpo en lugar de contra él.
             </p>
             <a
-              href="https://clinicarenova.org/glp"
+              href="/glp/intake"
               className="inline-block mt-8 text-sm font-bold tracking-widest uppercase px-8 py-3.5 rounded-full transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#2e936f", color: "#ffffff" }}
             >
@@ -425,7 +425,7 @@ export default function WeightLoss() {
             sin costos ocultos y soporte 24/7.
           </p>
           <a
-            href="https://clinicarenova.org/glp"
+            href="/glp/intake"
             className="inline-block text-white font-bold tracking-widest uppercase px-10 py-4 rounded-full text-sm transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#2e936f" }}
           >

@@ -93,26 +93,20 @@ export default function GlpIntakePage() {
           {/* Left: Hero Image */}
           <div
             className="rounded-2xl overflow-hidden relative min-h-[500px] flex items-end"
-            style={{ backgroundColor: "#1a1a2e" }}
           >
-            {/* Background gradient representing a woman athlete */}
+            <Image
+              src="https://framerusercontent.com/images/vC7EYvFVXWs3QWn7JLdi51Vvd7s.png"
+              alt="GLP-1 intake"
+              fill
+              unoptimized
+              className="object-cover"
+            />
             <div
               className="absolute inset-0"
-              style={{
-                background: "linear-gradient(160deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-              }}
+              style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%)" }}
             />
-            <div className="absolute inset-0 flex items-center justify-center opacity-10">
-              <span
-                className="text-8xl font-black tracking-widest text-white"
-                style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-              >
-                CR
-              </span>
-            </div>
             <div
               className="relative z-10 w-full p-8"
-              style={{ background: "linear-gradient(to top, rgba(15,52,96,0.95) 0%, transparent 100%)" }}
             >
               <h2
                 className="text-2xl md:text-3xl font-bold italic leading-tight mb-2"

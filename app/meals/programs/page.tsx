@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,12 +9,13 @@ function MealsNav() {
     <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/meals">
-          <span
-            className="text-3xl font-black text-black"
-            style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-          >
-            M
-          </span>
+          <Image
+            src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+            alt="ClínicaRenova Nutrición"
+            width={40}
+            height={40}
+            unoptimized
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
@@ -48,7 +50,7 @@ function MealsNav() {
             INGRESAR
           </Link>
           <Link
-            href="/meals/programs"
+            href="/meals/register"
             className="px-5 py-2 rounded-pill text-sm font-bold text-white transition-all hover:opacity-90"
             style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
           >
@@ -68,6 +70,17 @@ const priceMap: Record<number, string> = {
   14: "$154.99/semana",
   18: "$189.99/semana",
 };
+
+const mealImgListPgms = [
+  "https://framerusercontent.com/images/ihBupsd47mUBkztGVAMt31VNRN4.png",
+  "https://framerusercontent.com/images/keDlEK59Fa69dFZn1FAHPjD1j8.png",
+  "https://framerusercontent.com/images/Qzg7hOnOYm2PR1xuvL1xDf7C4M.png",
+  "https://framerusercontent.com/images/TDqwwuuERJIkMwN3ZjsZgCTOFoU.png",
+  "https://framerusercontent.com/images/ZlJbchQEeboQ3J4HC0w7Lj2SRvQ.png",
+  "https://framerusercontent.com/images/zmJZrAHLgexbSUaBuE8JSFohl8.png",
+  "https://framerusercontent.com/images/3YQLMZEk5tHlkmMh4CjpAifaEc.jpg",
+  "https://framerusercontent.com/images/u8K8rbgmRaS81RzFu2M7Wl00qI.jpg",
+];
 
 const meals = [
   { name: "Bowl de Cerdo Asiático", color: "#f9e4b7" },
@@ -281,12 +294,13 @@ export default function MealsProgramsPage() {
             </div>
           </div>
 
-          <button
-            className="w-full py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90"
+          <Link
+            href="/meals/register"
+            className="block w-full text-center py-4 rounded-pill text-base font-bold text-white transition-all hover:opacity-90"
             style={{ backgroundColor: "#2e936f", fontFamily: "'Red Hat Display', sans-serif" }}
           >
             Suscribirme
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -300,18 +314,26 @@ export default function MealsProgramsPage() {
             EXPLORA EL MENÚ
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {meals.map((meal) => (
+            {meals.map((meal, idx) => (
               <div
                 key={meal.name}
-                className="rounded-2xl overflow-hidden aspect-square flex items-end p-4"
-                style={{ backgroundColor: meal.color }}
+                className="rounded-2xl overflow-hidden aspect-square relative"
               >
-                <span
-                  className="text-sm font-bold"
-                  style={{ color: "#242220", fontFamily: "'Red Hat Display', sans-serif" }}
-                >
-                  {meal.name}
-                </span>
+                <Image
+                  src={mealImgListPgms[idx % mealImgListPgms.length]}
+                  alt={meal.name}
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 flex items-end p-4" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%)" }}>
+                  <span
+                    className="text-sm font-bold text-white"
+                    style={{ fontFamily: "'Red Hat Display', sans-serif" }}
+                  >
+                    {meal.name}
+                  </span>
+                </div>
               </div>
             ))}
           </div>
@@ -335,12 +357,13 @@ export default function MealsProgramsPage() {
       <footer className="bg-white border-t py-10 px-6" style={{ borderColor: "#e8e5e0" }}>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
-            <span
-              className="text-3xl font-black text-black"
-              style={{ fontFamily: "'Red Hat Display', sans-serif" }}
-            >
-              M
-            </span>
+            <Image
+              src="https://framerusercontent.com/images/snLhnFxV1S915H070FVXdFseVw.png"
+              alt="ClínicaRenova Nutrición"
+              width={40}
+              height={40}
+              unoptimized
+            />
             <div className="flex flex-wrap justify-center gap-6">
               {[
                 { label: "MENÚ SEMANAL", href: "/meals/menu" },
